@@ -5,7 +5,7 @@ on:
     branches: [ main, develop ]
   pull_request:
     branches: [ main, develop ]
-    
+
 jobs:
   react:
     name: React
@@ -16,13 +16,19 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd client
+          npm install
 
       - name: Build
-        run: npm run build
+        run: |
+          cd client
+          npm run build
 
       - name: Test
-        run: npm run test
+        run: |
+          cd client
+          npm run test
 
   rails:
     name: Ruby on Rails
@@ -33,10 +39,16 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: bundle install
+        run: |
+          cd Backend
+          bundle install
 
       - name: Database setup
-        run: bin/rails db:setup
+        run: |
+          cd Backend
+          bin/rails db:setup
 
       - name: Test
-        run: bin/rails test
+        run: |
+          cd Backend
+          bin/rails test
