@@ -41,7 +41,7 @@ jobs:
       - name: Install Ruby and Bundler
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.4
+          ruby-version: 3.0
           bundler-cache: true
 
       - name: Install dependencies
@@ -49,10 +49,13 @@ jobs:
           cd Backend
           bundle install
 
-      - name: Database setup
+      - name: Database setup and migration
         run: |
           cd Backend
           bin/rails db:setup
+          if [ -f db/schema.rb ]; then
+            bin/rails db:migrate
+          fi
 
       - name: Test
         run: |
