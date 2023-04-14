@@ -62,7 +62,7 @@ const Button = styled.button`
   padding: 10px;
   border: none;
   border-radius: 8px;
-  background-color: #4caf50;
+  background-color: rgba(26, 143, 227, 1);
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -81,7 +81,7 @@ const LinkWrapper = styled.div`
 `;
 
 const CustomLink = styled(Link)`
-  color: #4caf50;
+  color: rgba(26, 143, 227, 1);
 `;
 
 function Signup() {
