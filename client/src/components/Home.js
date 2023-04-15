@@ -101,41 +101,50 @@ const Home = (props) => {
               <span>Weekly</span>
             </span>
           </div>
-          <div className={styles['group1']}>
-            <span className={styles['text29']}>
-              <span>500 Ksh</span>
-            </span>
-          </div>
-          <div className={styles['group2']}>
-            <span className={styles['text31']}>
-              <span>1000 Ksh</span>
-            </span>
-          </div>
-          <div className={styles['group3']}>
-            <span className={styles['text33']}>
-              <span>2000 Ksh</span>
-            </span>
-          </div>
-          <div className={styles['group4']}>
-            <span className={styles['text35']}>
-              <span>5000 Ksh</span>
-            </span>
-          </div>
-          <div className={styles['group5']}>
-            <span className={styles['text37']}>
-              <span>10000 Ksh</span>
-            </span>
-          </div>
-          <div className={styles['group6']}>
-            <span className={styles['text39']}>
-              <span>50000 Ksh</span>
-            </span>
-          </div>
-          <div className={styles['custom-amount']}>
-            <span className={styles['text41']}>
-              <span>Custom Amount</span>
-            </span>
-          </div>
+          <form>
+  <div className={styles['group1']}>
+    <span className={styles['text29']}>
+      <input type="radio" name="amount" value="500" />
+      <span>500 Ksh</span>
+    </span>
+  </div>
+  <div className={styles['group2']}>
+    <span className={styles['text31']}>
+      <input type="radio" name="amount" value="1000" />
+      <span>1000 Ksh</span>
+    </span>
+  </div>
+  <div className={styles['group3']}>
+    <span className={styles['text33']}>
+      <input type="radio" name="amount" value="2000" />
+      <span>2000 Ksh</span>
+    </span>
+  </div>
+  <div className={styles['group4']}>
+    <span className={styles['text35']}>
+      <input type="radio" name="amount" value="5000" />
+      <span>5000 Ksh</span>
+    </span>
+  </div>
+  <div className={styles['group5']}>
+    <span className={styles['text37']}>
+      <input type="radio" name="amount" value="10000" />
+      <span>10000 Ksh</span>
+    </span>
+  </div>
+  <div className={styles['group6']}>
+    <span className={styles['text39']}>
+      <input type="radio" name="amount" value="50000" />
+      <span>50000 Ksh</span>
+    </span>
+  </div>
+  <div className={styles['custom-amount']}>
+    <span className={styles['text41']}>
+    <input type="text" name="customAmount" className={styles['custom-amount-input']} />
+    </span>
+  </div>
+</form>
+
           <div className={styles['donate-now1']}>
             <span className={styles['text43']}>
               <span>DONATE NOW</span>

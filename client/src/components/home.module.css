@@ -188,13 +188,14 @@
   border-color: transparent;
   border-style: none;
   border-width: 0;
+  border-radius: 10px; /* Update the value to adjust the curvature */
   margin-right: 0;
-  border-radius: 0px 0px 0px 0px;
   margin-bottom: 0;
   flex-direction: row;
   justify-content: flex-start;
   background-color: rgba(26, 143, 227, 1);
 }
+
 .text12 {
   top: 8px;
   left: 31px;
@@ -288,7 +289,7 @@
   text-decoration: none;
 }
 .donate-now {
-  top: 779px;
+  top: 879px;
   left: 101px;
   width: 150px;
   height: 42px;
@@ -303,12 +304,13 @@
   border-style: none;
   border-width: 0;
   margin-right: 0;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 10px; /* Update the value to adjust the curvature */
   margin-bottom: 0;
   flex-direction: row;
   justify-content: flex-start;
   background-color: rgba(26, 143, 227, 1);
 }
+
 .text21 {
   top: 10px;
   left: 27px;
@@ -689,11 +691,12 @@
   border-color: transparent;
   border-style: none;
   border-width: 0;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 10px; /* Update the value to adjust the curvature */
   flex-direction: row;
   justify-content: flex-start;
   background-color: rgba(26, 143, 227, 1);
 }
+
 .text43 {
   top: 13px;
   left: 76px;
@@ -718,3 +721,16 @@
   position: absolute;
   border-color: transparent;
 }
+.custom-amount-input {
+  border: 1px solid #000;
+  border-radius: 5px; 
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f8f8f8; 
+  color: #333; 
+  font-size: 16px; 
+  font-weight: bold; 
+  margin-top: 10px; 
+}
+

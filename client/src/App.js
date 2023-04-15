@@ -10,10 +10,11 @@ export default function App() {
        <BrowserRouter>
 {/* added routes */}
       <Routes>
-        <Route path="/" element={< Signup />} />
+        <Route path="/" element={< Home />} />
         <Route path="/home" element={<Home />}/>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup/>}/>
+        
       </Routes>
       </BrowserRouter>
     </div>
