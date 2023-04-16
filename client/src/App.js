@@ -1,20 +1,15 @@
-import './App.css';
-import NavBar from './components/Navbar/Navbar';
-import About from './components/About/About';
-import Footer from './components/Footer/Footer';
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-
+import About from './components/About';
 export default function App() {
   return (
-    <div className='App'>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/navbar" element={<NavBar />} />
-          <Route path="/footer" element={<Footer />} />
-        </Routes>
+    <div className="App">
+       <BrowserRouter>
+{/* added routes */}
+      <Routes>
+        <Route path="/" element={< About />} />
+        
+      </Routes>
       </BrowserRouter>
     </div>
   );
