@@ -1060,3 +1060,24 @@ Processing by AreasController#index as */*
 Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 2.4ms | Allocations: 800)
 
 
+Started GET "/donations" for 127.0.0.1 at 2023-04-17 23:10:29 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/donations"):
+  
+Started GET "/donation" for 127.0.0.1 at 2023-04-17 23:10:39 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/donation"):
+  
+Started GET "/donation" for 127.0.0.1 at 2023-04-17 23:11:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/donation"):
+  
+Started GET "/donations" for 127.0.0.1 at 2023-04-17 23:11:15 +0300
+Processing by DonationsController#index as */*
+  Parameters: {"comment"=>"This area needs more awareness campaigns to prevent the spread of the disease.", "rating"=>1, "user_id"=>1, "area_id"=>1, "donation"=>{"user_id"=>1, "area_id"=>1}}
+  [1m[36mArea Load (0.5ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/donations_controller.rb:40:in `set_area'
+Completed 422 Unprocessable Entity in 14ms (Views: 0.3ms | ActiveRecord: 5.7ms | Allocations: 8392)
+
+

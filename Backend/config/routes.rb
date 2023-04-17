@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   resources :communicable_diseases, only: [:index, :show, :create, :update, :destroy]
   resources :reviews, only: [:index, :show, :create, :update, :destroy]
   resources :areas, only: [:index, :show, :create, :update]
+  resources :donations, only: [:index, :show, :create, :update]
 end
