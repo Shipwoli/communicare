@@ -1,0 +1,2 @@
+class CommunicableDisease < ApplicationRecord
+end
