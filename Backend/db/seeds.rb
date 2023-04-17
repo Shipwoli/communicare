@@ -59,14 +59,14 @@ area2 = Area.create!(
 
 # Create reviews
 Review.create!(
-  content: 'I think more resources should be allocated to combating Ebola in Liberia.',
+  comment: 'I think more resources should be allocated to combating Ebola in Liberia.',
   rating: 4,
   user: User.first,
   area: area1
 )
 
 Review.create!(
-  content: 'The response to the COVID-19 pandemic in New York City could have been better.',
+  comment: 'The response to the COVID-19 pandemic in New York City could have been better.',
   rating: 3,
   user: User.first,
   area: area2

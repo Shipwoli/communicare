@@ -45,7 +45,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_17_075954) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.text "content"
+    t.text "comment"
     t.integer "rating"
     t.bigint "user_id", null: false
     t.bigint "area_id", null: false
