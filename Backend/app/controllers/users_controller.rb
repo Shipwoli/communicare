@@ -10,10 +10,15 @@ class UsersController < ApplicationController
         app_response(message: 'Something went wrong during registration', status: :unprocessable_entity, data: user.errors)
       end
     end
-    # def show
-    #     user = User.find_by(id: session[:user_id])
-    #     render json: user
-    # end
+    def show
+      token = request.headers['Authorization'].split(' ').last
+      decoded_token = JWT.decode(token, Rails.application.secrets.secret_key_base, true, algorithm: 'HS256')
+      user_id = decoded_token[0]['user_id']
+      user = User.find(user_id)
+      render json: user
+    rescue JWT::DecodeError
+      render json: { errors: ['Invalid token'] }, status: :unauthorized
+    end
   
     def login
       user = User.find_by(email: user_params[:email])
