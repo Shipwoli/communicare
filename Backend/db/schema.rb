@@ -16,9 +16,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_17_075954) do
 
   create_table "areas", force: :cascade do |t|
     t.string "name"
-    t.text "description"
-    t.decimal "latitude"
-    t.decimal "longitude"
+    t.string "location"
+    t.integer "reported_cases"
     t.bigint "communicable_disease_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
