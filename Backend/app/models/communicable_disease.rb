@@ -1,2 +1,0 @@
-class CommunicableDisease < ApplicationRecord
-end
