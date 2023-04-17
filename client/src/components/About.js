@@ -1,6 +1,29 @@
 import React from 'react'
 
 import styles from './about.module.css'
+import Vector from './Vector.png'
+import Vector2 from './Vector 2.png'
+import vector03 from './Vector 3.png'
+import image1 from    './images.jpeg'     
+import image2 from './images2.jpeg'     
+import image3 from './images3.jpeg'   
+import image4 from './images4.png'   
+import image5 from './images5.jpeg'  
+import image6 from './Rectangle 3.png'   
+import image7 from './image7.png'   
+import image8 from './image8.png'   
+import image9 from './image9.png'     
+import Line2 from './Line 2.png'        
+import line1 from './Line 1.png'     
+import group1 from './Group1.svg'
+import group2 from './Group2.svg'
+import Group3 from './Group3.svg'
+import sx1 from './1.png'
+import sx2 from './2.png'
+import sx3 from './3.png'
+
+
+
 
 const About = (props) => {
   return (
@@ -8,7 +31,7 @@ const About = (props) => {
       <div className={styles['about']}>
         <img
           alt="Rectangle31065"
-          src="/playground_assets/rectangle31065-iyuh-1600w.png"
+          src={image6}
           className={styles['rectangle3']}
         />
         <div className={styles['menu']}>
@@ -31,7 +54,7 @@ const About = (props) => {
           </div>
           <img
             alt="Rectangle11074"
-            src="/playground_assets/rectangle11074-rcfk-200h.png"
+            src={image7}
             className={styles['rectangle1']}
           />
         </div>
@@ -65,7 +88,7 @@ const About = (props) => {
         <div className={styles['group7']}>
           <img
             alt="Vector1084"
-            src="/playground_assets/vector1084-yr9.svg"
+            src={Vector2}
             className={styles['vector']}
           />
           <span className={styles['text19']}>
@@ -107,7 +130,7 @@ const About = (props) => {
           </div>
           <img
             alt="fluentpersonheart20regular1087"
-            src="/playground_assets/fluentpersonheart20regular1087-lkap.svg"
+            src={Vector}
             className={styles['fluentpersonheart20regular']}
           />
         </div>
@@ -129,7 +152,7 @@ const About = (props) => {
           </div>
           <img
             alt="Vector1086"
-            src="/playground_assets/vector1086-uthk.svg"
+            src={vector03}
             className={styles['vector01']}
           />
         </div>
@@ -148,12 +171,12 @@ const About = (props) => {
         <div className={styles['maskgroup']}>
           <img
             alt="Ellipse91012"
-            src="/playground_assets/ellipse91012-kafa.svg"
+            src={image7}
             className={styles['ellipse9']}
           />
           <img
             alt="image11011"
-            src="/playground_assets/image11011-d4c-900w.png"
+            src={image9}
             className={styles['image1']}
           />
         </div>
@@ -161,36 +184,36 @@ const About = (props) => {
           <div className={styles['group10']}>
             <img
               alt="Ellipse111012"
-              src="/playground_assets/ellipse111012-a7zh-200h.png"
+              src={sx1}
               className={styles['ellipse11']}
             />
             <img
               alt="Vector1013"
-              src="/playground_assets/vector1013-5y9d.svg"
+              src={Group3}
               className={styles['vector02']}
             />
           </div>
           <div className={styles['group11']}>
             <img
               alt="Ellipse121012"
-              src="/playground_assets/ellipse121012-nr2l-200h.png"
+              src={sx2}
               className={styles['ellipse12']}
             />
             <img
               alt="Vector1013"
-              src="/playground_assets/vector1013-i9it.svg"
+              src={group2}
               className={styles['vector03']}
             />
           </div>
           <div className={styles['group12']}>
             <img
               alt="Ellipse131012"
-              src="/playground_assets/ellipse131012-fezj-200h.png"
+              src={sx3}
               className={styles['ellipse13']}
             />
             <img
               alt="Vector1013"
-              src="/playground_assets/vector1013-7pq.svg"
+              src={group1}
               className={styles['vector04']}
             />
           </div>
@@ -233,12 +256,12 @@ const About = (props) => {
           </div>
           <img
             alt="Line11014"
-            src="/playground_assets/line11014-tzw.svg"
+            src={line1}
             className={styles['line1']}
           />
           <img
             alt="Line21014"
-            src="/playground_assets/line21014-smyf.svg"
+            src={Line2}
             className={styles['line2']}
           />
         </div>
@@ -275,18 +298,18 @@ const About = (props) => {
         <div className={styles['person1']}>
           <img
             alt="image4921614"
-            src="/playground_assets/image4921614-j0n-400w.png"
+            src={image1}
             className={styles['image492']}
           />
         </div>
         <img
           alt="image5014389"
-          src="/playground_assets/image5014389-m7mh-300w.png"
+          src={image3}
           className={styles['image501']}
         />
         <img
           alt="image5024389"
-          src="/playground_assets/image5024389-y5yc-300h.png"
+          src={image2}
           className={styles['image502']}
         />
         <span className={styles['text64']}>
@@ -310,7 +333,7 @@ const About = (props) => {
         <div className={styles['group2171']}>
           <img
             alt="Vector1615"
-            src="/playground_assets/vector1615-mqze.svg"
+            src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.icon-icons.com%2Ficons2%2F3019%2FPNG%2F512%2Fperson_worker_human_man_user_icon_188659.png&tbnid=RX58xnN74nCpsM&vet=12ahUKEwj1q_2ckLD-AhVwvicCHXX9Ch0QMyhTegUIARClAQ..i&imgrefurl=https%3A%2F%2Ficon-icons.com%2Ficon%2Fperson-worker-human-man-user%2F188659&docid=bboO_4ytlsp4IM&w=512&h=512&q=Human%20PNG%20icon&ved=2ahUKEwj1q_2ckLD-AhVwvicCHXX9Ch0QMyhTegUIARClAQ"
             className={styles['vector05']}
           />
           <img
@@ -396,7 +419,7 @@ const About = (props) => {
         </div>
         <img
           alt="image5034381"
-          src="/playground_assets/image5034381-mpob-300w.png"
+          src={image4}
           className={styles['image503']}
         />
         <span className={styles['text76']}>
@@ -436,7 +459,7 @@ const About = (props) => {
         </div>
         <img
           alt="image5044381"
-          src="/playground_assets/image5044381-5k0s-300w.png"
+          src={image5}
           className={styles['image504']}
         />
         <span className={styles['text80']}>
@@ -475,8 +498,8 @@ const About = (props) => {
           </div>
         </div>
         <img
-          alt="SE45259logoorigremovebgpreview14281"
-          src="/playground_assets/se45259logoorigremovebgpreview14281-mp8b-200h.png"
+          src="https://content.energage.com/company-images/SE45259/SE45259_logo_orig.png"
+          alt='logo'
           className={styles['se45259logoorigremovebgpreview1']}
         />
       </div>
