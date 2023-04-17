@@ -1041,3 +1041,22 @@ Processing by ReviewsController#create as */*
 Completed 422 Unprocessable Entity in 11ms (Views: 1.8ms | ActiveRecord: 1.1ms | Allocations: 4216)
 
 
+Started GET "/rarea" for 127.0.0.1 at 2023-04-17 23:01:25 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/rarea"):
+  
+Started GET "/area" for 127.0.0.1 at 2023-04-17 23:01:47 +0300
+  
+ActionController::RoutingError (uninitialized constant AreaController
+Did you mean?  AreasController
+               UsersController):
+  
+Started GET "/areas" for 127.0.0.1 at 2023-04-17 23:03:10 +0300
+Processing by AreasController#index as */*
+  Parameters: {"comment"=>"This area needs more awareness campaigns to prevent the spread of the disease.", "rating"=>1, "user_id"=>1, "area_id"=>1, "area"=>{}}
+  [1m[36mArea Load (0.7ms)[0m  [1m[34mSELECT "areas".* FROM "areas"[0m
+  ↳ app/controllers/areas_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 2.4ms | Allocations: 800)
+
+
