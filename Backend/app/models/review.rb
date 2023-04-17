@@ -1,4 +1,5 @@
 class Review < ApplicationRecord
-  belongs_to :user_id
-  belongs_to :area_id
+  belongs_to :user
+  belongs_to :area
+  belongs_to :communicable_disease
 end

@@ -71,3 +71,422 @@ FOREIGN KEY ("area_id")
   [1m[36mTRANSACTION (61.9ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.7ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 08:43:15.744362"], ["updated_at", "2023-04-17 08:43:15.744362"]]
+  [1m[36mTRANSACTION (1075.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 08:43:16.825229"], ["updated_at", "2023-04-17 08:43:16.825229"]]
+  [1m[36mTRANSACTION (31.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 08:43:16.859080"], ["updated_at", "2023-04-17 08:43:16.859080"]]
+  [1m[36mTRANSACTION (13.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.4ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 08:43:53.603073"], ["updated_at", "2023-04-17 08:43:53.603073"]]
+  [1m[36mTRANSACTION (835.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 08:43:54.442217"], ["updated_at", "2023-04-17 08:43:54.442217"]]
+  [1m[36mTRANSACTION (14.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 08:43:54.459349"], ["updated_at", "2023-04-17 08:43:54.459349"]]
+  [1m[36mTRANSACTION (14.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.4ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 08:45:09.653505"], ["updated_at", "2023-04-17 08:45:09.653505"]]
+  [1m[36mTRANSACTION (24.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 08:45:09.682431"], ["updated_at", "2023-04-17 08:45:09.682431"]]
+  [1m[36mTRANSACTION (26.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 08:45:09.710863"], ["updated_at", "2023-04-17 08:45:09.710863"]]
+  [1m[36mTRANSACTION (14.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:04:10.832634"], ["updated_at", "2023-04-17 09:04:10.832634"]]
+  [1m[36mTRANSACTION (25.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:04:10.864832"], ["updated_at", "2023-04-17 09:04:10.864832"]]
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:04:10.882183"], ["updated_at", "2023-04-17 09:04:10.882183"]]
+  [1m[36mTRANSACTION (13.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:07:12.728998"], ["updated_at", "2023-04-17 09:07:12.728998"]]
+  [1m[36mTRANSACTION (44.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:07:12.779626"], ["updated_at", "2023-04-17 09:07:12.779626"]]
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:07:12.795923"], ["updated_at", "2023-04-17 09:07:12.795923"]]
+  [1m[36mTRANSACTION (14.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:07:52.875157"], ["updated_at", "2023-04-17 09:07:52.875157"]]
+  [1m[36mTRANSACTION (109.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:07:52.991196"], ["updated_at", "2023-04-17 09:07:52.991196"]]
+  [1m[36mTRANSACTION (13.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:07:53.008346"], ["updated_at", "2023-04-17 09:07:53.008346"]]
+  [1m[36mTRANSACTION (13.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:09:50.747092"], ["updated_at", "2023-04-17 09:09:50.747092"]]
+  [1m[36mTRANSACTION (456.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:09:51.209001"], ["updated_at", "2023-04-17 09:09:51.209001"]]
+  [1m[36mTRANSACTION (13.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:09:51.225209"], ["updated_at", "2023-04-17 09:09:51.225209"]]
+  [1m[36mTRANSACTION (54.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:18:46.642176"], ["updated_at", "2023-04-17 09:18:46.642176"]]
+  [1m[36mTRANSACTION (18.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:18:46.666723"], ["updated_at", "2023-04-17 09:18:46.666723"]]
+  [1m[36mTRANSACTION (30.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:18:46.700437"], ["updated_at", "2023-04-17 09:18:46.700437"]]
+  [1m[36mTRANSACTION (14.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "A respiratory illness caused by the SARS-CoV-2 virus."], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:18:46.718035"], ["updated_at", "2023-04-17 09:18:46.718035"]]
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mArea Create (0.5ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Central Park"], ["description", "A public park at the center of Manhattan in New York City."], ["latitude", "40.7829"], ["longitude", "-73.9654"], ["communicable_disease_id", 25], ["created_at", "2023-04-17 09:18:46.789357"], ["updated_at", "2023-04-17 09:18:46.789357"]]
+  [1m[36mTRANSACTION (31.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mArea Create (0.3ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Golden Gate Park"], ["description", "A large urban park consisting of 1,017 acres of public grounds in San Francisco, California."], ["latitude", "37.7667"], ["longitude", "-122.4786"], ["communicable_disease_id", 25], ["created_at", "2023-04-17 09:18:46.825686"], ["updated_at", "2023-04-17 09:18:46.825686"]]
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:19:41.640068"], ["updated_at", "2023-04-17 09:19:41.640068"]]
+  [1m[36mTRANSACTION (22.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:19:41.669644"], ["updated_at", "2023-04-17 09:19:41.669644"]]
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:19:41.686604"], ["updated_at", "2023-04-17 09:19:41.686604"]]
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "A respiratory illness caused by the SARS-CoV-2 virus."], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:19:41.703140"], ["updated_at", "2023-04-17 09:19:41.703140"]]
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.5ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:20:01.453371"], ["updated_at", "2023-04-17 09:20:01.453371"]]
+  [1m[36mTRANSACTION (22.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:20:01.481684"], ["updated_at", "2023-04-17 09:20:01.481684"]]
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:20:01.497599"], ["updated_at", "2023-04-17 09:20:01.497599"]]
+  [1m[36mTRANSACTION (14.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "A respiratory illness caused by the SARS-CoV-2 virus."], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:20:01.514968"], ["updated_at", "2023-04-17 09:20:01.514968"]]
+  [1m[36mTRANSACTION (13.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.7ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:20:43.732675"], ["updated_at", "2023-04-17 09:20:43.732675"]]
+  [1m[36mTRANSACTION (124.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:20:43.863967"], ["updated_at", "2023-04-17 09:20:43.863967"]]
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:20:43.880468"], ["updated_at", "2023-04-17 09:20:43.880468"]]
+  [1m[36mTRANSACTION (102.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "A respiratory illness caused by the SARS-CoV-2 virus."], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:20:43.986217"], ["updated_at", "2023-04-17 09:20:43.986217"]]
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mArea Create (0.6ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Central Park"], ["description", "A public park at the center of Manhattan in New York City."], ["latitude", "40.7829"], ["longitude", "-73.9654"], ["communicable_disease_id", 37], ["created_at", "2023-04-17 09:20:44.030543"], ["updated_at", "2023-04-17 09:20:44.030543"]]
+  [1m[36mTRANSACTION (18.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mArea Create (0.3ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Golden Gate Park"], ["description", "A large urban park consisting of 1,017 acres of public grounds in San Francisco, California."], ["latitude", "37.7667"], ["longitude", "-122.4786"], ["communicable_disease_id", 37], ["created_at", "2023-04-17 09:20:44.055518"], ["updated_at", "2023-04-17 09:20:44.055518"]]
+  [1m[36mTRANSACTION (11.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:22:18.946546"], ["updated_at", "2023-04-17 09:22:18.946546"]]
+  [1m[36mTRANSACTION (126.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:22:19.079181"], ["updated_at", "2023-04-17 09:22:19.079181"]]
+  [1m[36mTRANSACTION (14.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:22:19.096477"], ["updated_at", "2023-04-17 09:22:19.096477"]]
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "A respiratory illness caused by the SARS-CoV-2 virus."], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:22:19.113018"], ["updated_at", "2023-04-17 09:22:19.113018"]]
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mArea Create (0.7ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Central Park"], ["description", "A public park at the center of Manhattan in New York City."], ["latitude", "40.7829"], ["longitude", "-73.9654"], ["communicable_disease_id", 41], ["created_at", "2023-04-17 09:22:19.158647"], ["updated_at", "2023-04-17 09:22:19.158647"]]
+  [1m[36mTRANSACTION (17.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mArea Create (0.4ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Golden Gate Park"], ["description", "A large urban park consisting of 1,017 acres of public grounds in San Francisco, California."], ["latitude", "37.7667"], ["longitude", "-122.4786"], ["communicable_disease_id", 41], ["created_at", "2023-04-17 09:22:19.182322"], ["updated_at", "2023-04-17 09:22:19.182322"]]
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.5ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:22:29.936305"], ["updated_at", "2023-04-17 09:22:29.936305"]]
+  [1m[36mTRANSACTION (34.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:22:29.976715"], ["updated_at", "2023-04-17 09:22:29.976715"]]
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.4ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:22:29.994025"], ["updated_at", "2023-04-17 09:22:29.994025"]]
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "A respiratory illness caused by the SARS-CoV-2 virus."], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:22:30.010325"], ["updated_at", "2023-04-17 09:22:30.010325"]]
+  [1m[36mTRANSACTION (13.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mArea Create (0.6ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Central Park"], ["description", "A public park at the center of Manhattan in New York City."], ["latitude", "40.7829"], ["longitude", "-73.9654"], ["communicable_disease_id", 45], ["created_at", "2023-04-17 09:22:30.055699"], ["updated_at", "2023-04-17 09:22:30.055699"]]
+  [1m[36mTRANSACTION (18.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[36mArea Create (0.3ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Golden Gate Park"], ["description", "A large urban park consisting of 1,017 acres of public grounds in San Francisco, California."], ["latitude", "37.7667"], ["longitude", "-122.4786"], ["communicable_disease_id", 45], ["created_at", "2023-04-17 09:22:30.080745"], ["updated_at", "2023-04-17 09:22:30.080745"]]
+  [1m[36mTRANSACTION (10.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:22:51.816598"], ["updated_at", "2023-04-17 09:22:51.816598"]]
+  [1m[36mTRANSACTION (843.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:22:52.665393"], ["updated_at", "2023-04-17 09:22:52.665393"]]
+  [1m[36mTRANSACTION (43.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:22:52.711595"], ["updated_at", "2023-04-17 09:22:52.711595"]]
+  [1m[36mTRANSACTION (30.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "A respiratory illness caused by the SARS-CoV-2 virus."], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:22:52.745200"], ["updated_at", "2023-04-17 09:22:52.745200"]]
+  [1m[36mTRANSACTION (41.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[36mArea Create (0.5ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Central Park"], ["description", "A public park at the center of Manhattan in New York City."], ["latitude", "40.7829"], ["longitude", "-73.9654"], ["communicable_disease_id", 49], ["created_at", "2023-04-17 09:22:52.812701"], ["updated_at", "2023-04-17 09:22:52.812701"]]
+  [1m[36mTRANSACTION (23.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[36mArea Create (0.2ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Golden Gate Park"], ["description", "A large urban park consisting of 1,017 acres of public grounds in San Francisco, California."], ["latitude", "37.7667"], ["longitude", "-122.4786"], ["communicable_disease_id", 49], ["created_at", "2023-04-17 09:22:52.840958"], ["updated_at", "2023-04-17 09:22:52.840958"]]
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:23:48.998582"], ["updated_at", "2023-04-17 09:23:48.998582"]]
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:23:49.016812"], ["updated_at", "2023-04-17 09:23:49.016812"]]
+  [1m[36mTRANSACTION (11.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:23:49.032648"], ["updated_at", "2023-04-17 09:23:49.032648"]]
+  [1m[36mTRANSACTION (14.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "A respiratory illness caused by the SARS-CoV-2 virus."], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:23:49.050116"], ["updated_at", "2023-04-17 09:23:49.050116"]]
+  [1m[36mTRANSACTION (13.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  [1m[36mArea Create (0.7ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Central Park"], ["description", "A public park at the center of Manhattan in New York City."], ["latitude", "40.7829"], ["longitude", "-73.9654"], ["communicable_disease_id", 53], ["created_at", "2023-04-17 09:23:49.097767"], ["updated_at", "2023-04-17 09:23:49.097767"]]
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  [1m[36mArea Create (0.3ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Golden Gate Park"], ["description", "A large urban park consisting of 1,017 acres of public grounds in San Francisco, California."], ["latitude", "37.7667"], ["longitude", "-122.4786"], ["communicable_disease_id", 53], ["created_at", "2023-04-17 09:23:49.118616"], ["updated_at", "2023-04-17 09:23:49.118616"]]
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:24:02.065059"], ["updated_at", "2023-04-17 09:24:02.065059"]]
+  [1m[36mTRANSACTION (29.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:24:02.100463"], ["updated_at", "2023-04-17 09:24:02.100463"]]
+  [1m[36mTRANSACTION (30.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:24:02.134198"], ["updated_at", "2023-04-17 09:24:02.134198"]]
+  [1m[36mTRANSACTION (30.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "A respiratory illness caused by the SARS-CoV-2 virus."], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:24:02.167907"], ["updated_at", "2023-04-17 09:24:02.167907"]]
+  [1m[36mTRANSACTION (29.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  [1m[36mArea Create (0.5ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Central Park"], ["description", "A public park at the center of Manhattan in New York City."], ["latitude", "40.7829"], ["longitude", "-73.9654"], ["communicable_disease_id", 57], ["created_at", "2023-04-17 09:24:02.228533"], ["updated_at", "2023-04-17 09:24:02.228533"]]
+  [1m[36mTRANSACTION (20.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  [1m[36mArea Create (0.4ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Golden Gate Park"], ["description", "A large urban park consisting of 1,017 acres of public grounds in San Francisco, California."], ["latitude", "37.7667"], ["longitude", "-122.4786"], ["communicable_disease_id", 57], ["created_at", "2023-04-17 09:24:02.255196"], ["updated_at", "2023-04-17 09:24:02.255196"]]
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "John"], ["last_name", "Doe"], ["email", "john@example.com"], ["password_digest", "[FILTERED]"], ["admin", nil], ["created_at", "2023-04-17 09:24:02.285201"], ["updated_at", "2023-04-17 09:24:02.285201"]]
+  [1m[36mTRANSACTION (16.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.5ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:24:22.723182"], ["updated_at", "2023-04-17 09:24:22.723182"]]
+  [1m[36mTRANSACTION (177.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:24:22.905760"], ["updated_at", "2023-04-17 09:24:22.905760"]]
+  [1m[36mTRANSACTION (101.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:24:23.010497"], ["updated_at", "2023-04-17 09:24:23.010497"]]
+  [1m[36mTRANSACTION (13.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "A respiratory illness caused by the SARS-CoV-2 virus."], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:24:23.026988"], ["updated_at", "2023-04-17 09:24:23.026988"]]
+  [1m[36mTRANSACTION (14.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mArea Create (0.7ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Central Park"], ["description", "A public park at the center of Manhattan in New York City."], ["latitude", "40.7829"], ["longitude", "-73.9654"], ["communicable_disease_id", 61], ["created_at", "2023-04-17 09:24:23.072489"], ["updated_at", "2023-04-17 09:24:23.072489"]]
+  [1m[36mTRANSACTION (17.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mArea Create (0.3ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Golden Gate Park"], ["description", "A large urban park consisting of 1,017 acres of public grounds in San Francisco, California."], ["latitude", "37.7667"], ["longitude", "-122.4786"], ["communicable_disease_id", 61], ["created_at", "2023-04-17 09:24:23.096364"], ["updated_at", "2023-04-17 09:24:23.096364"]]
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "John"], ["last_name", "Doe"], ["email", "john@example.com"], ["password_digest", "[FILTERED]"], ["admin", nil], ["created_at", "2023-04-17 09:24:23.123526"], ["updated_at", "2023-04-17 09:24:23.123526"]]
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Jane"], ["last_name", "Smith"], ["email", "jane@example.com"], ["password_digest", "[FILTERED]"], ["admin", nil], ["created_at", "2023-04-17 09:24:23.138643"], ["updated_at", "2023-04-17 09:24:23.138643"]]
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.5ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:25:58.080013"], ["updated_at", "2023-04-17 09:25:58.080013"]]
+  [1m[36mTRANSACTION (21.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:25:58.107288"], ["updated_at", "2023-04-17 09:25:58.107288"]]
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:25:58.123305"], ["updated_at", "2023-04-17 09:25:58.123305"]]
+  [1m[36mTRANSACTION (13.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "A respiratory illness caused by the SARS-CoV-2 virus."], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:25:58.140626"], ["updated_at", "2023-04-17 09:25:58.140626"]]
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.4ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mArea Create (0.6ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Central Park"], ["description", "A public park at the center of Manhattan in New York City."], ["latitude", "40.7829"], ["longitude", "-73.9654"], ["communicable_disease_id", 65], ["created_at", "2023-04-17 09:25:58.190741"], ["updated_at", "2023-04-17 09:25:58.190741"]]
+  [1m[36mTRANSACTION (18.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mArea Create (0.4ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Golden Gate Park"], ["description", "A large urban park consisting of 1,017 acres of public grounds in San Francisco, California."], ["latitude", "37.7667"], ["longitude", "-122.4786"], ["communicable_disease_id", 65], ["created_at", "2023-04-17 09:25:58.215710"], ["updated_at", "2023-04-17 09:25:58.215710"]]
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "John"], ["last_name", "Doe"], ["email", "john@example.com"], ["password_digest", "[FILTERED]"], ["admin", nil], ["created_at", "2023-04-17 09:25:58.247612"], ["updated_at", "2023-04-17 09:25:58.247612"]]
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Jane"], ["last_name", "Smith"], ["email", "jane@example.com"], ["password_digest", "[FILTERED]"], ["admin", nil], ["created_at", "2023-04-17 09:25:58.268808"], ["updated_at", "2023-04-17 09:25:58.268808"]]
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.5ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:28:10.003317"], ["updated_at", "2023-04-17 09:28:10.003317"]]
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:28:10.024451"], ["updated_at", "2023-04-17 09:28:10.024451"]]
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:28:10.040322"], ["updated_at", "2023-04-17 09:28:10.040322"]]
+  [1m[36mTRANSACTION (32.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "A respiratory illness caused by the SARS-CoV-2 virus."], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:28:10.075862"], ["updated_at", "2023-04-17 09:28:10.075862"]]
+  [1m[36mTRANSACTION (30.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mArea Create (0.6ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Central Park"], ["description", "A public park at the center of Manhattan in New York City."], ["latitude", "40.7829"], ["longitude", "-73.9654"], ["communicable_disease_id", 69], ["created_at", "2023-04-17 09:28:10.139770"], ["updated_at", "2023-04-17 09:28:10.139770"]]
+  [1m[36mTRANSACTION (49.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mArea Create (0.4ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Golden Gate Park"], ["description", "A large urban park consisting of 1,017 acres of public grounds in San Francisco, California."], ["latitude", "37.7667"], ["longitude", "-122.4786"], ["communicable_disease_id", 69], ["created_at", "2023-04-17 09:28:10.194614"], ["updated_at", "2023-04-17 09:28:10.194614"]]
+  [1m[36mTRANSACTION (16.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "John"], ["last_name", "Doe"], ["email", "john@example.com"], ["password_digest", "[FILTERED]"], ["admin", nil], ["created_at", "2023-04-17 09:28:10.229153"], ["updated_at", "2023-04-17 09:28:10.229153"]]
+  [1m[36mTRANSACTION (18.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Jane"], ["last_name", "Smith"], ["email", "jane@example.com"], ["password_digest", "[FILTERED]"], ["admin", nil], ["created_at", "2023-04-17 09:28:10.253501"], ["updated_at", "2023-04-17 09:28:10.253501"]]
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mArea Load (0.3ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mArea Load (0.3ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A mosquito-borne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:28:28.581567"], ["updated_at", "2023-04-17 09:28:28.581567"]]
+  [1m[36mTRANSACTION (156.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cholera"], ["description", "A waterborne disease"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:28:28.744006"], ["updated_at", "2023-04-17 09:28:28.744006"]]
+  [1m[36mTRANSACTION (123.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "A viral hemorrhagic fever"], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:28:28.870670"], ["updated_at", "2023-04-17 09:28:28.870670"]]
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "A respiratory illness caused by the SARS-CoV-2 virus."], ["symptoms", nil], ["prevention_measures", nil], ["created_at", "2023-04-17 09:28:28.888001"], ["updated_at", "2023-04-17 09:28:28.888001"]]
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.4ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  [1m[36mArea Create (1.1ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Central Park"], ["description", "A public park at the center of Manhattan in New York City."], ["latitude", "40.7829"], ["longitude", "-73.9654"], ["communicable_disease_id", 73], ["created_at", "2023-04-17 09:28:28.934981"], ["updated_at", "2023-04-17 09:28:28.934981"]]
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Load (0.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  [1m[36mArea Create (0.3ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Golden Gate Park"], ["description", "A large urban park consisting of 1,017 acres of public grounds in San Francisco, California."], ["latitude", "37.7667"], ["longitude", "-122.4786"], ["communicable_disease_id", 73], ["created_at", "2023-04-17 09:28:28.957037"], ["updated_at", "2023-04-17 09:28:28.957037"]]
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "John"], ["last_name", "Doe"], ["email", "john@example.com"], ["password_digest", "[FILTERED]"], ["admin", nil], ["created_at", "2023-04-17 09:28:29.000645"], ["updated_at", "2023-04-17 09:28:29.000645"]]
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Jane"], ["last_name", "Smith"], ["email", "jane@example.com"], ["password_digest", "[FILTERED]"], ["admin", nil], ["created_at", "2023-04-17 09:28:29.021824"], ["updated_at", "2023-04-17 09:28:29.021824"]]
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArea Load (0.3ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mArea Load (0.3ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/" for ::1 at 2023-04-17 12:29:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.6ms | Allocations: 932)
+Completed 200 OK in 28ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 7859)
+
+
+Started GET "/users" for ::1 at 2023-04-17 12:29:30 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "Backend_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "Backend_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Admin"], ["last_name", "User"], ["email", "admin@example.com"], ["password_digest", "[FILTERED]"], ["admin", true], ["created_at", "2023-04-17 09:34:34.198416"], ["updated_at", "2023-04-17 09:34:34.198416"]]
+  [1m[36mTRANSACTION (117.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Regular"], ["last_name", "User"], ["email", "user@example.com"], ["password_digest", "[FILTERED]"], ["admin", false], ["created_at", "2023-04-17 09:34:34.320347"], ["updated_at", "2023-04-17 09:34:34.320347"]]
+  [1m[36mTRANSACTION (14.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.4ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ebola"], ["description", "Ebola virus disease (EVD) is a rare but severe and often fatal illness in humans. The virus is transmitted to people from wild animals and spreads in the human population through human-to-human transmission."], ["symptoms", "The symptoms of Ebola include fever, severe headache, muscle pain, weakness, fatigue, diarrhea, vomiting, abdominal (stomach) pain, and unexplained hemorrhage (bleeding or bruising)."], ["prevention_measures", "Prevention measures include avoiding contact with wild animals, washing hands frequently, and practicing good hygiene."], ["created_at", "2023-04-17 09:34:34.349951"], ["updated_at", "2023-04-17 09:34:34.349951"]]
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "COVID-19 is a respiratory illness caused by the SARS-CoV-2 virus. It was first identified in Wuhan, China in December 2019 and has since become a global pandemic."], ["symptoms", "The symptoms of COVID-19 include fever, cough, and shortness of breath. Other symptoms may include fatigue, body aches, headache, loss of taste or smell, sore throat, congestion or runny nose, nausea or vomiting, and diarrhea."], ["prevention_measures", "Prevention measures include wearing a mask, social distancing, washing hands frequently, avoiding crowds, and getting vaccinated when possible."], ["created_at", "2023-04-17 09:34:34.365082"], ["updated_at", "2023-04-17 09:34:34.365082"]]
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (0.6ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Liberia"], ["description", "Liberia is a country in West Africa that was severely affected by the Ebola outbreak in 2014-2015."], ["latitude", "6.4281"], ["longitude", "-9.429500000000001"], ["communicable_disease_id", 74], ["created_at", "2023-04-17 09:34:34.397386"], ["updated_at", "2023-04-17 09:34:34.397386"]]
+  [1m[36mTRANSACTION (19.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (0.4ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "New York City"], ["description", "New York City is a major urban center in the United States that was heavily impacted by the COVID-19 pandemic in 2020."], ["latitude", "40.7128"], ["longitude", "-74.006"], ["communicable_disease_id", 75], ["created_at", "2023-04-17 09:34:34.421025"], ["updated_at", "2023-04-17 09:34:34.421025"]]
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
