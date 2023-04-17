@@ -20,7 +20,7 @@ class ApplicationController < ActionController::API
             },
             exp: Time.now.to_i + (6 * 3600)
         }
-        JWT.encode(payload, ENV['task_train_key'], 'HS256')
+        JWT.encode(payload, ENV['communicare_key'], 'HS256')
     end
 
     # unhash the token

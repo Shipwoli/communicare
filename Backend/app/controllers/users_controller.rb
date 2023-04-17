@@ -10,6 +10,10 @@ class UsersController < ApplicationController
         app_response(message: 'Something went wrong during registration', status: :unprocessable_entity, data: user.errors)
       end
     end
+    # def show
+    #     user = User.find_by(id: session[:user_id])
+    #     render json: user
+    # end
   
     def login
       user = User.find_by(email: user_params[:email])
@@ -34,7 +38,7 @@ class UsersController < ApplicationController
     private 
   
     def user_params
-      params.permit(:first_name, :last_name, :email, :password)
+      params.permit(:first_name, :last_name, :email, :password, :admin)
     end
   end
   
