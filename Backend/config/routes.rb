@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'communicable_diseases/no-test-framework'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -12,4 +13,8 @@ Rails.application.routes.draw do
    # verify auth
    get '/verify', to: 'application#verify_auth'
    get "/me", to: "users#show"
+
+     # Routes for communicable diseases
+  resources :communicable_diseases, only: [:index, :show, :create, :update, :destroy]
+  resources :reviews, only: [:index, :show, :create, :update, :destroy]
 end

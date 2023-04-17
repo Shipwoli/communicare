@@ -886,3 +886,158 @@ Processing by UsersController#show as */*
 Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 692)
 
 
+Started GET "/diseases" for 127.0.0.1 at 2023-04-17 15:58:16 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant DiseasesController):
+  
+Started GET "/diseases" for 127.0.0.1 at 2023-04-17 15:59:00 +0300
+  
+ActionController::RoutingError (uninitialized constant DiseasesController):
+  
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-17 16:02:29 +0300
+Processing by CommunicableDiseasesController#index as */*
+  Parameters: {"email"=>"ingosi@gmail.com", "password"=>"[FILTERED]", "communicable_disease"=>{}}
+Completed 422 Unprocessable Entity in 28ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 2156)
+
+
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-17 19:24:18 +0300
+Processing by CommunicableDiseasesController#index as */*
+  Parameters: {"email"=>"ingosi@gmail.com", "password"=>"[FILTERED]", "communicable_disease"=>{}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | Allocations: 2130)
+
+
+Started GET "/diseases" for 127.0.0.1 at 2023-04-17 19:25:18 +0300
+  
+ActionController::RoutingError (uninitialized constant DiseasesController):
+  
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-17 19:25:56 +0300
+Processing by CommunicableDiseasesController#index as */*
+  Parameters: {"email"=>"ingosi@gmail.com", "password"=>"[FILTERED]", "communicable_disease"=>{}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.6ms | ActiveRecord: 3.8ms | Allocations: 2101)
+
+
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-17 19:26:13 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/communicable_diseases"):
+  
+Started GET "/communicable_disease" for 127.0.0.1 at 2023-04-17 19:26:18 +0300
+  
+ActionController::RoutingError (uninitialized constant CommunicableDiseaseController
+Did you mean?  CommunicableDiseasesController
+               CommunicableDiseasesHelper):
+  
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-17 19:30:56 +0300
+Processing by CommunicableDiseasesController#index as */*
+  Parameters: {"email"=>"ingosi@gmail.com", "password"=>"[FILTERED]", "communicable_disease"=>{}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 2103)
+
+
+Started GET "/reviews" for 127.0.0.1 at 2023-04-17 22:46:00 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReviewsController#index as */*
+  Parameters: {"name"=>"chilly source", "description"=>"bbdbddbbb", "user_id"=>1, "review"=>{"user_id"=>1}}
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 4.3ms | Allocations: 789)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2023-04-17 22:50:10 +0300
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"khalwale@gmail.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007ff518e1b080>, params: {"email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"email"=>"khalwale@gmail.com"}} }[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "khalwale@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007ff518e1b080>, params: {"email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"email"=>"khalwale@gmail.com"}} }[0m
+Completed 200 OK in 313ms (Views: 0.3ms | ActiveRecord: 4.3ms | Allocations: 18829)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-17 22:52:10 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"review"=>{"content"=>"This area needs more awareness campaigns to prevent the spread of the disease.", "user_id"=>1, "area_id"=>1}}
+[31mUnpermitted parameter: :content. Context: { controller: ReviewsController, action: create, request: #<ActionDispatch::Request:0x00007ff518a2da90>, params: {"review"=>{"content"=>"This area needs more awareness campaigns to prevent the spread of the disease.", "user_id"=>1, "area_id"=>1}, "controller"=>"reviews", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mArea Load (14.8ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 211ms (Views: 27.0ms | ActiveRecord: 20.8ms | Allocations: 35210)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-17 22:52:31 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"review"=>{"comment"=>"This area needs more awareness campaigns to prevent the spread of the disease.", "user_id"=>1, "area_id"=>1}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mArea Load (1.3ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 12ms (Views: 2.5ms | ActiveRecord: 1.9ms | Allocations: 4135)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-17 22:53:05 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"review"=>{"comment"=>"This area needs more awareness campaigns to prevent the spread of the disease.", "rating"=>"1", "user_id"=>1, "area_id"=>1}}
+[31mUnpermitted parameter: :rating. Context: { controller: ReviewsController, action: create, request: #<ActionDispatch::Request:0x00007ff518161d58>, params: {"review"=>{"comment"=>"This area needs more awareness campaigns to prevent the spread of the disease.", "rating"=>"1", "user_id"=>1, "area_id"=>1}, "controller"=>"reviews", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mArea Load (0.2ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 12ms (Views: 2.6ms | ActiveRecord: 1.2ms | Allocations: 4219)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-17 22:53:28 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"review"=>{"comment"=>"This area needs more awareness campaigns to prevent the spread of the disease.", "rating"=>1, "user_id"=>1, "area_id"=>1}}
+[31mUnpermitted parameter: :rating. Context: { controller: ReviewsController, action: create, request: #<ActionDispatch::Request:0x0000558f8c3a1dc8>, params: {"review"=>{"comment"=>"This area needs more awareness campaigns to prevent the spread of the disease.", "rating"=>1, "user_id"=>1, "area_id"=>1}, "controller"=>"reviews", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mArea Load (0.3ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 21ms (Views: 2.9ms | ActiveRecord: 0.9ms | Allocations: 4204)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-17 22:53:59 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"review"=>{"comment"=>"This area needs more awareness campaigns to prevent the spread of the disease.", "rating"=>1, "user_id"=>1, "area_id"=>1}}
+[31mUnpermitted parameter: :rating. Context: { controller: ReviewsController, action: create, request: #<ActionDispatch::Request:0x00007ff518efe920>, params: {"review"=>{"comment"=>"This area needs more awareness campaigns to prevent the spread of the disease.", "rating"=>1, "user_id"=>1, "area_id"=>1}, "controller"=>"reviews", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mArea Load (0.3ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 12ms (Views: 1.5ms | ActiveRecord: 1.0ms | Allocations: 4204)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-17 22:54:36 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>"This area needs more awareness campaigns to prevent the spread of the disease.", "rating"=>1, "user_id"=>1, "area_id"=>1, "review"=>{"comment"=>"This area needs more awareness campaigns to prevent the spread of the disease.", "rating"=>1, "user_id"=>1, "area_id"=>1}}
+[31mUnpermitted parameter: :rating. Context: { controller: ReviewsController, action: create, request: #<ActionDispatch::Request:0x00007ff518debf88>, params: {"comment"=>"This area needs more awareness campaigns to prevent the spread of the disease.", "rating"=>1, "user_id"=>1, "area_id"=>1, "controller"=>"reviews", "action"=>"create", "review"=>{"comment"=>"This area needs more awareness campaigns to prevent the spread of the disease.", "rating"=>1, "user_id"=>1, "area_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mArea Load (0.3ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+Completed 422 Unprocessable Entity in 11ms (Views: 1.8ms | ActiveRecord: 1.1ms | Allocations: 4216)
+
+
