@@ -4,7 +4,7 @@ import styles from './donation.module.css'
 import D1 from './D1.png'
 import  logo from './Dlogo.png'
 import d2 from './D2.png'
-import d3 from './D3.png'
+import d3 from './D3.jpg'
 import  line from './line.png'
 import dr from './dr.svg'
 
@@ -93,7 +93,7 @@ const Donation = (props) => {
             </span>
           </div>
           <img
-            src={line}
+            src="https://www"
             alt="Line31614"
             className={styles['line3']}
           />
