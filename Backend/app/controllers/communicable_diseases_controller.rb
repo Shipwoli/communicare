@@ -1,6 +1,6 @@
 class CommunicableDiseasesController < ApplicationController
   
-  before_action :set_disease, only: [:show, :update, :destroy]
+  #before_action :set_disease, only: [:show, :update, :destroy]
 
   # GET /diseases
   def index
