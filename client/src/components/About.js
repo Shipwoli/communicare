@@ -4,11 +4,11 @@ import styles from './about.module.css'
 import Vector from './Vector.png'
 import Vector2 from './Vector 2.png'
 import vector03 from './Vector 3.png'
-import image1 from    './images.jpeg'     
-import image2 from './images2.jpeg'     
-import image3 from './images3.jpeg'   
+import image1 from    './images.svg'     
+import image2 from './images2.png'     
+import image3 from './images3.png'   
 import image4 from './images4.png'   
-import image5 from './images5.jpeg'  
+import image5 from './images5.png'  
 import image6 from './Rectangle 3.png'   
 import image7 from './image7.png'   
 import image8 from './image8.png'   
@@ -21,9 +21,9 @@ import Group3 from './Group3.svg'
 import sx1 from './1.png'
 import sx2 from './2.png'
 import sx3 from './3.png'
-
-
-
+import v1 from './v1.png'
+import v2 from './v2.png'
+import v3 from './v3.png'
 
 const About = (props) => {
   return (
@@ -333,88 +333,62 @@ const About = (props) => {
         <div className={styles['group2171']}>
           <img
             alt="Vector1615"
-            src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.icon-icons.com%2Ficons2%2F3019%2FPNG%2F512%2Fperson_worker_human_man_user_icon_188659.png&tbnid=RX58xnN74nCpsM&vet=12ahUKEwj1q_2ckLD-AhVwvicCHXX9Ch0QMyhTegUIARClAQ..i&imgrefurl=https%3A%2F%2Ficon-icons.com%2Ficon%2Fperson-worker-human-man-user%2F188659&docid=bboO_4ytlsp4IM&w=512&h=512&q=Human%20PNG%20icon&ved=2ahUKEwj1q_2ckLD-AhVwvicCHXX9Ch0QMyhTegUIARClAQ"
+            src={v1}
             className={styles['vector05']}
           />
           <img
             alt="Vector1615"
-            src="/playground_assets/vector1615-y9s.svg"
+            src={v2}
             className={styles['vector06']}
           />
           <div className={styles['group2170']}>
             <img
               alt="Vector1615"
-              src="/playground_assets/vector1615-vrlf.svg"
+              src={v3}
               className={styles['vector07']}
             />
-            <img
-              alt="Vector1615"
-              src="/playground_assets/vector1615-y96m.svg"
-              className={styles['vector08']}
-            />
-            <img
-              alt="Vector1615"
-              src="/playground_assets/vector1615-btcm.svg"
-              className={styles['vector09']}
-            />
+           
           </div>
         </div>
         <div className={styles['group2172']}>
           <img
             alt="Vector1615"
-            src="/playground_assets/vector1615-3j5.svg"
+            src={v1}
             className={styles['vector10']}
           />
           <img
             alt="Vector1615"
-            src="/playground_assets/vector1615-2p3.svg"
+            src={v2}
             className={styles['vector11']}
           />
           <div className={styles['group21701']}>
             <img
               alt="Vector1615"
-              src="/playground_assets/vector1615-wqes.svg"
+              src={v3}
               className={styles['vector12']}
             />
-            <img
-              alt="Vector1615"
-              src="/playground_assets/vector1615-guo9.svg"
-              className={styles['vector13']}
-            />
-            <img
-              alt="Vector1615"
-              src="/playground_assets/vector1615-dao.svg"
-              className={styles['vector14']}
-            />
+           
+            
           </div>
         </div>
         <div className={styles['group2173']}>
           <img
             alt="Vector1615"
-            src="/playground_assets/vector1615-deru.svg"
+            src={v1}
             className={styles['vector15']}
           />
           <img
             alt="Vector1615"
-            src="/playground_assets/vector1615-wu8qq.svg"
+            src={v2}
             className={styles['vector16']}
           />
           <div className={styles['group21702']}>
             <img
               alt="Vector1615"
-              src="/playground_assets/vector1615-97ej.svg"
+              src={v3}
               className={styles['vector17']}
             />
-            <img
-              alt="Vector1615"
-              src="/playground_assets/vector1615-xyy.svg"
-              className={styles['vector18']}
-            />
-            <img
-              alt="Vector1615"
-              src="/playground_assets/vector1615-sxd.svg"
-              className={styles['vector19']}
-            />
+            
           </div>
         </div>
         <img
@@ -431,30 +405,21 @@ const About = (props) => {
         <div className={styles['group2174']}>
           <img
             alt="Vector4061"
-            src="/playground_assets/vector4061-lsrd.svg"
+            src={v1}
             className={styles['vector20']}
           />
           <img
             alt="Vector4061"
-            src="/playground_assets/vector4061-u23t.svg"
+            src={v2}
             className={styles['vector21']}
           />
           <div className={styles['group21703']}>
             <img
               alt="Vector4061"
-              src="/playground_assets/vector4061-me1.svg"
+              src={v3}
               className={styles['vector22']}
             />
-            <img
-              alt="Vector4061"
-              src="/playground_assets/vector4061-ss9h.svg"
-              className={styles['vector23']}
-            />
-            <img
-              alt="Vector4061"
-              src="/playground_assets/vector4061-9ave.svg"
-              className={styles['vector24']}
-            />
+           
           </div>
         </div>
         <img
@@ -471,30 +436,21 @@ const About = (props) => {
         <div className={styles['group2175']}>
           <img
             alt="Vector4061"
-            src="/playground_assets/vector4061-zasa9.svg"
+            src={v1}
             className={styles['vector25']}
           />
           <img
             alt="Vector4061"
-            src="/playground_assets/vector4061-84wl.svg"
+            src={v2}
             className={styles['vector26']}
           />
           <div className={styles['group21704']}>
             <img
               alt="Vector4061"
-              src="/playground_assets/vector4061-ym9o.svg"
+              src={v3}
               className={styles['vector27']}
             />
-            <img
-              alt="Vector4061"
-              src="/playground_assets/vector4061-8kg.svg"
-              className={styles['vector28']}
-            />
-            <img
-              alt="Vector4061"
-              src="/playground_assets/vector4061-7jd9.svg"
-              className={styles['vector29']}
-            />
+           
           </div>
         </div>
         <img
