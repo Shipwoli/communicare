@@ -6,6 +6,7 @@ import  logo from './Dlogo.png'
 import d2 from './D2.png'
 import d3 from './D3.png'
 import  line from './line.png'
+import dr from './dr.svg'
 
 const Donation = (props) => {
   return (
@@ -86,11 +87,7 @@ const Donation = (props) => {
             <span>Category 1</span>
           </span>
           <div className={styles['donate-now']}>
-            <img
-              src="/playground_assets/rectangle21614-dyfl-600w.png"
-              alt="Rectangle21614"
-              className={styles['rectangle2']}
-            />
+           
             <span className={styles['text25']}>
               <span> Donate Now</span>
             </span>
@@ -115,20 +112,11 @@ const Donation = (props) => {
           </span>
           <div className={styles['group2169']}>
             <img
-              src="/playground_assets/vector1614-jqgb.svg"
+              src={dr}
               alt="Vector1614"
               className={styles['vector']}
             />
-            <img
-              src="/playground_assets/vector1614-xrrs.svg"
-              alt="Vector1614"
-              className={styles['vector1']}
-            />
-            <img
-              src="/playground_assets/vector1614-aydq.svg"
-              alt="Vector1614"
-              className={styles['vector2']}
-            />
+           
           </div>
         </div>
         <img
