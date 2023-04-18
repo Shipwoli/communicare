@@ -1041,6 +1041,16 @@
     position: absolute;
     border-color: transparent;
   }
+  .image505 {
+    top: 2158px;
+    left: 1212px;
+    width: 166px;
+    height: 226px;
+    position: absolute;
+    border-color: transparent;
+    border-radius: 276px;
+  }
+  
   .text64 {
     top: 2424px;
     left: 81px;
@@ -1503,7 +1513,7 @@
   }
   .image504 {
     top: 2162px;
-    left: 1186px;
+    left: 1486px;
     width: 203px;
     height: 279px;
     position: absolute;
@@ -1528,6 +1538,26 @@
     margin-bottom: 0;
     text-decoration: none;
   }
+
+  .text81 {
+    top: 2471px;
+    left: 1542px;
+    color: rgba(53, 53, 53, 1);
+    height: auto;
+    position: absolute;
+    font-size: 28px;
+    align-self: auto;
+    font-style: ExtraBold;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+  }
+
   .text82 {
     top: 2491px;
     left: 1229px;

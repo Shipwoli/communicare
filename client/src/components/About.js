@@ -285,11 +285,7 @@ const About = (props) => {
           src={image3}
           className={styles['image501']}
         />
-        <img
-          alt="image"
-          src={imagex}
-          className={styles['image506']}
-        />
+       
         <img
           alt="image5024389"
           src={image2}
@@ -304,9 +300,7 @@ const About = (props) => {
         <span className={styles['text68']}>
           <span>Keittah</span>
         </span>
-        <span className={styles['text75']}>
-          <span>Linex</span>
-        </span>
+        
         <span className={styles['text70']}>
           <span>(Scrum Master)</span>
         </span>
@@ -316,9 +310,7 @@ const About = (props) => {
         <span className={styles['text74']}>
           <span>(Frontend)</span>
         </span>
-        <span className={styles['text75']}>
-          <span>(Frontend)</span>
-        </span>
+        
         <div className={styles['group2171']}>
           <img
             alt="Vector1615"
@@ -391,7 +383,21 @@ const About = (props) => {
         <span className={styles['text78']}>
           <span>(Backend)</span>
         </span>
+        <img
+          src={imagex}
+          alt="image5051023"
+          className={styles['image505']}
+        />
+        <span className={styles['text80']}>
+          <span>Linex</span>
+        </span>
+        <span className={styles['text82']}>
+          <span>(Frontend)</span>
+        </span>
         <div className={styles['group2174']}>
+          
+          
+
           <img
             alt="Vector4061"
             src={v1}
@@ -416,7 +422,7 @@ const About = (props) => {
           src={image5}
           className={styles['image504']}
         />
-        <span className={styles['text80']}>
+        <span className={styles['text81']}>
           <span>Victor</span>
         </span>
         <span className={styles['text82']}>
@@ -438,6 +444,15 @@ const About = (props) => {
               alt="Vector4061"
               src={v3}
               className={styles['vector27']}
+            />
+
+
+            
+            
+            <img
+              alt="Vector4061"
+              src={v3}
+              className={styles['vector22']}
             />
            
           </div>
