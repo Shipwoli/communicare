@@ -44,14 +44,14 @@ const Blog = (props) => {
           />
         </div>
         <div className={styles['sign-in']}>
-          <span className={styles['text10']}>
-            <span>Sign in</span>
-          </span>
+          <Link to="/signup" className={styles['text10']}>
+          <span>Sign in</span>
+        </Link>
         </div>
         <div className={styles['sign-up']}>
-          <span className={styles['text12']}>
-            <span>Sign up</span>
-          </span>
+        <Link to="/login" className={styles['text12']}>
+          <span>Sign up</span>
+        </Link>
         </div>
         <span className={styles['text14']}>
           <span className={styles['text15']}>
