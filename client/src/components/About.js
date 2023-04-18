@@ -286,13 +286,13 @@ const About = (props) => {
           className={styles['image501']}
         />
         <img
-          alt="image5024389"
-          src={image2}
-          className={styles['image502']}
+          alt="image"
+          src={imagex}
+          className={styles['image506']}
         />
         <img
           alt="image5024389"
-          src={imagex}
+          src={image2}
           className={styles['image502']}
         />
         <span className={styles['text64']}>
