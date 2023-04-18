@@ -1366,3 +1366,417 @@ Processing by SessionsController#destroy as */*
 Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 214)
 
 
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/communicabledisease" for 127.0.0.1 at 2023-04-18 10:44:48 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/communicabledisease"):
+  
+Started GET "/communicablediseases" for 127.0.0.1 at 2023-04-18 10:44:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/communicablediseases"):
+  
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-18 10:45:21 +0300
+Processing by CommunicableDiseasesController#index as */*
+  Parameters: {"email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "communicable_disease"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 5ms (Views: 1.8ms | ActiveRecord: 1.7ms | Allocations: 4644)
+
+
+Started GET "/diseases" for 127.0.0.1 at 2023-04-18 10:55:22 +0300
+  
+ActionController::RoutingError (uninitialized constant DiseasesController
+Did you mean?  ReviewsController):
+  
+Started GET "/users" for 127.0.0.1 at 2023-04-18 10:57:14 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/diseases" for 127.0.0.1 at 2023-04-18 10:59:25 +0300
+  
+ActionController::RoutingError (uninitialized constant DiseasesController
+Did you mean?  ReviewsController):
+  
+Started GET "/disease" for 127.0.0.1 at 2023-04-18 10:59:30 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/disease"):
+  
+Started GET "/disease" for 127.0.0.1 at 2023-04-18 10:59:54 +0300
+  
+ActionController::RoutingError (uninitialized constant DiseaseController
+Did you mean?  ReviewsController):
+  
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-18 11:02:24 +0300
+Processing by CommunicableDiseasesController#index as */*
+  Parameters: {"email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "communicable_disease"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 422 Unprocessable Entity in 5ms (Views: 2.6ms | ActiveRecord: 4.3ms | Allocations: 4318)
+
+
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-18 11:07:00 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CommunicableDiseasesController#index as */*
+  Parameters: {"email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "communicable_disease"=>{}}
+No template found for CommunicableDiseasesController#index, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 2.0ms | Allocations: 699)
+
+
+  [1m[36mCommunicableDisease Load (1.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-18 11:08:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CommunicableDiseasesController#index as */*
+  Parameters: {"email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "communicable_disease"=>{}}
+No template found for CommunicableDiseasesController#index, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 1.5ms | Allocations: 678)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-04-18 11:09:25 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"khalwale@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "khalwale@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 201 Created in 295ms (Views: 3.4ms | ActiveRecord: 3.0ms | Allocations: 23922)
+
+
+Started POST "/communicable_diseases" for 127.0.0.1 at 2023-04-18 11:10:03 +0300
+Processing by CommunicableDiseasesController#create as */*
+  Parameters: {"name"=>"COVID-19", "description"=>"Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus.", "symptoms"=>"Fever, cough, and shortness of breath are the most common symptoms of COVID-19.", "prevention_measures"=>"Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing.", "communicable_disease"=>{"name"=>"COVID-19", "description"=>"Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus.", "symptoms"=>"Fever, cough, and shortness of breath are the most common symptoms of COVID-19.", "prevention_measures"=>"Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing."}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:21:in `create'
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus."], ["symptoms", "Fever, cough, and shortness of breath are the most common symptoms of COVID-19."], ["prevention_measures", "Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing."], ["created_at", "2023-04-18 08:10:03.209923"], ["updated_at", "2023-04-18 08:10:03.209923"]]
+  ↳ app/controllers/communicable_diseases_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (110.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:21:in `create'
+Redirected to http://localhost:3000/communicable_diseases/3
+Completed 302 Found in 128ms (ActiveRecord: 112.9ms | Allocations: 17145)
+
+
+Started POST "/communicable_diseases/3" for 127.0.0.1 at 2023-04-18 11:10:03 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/communicable_diseases/3"):
+  
+Started POST "/communicable_diseases" for 127.0.0.1 at 2023-04-18 11:11:41 +0300
+Processing by CommunicableDiseasesController#create as */*
+  Parameters: {"name"=>"COVID-19", "description"=>"Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus.", "symptoms"=>"Fever, cough, and shortness of breath are the most common symptoms of COVID-19.", "prevention_measures"=>"Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing.", "communicable_disease"=>{"name"=>"COVID-19", "description"=>"Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus.", "symptoms"=>"Fever, cough, and shortness of breath are the most common symptoms of COVID-19.", "prevention_measures"=>"Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing."}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:21:in `create'
+  [1m[36mCommunicableDisease Create (0.5ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus."], ["symptoms", "Fever, cough, and shortness of breath are the most common symptoms of COVID-19."], ["prevention_measures", "Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing."], ["created_at", "2023-04-18 08:11:41.880032"], ["updated_at", "2023-04-18 08:11:41.880032"]]
+  ↳ app/controllers/communicable_diseases_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (51.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:21:in `create'
+Redirected to http://localhost:3000/communicable_diseases/4
+Completed 302 Found in 65ms (ActiveRecord: 52.1ms | Allocations: 1914)
+
+
+Started POST "/communicable_diseases/4" for 127.0.0.1 at 2023-04-18 11:11:41 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/communicable_diseases/4"):
+  
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-18 11:13:11 +0300
+Processing by CommunicableDiseasesController#index as */*
+  Parameters: {"name"=>"COVID-19", "description"=>"Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus.", "symptoms"=>"Fever, cough, and shortness of breath are the most common symptoms of COVID-19.", "prevention_measures"=>"Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing.", "communicable_disease"=>{"name"=>"COVID-19", "description"=>"Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus.", "symptoms"=>"Fever, cough, and shortness of breath are the most common symptoms of COVID-19.", "prevention_measures"=>"Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing."}}
+  [1m[36mCommunicableDisease Load (0.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:6:in `index'
+No serializer found for resource: #<CommunicableDisease id: 1, name: "COVID-19", description: "A highly infectious respiratory disease caused by ...", symptoms: "Fever, cough, shortness of breath, fatigue, body a...", prevention_measures: "Wear a mask, practice social distancing, wash your...", created_at: "2023-04-17 20:38:52.050540000 +0000", updated_at: "2023-04-17 20:38:52.050540000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with CommunicableDisease::ActiveRecord_Relation (0.87ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 3.1ms | Allocations: 6772)
+
+
+Started PATCH "/communicable_diseases" for 127.0.0.1 at 2023-04-18 11:17:04 +0300
+  
+ActionController::RoutingError (No route matches [PATCH] "/communicable_diseases"):
+  
+Started PATCH "/communicable_diseases" for 127.0.0.1 at 2023-04-18 11:19:46 +0300
+  
+ActionController::RoutingError (No route matches [PATCH] "/communicable_diseases"):
+  
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-18 11:19:54 +0300
+Processing by CommunicableDiseasesController#index as */*
+  Parameters: {"name"=>"COVID-19", "description"=>"Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus.", "symptoms"=>"Fever, cough, and shortness of breath are the most common symptoms of COVID-19.", "prevention_measures"=>"Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing, cough in your elbow.", "communicable_disease"=>{"name"=>"COVID-19", "description"=>"Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus.", "symptoms"=>"Fever, cough, and shortness of breath are the most common symptoms of COVID-19.", "prevention_measures"=>"Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing, cough in your elbow."}}
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:7:in `index'
+No serializer found for resource: #<CommunicableDisease id: 1, name: "COVID-19", description: "A highly infectious respiratory disease caused by ...", symptoms: "Fever, cough, shortness of breath, fatigue, body a...", prevention_measures: "Wear a mask, practice social distancing, wash your...", created_at: "2023-04-17 20:38:52.050540000 +0000", updated_at: "2023-04-17 20:38:52.050540000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with CommunicableDisease::ActiveRecord_Relation (1.29ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 2.9ms | Allocations: 6697)
+
+
+Started PATCH "/communicable_diseases" for 127.0.0.1 at 2023-04-18 11:21:24 +0300
+  
+ActionController::RoutingError (No route matches [PATCH] "/communicable_diseases"):
+  
+Started PATCH "/communicable_disease" for 127.0.0.1 at 2023-04-18 11:22:03 +0300
+  
+ActionController::RoutingError (No route matches [PATCH] "/communicable_disease"):
+  
+Started PATCH "/communicable_diseases" for 127.0.0.1 at 2023-04-18 11:22:09 +0300
+  
+ActionController::RoutingError (No route matches [PATCH] "/communicable_diseases"):
+  
+Started POST "/communicable_diseases" for 127.0.0.1 at 2023-04-18 11:22:28 +0300
+Processing by CommunicableDiseasesController#create as */*
+  Parameters: {"id"=>4, "name"=>"COVID-19", "description"=>"Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus.", "symptoms"=>"Fever, cough, and shortness of breath are the most common symptoms of COVID-19.", "prevention_measures"=>"Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing, cough in your elbow.", "communicable_disease"=>{"id"=>4, "name"=>"COVID-19", "description"=>"Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus.", "symptoms"=>"Fever, cough, and shortness of breath are the most common symptoms of COVID-19.", "prevention_measures"=>"Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing, cough in your elbow."}}
+[31mUnpermitted parameter: :id. Context: { controller: CommunicableDiseasesController, action: create, request: #<ActionDispatch::Request:0x00007fc5dd299f28>, params: {"id"=>4, "name"=>"COVID-19", "description"=>"Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus.", "symptoms"=>"Fever, cough, and shortness of breath are the most common symptoms of COVID-19.", "prevention_measures"=>"Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing, cough in your elbow.", "controller"=>"communicable_diseases", "action"=>"create", "communicable_disease"=>{"id"=>4, "name"=>"COVID-19", "description"=>"Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus.", "symptoms"=>"Fever, cough, and shortness of breath are the most common symptoms of COVID-19.", "prevention_measures"=>"Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing, cough in your elbow."}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:19:in `create'
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus."], ["symptoms", "Fever, cough, and shortness of breath are the most common symptoms of COVID-19."], ["prevention_measures", "Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing, cough in your elbow."], ["created_at", "2023-04-18 08:22:28.664113"], ["updated_at", "2023-04-18 08:22:28.664113"]]
+  ↳ app/controllers/communicable_diseases_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (101.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:19:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CommunicableDisease (0.48ms)
+Completed 201 Created in 120ms (Views: 13.9ms | ActiveRecord: 101.5ms | Allocations: 4246)
+
+
+Started GET "/reviews" for 127.0.0.1 at 2023-04-18 11:22:53 +0300
+Processing by ReviewsController#index as */*
+  Parameters: {"id"=>4, "name"=>"COVID-19", "description"=>"Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus.", "symptoms"=>"Fever, cough, and shortness of breath are the most common symptoms of COVID-19.", "prevention_measures"=>"Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing, cough in your elbow.", "review"=>{"id"=>4}}
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 2.9ms | Allocations: 812)
+
+
+Started GET "/donations" for 127.0.0.1 at 2023-04-18 11:25:14 +0300
+Processing by DonationsController#index as */*
+  Parameters: {"id"=>4, "name"=>"COVID-19", "description"=>"Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus.", "symptoms"=>"Fever, cough, and shortness of breath are the most common symptoms of COVID-19.", "prevention_measures"=>"Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing, cough in your elbow.", "donation"=>{"id"=>4}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 422 Unprocessable Entity in 9ms (Views: 1.3ms | ActiveRecord: 3.3ms | Allocations: 6086)
+
+
+Started GET "/areas" for 127.0.0.1 at 2023-04-18 11:25:30 +0300
+Processing by AreasController#index as */*
+  Parameters: {"id"=>4, "name"=>"COVID-19", "description"=>"Coronavirus disease is an infectious disease caused by the SARS-CoV-2 virus.", "symptoms"=>"Fever, cough, and shortness of breath are the most common symptoms of COVID-19.", "prevention_measures"=>"Wash your hands often with soap and water. Stay home if you are sick. Wear a mask and practice physical distancing, cough in your elbow.", "area"=>{"id"=>4, "name"=>"COVID-19"}}
+  [1m[36mArea Load (0.7ms)[0m  [1m[34mSELECT "areas".* FROM "areas"[0m
+  ↳ app/controllers/areas_controller.rb:6:in `index'
+No serializer found for resource: #<Area id: 1, name: "Nairobi", location: "central", reported_cases: 1000, communicable_disease_id: 1, created_at: "2023-04-17 20:38:52.825910000 +0000", updated_at: "2023-04-17 20:38:52.825910000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Area::ActiveRecord_Relation (0.24ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 2.0ms | Allocations: 16011)
+
+
+Started POST "/donations" for 127.0.0.1 at 2023-04-18 11:27:57 +0300
+Processing by DonationsController#create as */*
+  Parameters: {"user_id"=>3, "area_id"=>1, " amount"=>500, "donation"=>{"user_id"=>3, "area_id"=>1}}
+  [1m[36mArea Load (0.2ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/donations_controller.rb:40:in `set_area'
+[31mUnpermitted parameter: :area_id. Context: { controller: DonationsController, action: create, request: #<ActionDispatch::Request:0x00007fc5cc5d7d68>, params: {"user_id"=>3, "area_id"=>1, " amount"=>500, "controller"=>"donations", "action"=>"create", "donation"=>{"user_id"=>3, "area_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/donations_controller.rb:17:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/donations_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/donations_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (1.85ms)
+Completed 422 Unprocessable Entity in 238ms (Views: 2.5ms | ActiveRecord: 5.5ms | Allocations: 33821)
+
+
+Started POST "/donations" for 127.0.0.1 at 2023-04-18 11:28:12 +0300
+Processing by DonationsController#create as */*
+  Parameters: {"user_id"=>3, "area_id"=>1, "amount"=>500, "donation"=>{"amount"=>500, "user_id"=>3, "area_id"=>1}}
+  [1m[36mArea Load (0.4ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/donations_controller.rb:40:in `set_area'
+[31mUnpermitted parameter: :area_id. Context: { controller: DonationsController, action: create, request: #<ActionDispatch::Request:0x00007fc5d85b1260>, params: {"user_id"=>3, "area_id"=>1, "amount"=>500, "controller"=>"donations", "action"=>"create", "donation"=>{"amount"=>500, "user_id"=>3, "area_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/donations_controller.rb:17:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/donations_controller.rb:17:in `create'
+  [1m[36mDonation Create (0.8ms)[0m  [1m[32mINSERT INTO "donations" ("amount", "user_id", "area_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["amount", "500.0"], ["user_id", 3], ["area_id", 1], ["created_at", "2023-04-18 08:28:12.816139"], ["updated_at", "2023-04-18 08:28:12.816139"]]
+  ↳ app/controllers/donations_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (114.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/donations_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Donation (0.38ms)
+Completed 201 Created in 129ms (Views: 1.7ms | ActiveRecord: 116.5ms | Allocations: 4378)
+
+
+Started GET "/donations" for 127.0.0.1 at 2023-04-18 11:28:22 +0300
+Processing by DonationsController#index as */*
+  Parameters: {"user_id"=>3, "area_id"=>1, "amount"=>500, "donation"=>{"amount"=>500, "user_id"=>3, "area_id"=>1}}
+  [1m[36mArea Load (0.3ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/donations_controller.rb:40:in `set_area'
+  [1m[36mDonation Load (0.3ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."area_id" = $1[0m  [["area_id", 1]]
+  ↳ app/controllers/donations_controller.rb:7:in `index'
+No serializer found for resource: #<Donation id: 1, amount: 0.5e3, user_id: 1, area_id: 1, created_at: "2023-04-17 20:38:52.913611000 +0000", updated_at: "2023-04-17 20:38:52.913611000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Donation::ActiveRecord_Associations_CollectionProxy (0.7ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 2295)
+
+
+Started POST "/areas" for 127.0.0.1 at 2023-04-18 11:30:00 +0300
+Processing by AreasController#create as */*
+  Parameters: {"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1, "amount"=>500, "area"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 422 Unprocessable Entity in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 572)
+
+
+Started POST "/areas" for 127.0.0.1 at 2023-04-18 11:30:11 +0300
+Processing by AreasController#create as */*
+  Parameters: {"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1, "area"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 568)
+
+
+Started POST "/areas" for 127.0.0.1 at 2023-04-18 11:31:03 +0300
+Processing by AreasController#create as */*
+  Parameters: {"comment"=>"worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1, "area"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 422 Unprocessable Entity in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 568)
+
+
+Started POST "/areas" for 127.0.0.1 at 2023-04-18 11:32:55 +0300
+Processing by AreasController#create as */*
+  Parameters: {"comment"=>"worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1, "area"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 422 Unprocessable Entity in 2ms (Views: 1.0ms | ActiveRecord: 1.5ms | Allocations: 2635)
+
+
+Started POST "/areas" for 127.0.0.1 at 2023-04-18 11:33:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AreasController#create as */*
+  Parameters: {"comment"=>"worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1, "area"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 422 Unprocessable Entity in 10ms (Views: 7.9ms | ActiveRecord: 2.6ms | Allocations: 3016)
+
+
+Started GET "/areas" for 127.0.0.1 at 2023-04-18 11:33:27 +0300
+Processing by AreasController#index as */*
+  Parameters: {"comment"=>"worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1, "area"=>{}}
+  [1m[36mArea Load (0.8ms)[0m  [1m[34mSELECT "areas".* FROM "areas"[0m
+  ↳ app/controllers/areas_controller.rb:6:in `index'
+No serializer found for resource: #<Area id: 1, name: "Nairobi", location: "central", reported_cases: 1000, communicable_disease_id: 1, created_at: "2023-04-17 20:38:52.825910000 +0000", updated_at: "2023-04-17 20:38:52.825910000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Area::ActiveRecord_Relation (0.56ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 2.3ms | Allocations: 19628)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-18 11:34:01 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1, "review"=>{"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mArea Load (0.3ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (2.02ms)
+Completed 422 Unprocessable Entity in 43ms (Views: 2.6ms | ActiveRecord: 7.9ms | Allocations: 46349)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-18 11:35:07 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1, "review"=>{"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mArea Load (0.5ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.77ms)
+Completed 422 Unprocessable Entity in 39ms (Views: 1.9ms | ActiveRecord: 10.6ms | Allocations: 22881)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-18 11:35:53 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1, "communicable_disease_id"=>1, "review"=>{"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mArea Load (0.4ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (1.43ms)
+Completed 422 Unprocessable Entity in 12ms (Views: 2.0ms | ActiveRecord: 1.9ms | Allocations: 3927)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-18 11:36:28 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1, "communicable_disease"=>"cholera", "review"=>{"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mArea Load (0.5ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.79ms)
+Completed 422 Unprocessable Entity in 10ms (Views: 1.1ms | ActiveRecord: 1.4ms | Allocations: 3910)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-18 11:37:58 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1, "communicable_disease"=>"cholera", "review"=>{"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mArea Load (0.3ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 422 Unprocessable Entity in 62ms (Views: 2.0ms | ActiveRecord: 10.0ms | Allocations: 25535)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-18 11:38:23 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1, "communicable_disease_id"=>1, "review"=>{"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mArea Load (0.3ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 422 Unprocessable Entity in 32ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 6566)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-18 11:38:24 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1, "communicable_disease_id"=>1, "review"=>{"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mArea Load (0.2ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 422 Unprocessable Entity in 32ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 6566)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-18 11:38:52 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1, "review"=>{"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mArea Load (0.2ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 422 Unprocessable Entity in 33ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 6566)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-18 11:39:23 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1, "review"=>{"comment"=>" worse than before", "rating"=>8, "user_id"=>3, "area_id"=>1}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mArea Load (0.3ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.73ms)
+Completed 422 Unprocessable Entity in 37ms (Views: 1.5ms | ActiveRecord: 10.6ms | Allocations: 22866)
+
+

@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   
 
      # Routes for communicable diseases
-  resources :communicable_diseases, only: [:index, :show, :create, :update, :destroy]
+  # resources :communicable_diseases, only: [:index, :show, :create, :update, :destroy]
   resources :reviews, only: [:index, :show, :create, :update, :destroy]
   resources :areas, only: [:index, :show, :create, :update]
   resources :donations, only: [:index, :show, :create, :update]
+  resources :communicable_diseases
 end
