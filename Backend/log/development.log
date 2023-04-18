@@ -1287,3 +1287,82 @@ Processing by CommunicableDiseasesController#index as */*
 Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2163)
 
 
+Started POST "/register" for 127.0.0.1 at 2023-04-18 10:30:26 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"first_name"=>"saviour", "second_name"=>"Khalwale", "email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "user"=>{"first_name"=>"saviour", "email"=>"khalwale@gmail.com"}}
+[31mUnpermitted parameters: :second_name, :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007ff6ecc34bb0>, params: {"first_name"=>"saviour", "second_name"=>"Khalwale", "email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"first_name"=>"saviour", "email"=>"khalwale@gmail.com"}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "khalwale@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "khalwale@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 422 Unprocessable Entity in 416ms (Views: 91.2ms | ActiveRecord: 5.6ms | Allocations: 25929)
+
+
+Started POST "/register" for 127.0.0.1 at 2023-04-18 10:30:54 +0300
+Processing by UsersController#create as */*
+  Parameters: {"first_name"=>"saviour", "last_name"=>"Khalwale", "email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "admin"=>true, "user"=>{"first_name"=>"saviour", "last_name"=>"Khalwale", "email"=>"khalwale@gmail.com", "admin"=>true}}
+[31mUnpermitted parameters: :admin, :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007ff6e003c328>, params: {"first_name"=>"saviour", "last_name"=>"Khalwale", "email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "admin"=>true, "controller"=>"users", "action"=>"create", "user"=>{"first_name"=>"saviour", "last_name"=>"Khalwale", "email"=>"khalwale@gmail.com", "admin"=>true}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "khalwale@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "khalwale@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 422 Unprocessable Entity in 292ms (Views: 0.8ms | ActiveRecord: 0.9ms | Allocations: 3693)
+
+
+Started POST "/register" for 127.0.0.1 at 2023-04-18 10:31:29 +0300
+Processing by UsersController#create as */*
+  Parameters: {"first_name"=>"saviour", "last_name"=>"Khalwale", "email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "admin"=>true, "user"=>{"first_name"=>"saviour", "last_name"=>"Khalwale", "email"=>"khalwale@gmail.com", "admin"=>true}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007ff6f09d2cd8>, params: {"first_name"=>"saviour", "last_name"=>"Khalwale", "email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "admin"=>true, "controller"=>"users", "action"=>"create", "user"=>{"first_name"=>"saviour", "last_name"=>"Khalwale", "email"=>"khalwale@gmail.com", "admin"=>true}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "khalwale@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "saviour"], ["last_name", "Khalwale"], ["email", "khalwale@gmail.com"], ["password_digest", "[FILTERED]"], ["admin", true], ["created_at", "2023-04-18 07:31:29.886839"], ["updated_at", "2023-04-18 07:31:29.886839"]]
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (44.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:3:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "khalwale@gmail.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.74ms)
+Completed 201 Created in 395ms (Views: 57.1ms | ActiveRecord: 48.4ms | Allocations: 9297)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-04-18 10:33:10 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"khalwale@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "khalwale@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 201 Created in 281ms (Views: 0.8ms | ActiveRecord: 0.8ms | Allocations: 1096)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-04-18 10:33:40 +0300
+Processing by UsersController#show as */*
+  Parameters: {"email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"khalwale@gmail.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 1397)
+
+
+Started POST "/logout" for 127.0.0.1 at 2023-04-18 10:34:00 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/logout"):
+  
+Started DELETE "/logout" for 127.0.0.1 at 2023-04-18 10:34:09 +0300
+Processing by SessionsController#destroy as */*
+  Parameters: {"email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"khalwale@gmail.com", "password"=>"[FILTERED]"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 214)
+
+
