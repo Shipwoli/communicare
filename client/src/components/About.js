@@ -8,7 +8,8 @@ import image1 from    './images.svg'
 import image2 from './images2.png'     
 import image3 from './images3.png'   
 import image4 from './images4.png'   
-import image5 from './images5.png'  
+import image5 from './images5.png' 
+import imagex from './images6.jpeg' 
 import image6 from './Rectangle 3.png'   
 import image7 from './image7.png'   
 import image8 from './image8.png'   
@@ -18,9 +19,6 @@ import line1 from './Line 1.png'
 import group1 from './Group1.svg'
 import group2 from './Group2.svg'
 import Group3 from './Group3.svg'
-import sx1 from './1.png'
-import sx2 from './2.png'
-import sx3 from './3.png'
 import v1 from './v1.png'
 import v2 from './v2.png'
 import v3 from './v3.png'
@@ -171,22 +169,14 @@ const About = (props) => {
         <div className={styles['maskgroup']}>
           <img
             alt="Ellipse91012"
-            src={image7}
+            src={image9}
             className={styles['ellipse9']}
           />
-          <img
-            alt="image11011"
-            src={image9}
-            className={styles['image1']}
-          />
+          
         </div>
         <div className={styles['category-list']}>
           <div className={styles['group10']}>
-            <img
-              alt="Ellipse111012"
-              src={sx1}
-              className={styles['ellipse11']}
-            />
+            
             <img
               alt="Vector1013"
               src={Group3}
@@ -194,11 +184,7 @@ const About = (props) => {
             />
           </div>
           <div className={styles['group11']}>
-            <img
-              alt="Ellipse121012"
-              src={sx2}
-              className={styles['ellipse12']}
-            />
+            
             <img
               alt="Vector1013"
               src={group2}
@@ -206,11 +192,7 @@ const About = (props) => {
             />
           </div>
           <div className={styles['group12']}>
-            <img
-              alt="Ellipse131012"
-              src={sx3}
-              className={styles['ellipse13']}
-            />
+            
             <img
               alt="Vector1013"
               src={group1}
@@ -270,11 +252,7 @@ const About = (props) => {
             <span>Donate Now</span>
           </span>
         </div>
-        <img
-          alt="Rectangle121015"
-          src="/playground_assets/rectangle121015-oz1n-200h.png"
-          className={styles['rectangle12']}
-        />
+        
         <span className={styles['text60']}>
           <span className={styles['text61']}>
             Our
@@ -312,6 +290,11 @@ const About = (props) => {
           src={image2}
           className={styles['image502']}
         />
+        <img
+          alt="image5024389"
+          src={imagex}
+          className={styles['image502']}
+        />
         <span className={styles['text64']}>
           <span>Saviour</span>
         </span>
@@ -321,6 +304,9 @@ const About = (props) => {
         <span className={styles['text68']}>
           <span>Keittah</span>
         </span>
+        <span className={styles['text75']}>
+          <span>Linex</span>
+        </span>
         <span className={styles['text70']}>
           <span>(Scrum Master)</span>
         </span>
@@ -328,6 +314,9 @@ const About = (props) => {
           <span>(Frontend)</span>
         </span>
         <span className={styles['text74']}>
+          <span>(Frontend)</span>
+        </span>
+        <span className={styles['text75']}>
           <span>(Frontend)</span>
         </span>
         <div className={styles['group2171']}>
