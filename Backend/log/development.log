@@ -1780,3 +1780,5 @@ Processing by ReviewsController#create as */*
 Completed 422 Unprocessable Entity in 37ms (Views: 1.5ms | ActiveRecord: 10.6ms | Allocations: 22866)
 
 
+  [1m[35m (31.6ms)[0m  [1m[35mCREATE DATABASE "Backend_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "Backend_test" ENCODING = 'unicode'[0m
