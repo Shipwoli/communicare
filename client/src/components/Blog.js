@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 import styles from './blog.module.css'
 // import Business from './Business Development Plan 1.png'
@@ -20,9 +21,9 @@ const Blog = (props) => {
         />
         <div className={styles['menu']}>
           <div className={styles['menu-list']}>
-            <span className={styles['text']}>
-              <span>Home</span>
-            </span>
+          <Link to="/" className={styles['text']}>
+          <span>Home</span>
+        </Link>
             <span className={styles['text02']}>
               <span>About</span>
             </span>
