@@ -5,6 +5,7 @@ import D1 from './D1.png'
 import  logo from './Dlogo.png'
 import d2 from './D2.png'
 import d3 from './D3.png'
+import  line from './line.png'
 
 const Donation = (props) => {
   return (
@@ -95,12 +96,12 @@ const Donation = (props) => {
             </span>
           </div>
           <img
-            src="/playground_assets/line31614-qflc.svg"
+            src={line}
             alt="Line31614"
             className={styles['line3']}
           />
           <img
-            src="/playground_assets/line41614-wf7e.svg"
+            src={line}
             alt="Line41614"
             className={styles['line4']}
           />
