@@ -4,8 +4,8 @@ class Area < ApplicationRecord
   has_many :reviews
   has_many :donations
 
-geocoded_by :location
-after_validation :geocode
+# geocoded_by :location
+# after_validation :geocode
 
 
   validates :name, presence: true
