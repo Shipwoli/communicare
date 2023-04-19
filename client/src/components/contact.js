@@ -227,7 +227,7 @@ const Contact = (props) => {
         </span>
         <div className={styles['input-form']}>
           <span className={styles['text39']}>
-            <span>Enter your email</span>
+<input type="text" placeholder='Enter your email'/>
           </span>
         </div>
         <div className={styles['submit']}>
