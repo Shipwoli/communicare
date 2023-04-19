@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 import styles from './blog.module.css'
 // import Business from './Business Development Plan 1.png'
-import rectangle3 from './Rectangle 3.png'
-import rectangle20 from './Rectangle 20.png'
+import rectangle3 from './images/Rectangle 3.png'
+import rectangle20 from './images/Rectangle 20.png'
 const Blog = (props) => {
   return (
     <div>

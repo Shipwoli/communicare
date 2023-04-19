@@ -1,10 +1,10 @@
 import React from 'react'
-import rect from './rectangle don.png'
+import rect from './images/rectangle don.png'
 import './donation.css'
-import rectangle from './Rectangle 6.png'
+import rectangle from './images/Rectangle 6.png'
 import styles from './donation.css'
 import { Link } from 'react-router-dom'
-import line from  './Line 4.png'
+//import line from  './images/Line 4.png'
 const Donation = (props) => {
   return (
     <div>

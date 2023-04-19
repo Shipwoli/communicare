@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 import styles from './home.module.css'
-import ellipseImage from "./Ellipse 3.png"; // Import the local image
-import ellipseImg from "./Ellipse 4.png"; // Import the local image
-import ellipse from "./Ellipse 6.png"; // Import the local image
-import vector from "./Form Vector.png"
-import rectangle from "./Rectangle 6.png"
+import ellipseImage from "./images/Ellipse 3.png"; // Import the local image
+import ellipseImg from "./images/Ellipse 4.png"; // Import the local image
+import ellipse from "./images/Ellipse 6.png"; // Import the local image
+import vector from "./images/Form Vector.png"
+import rectangle from "./images/Rectangle 6.png"
 
 const Home = (props) => {
   return (
