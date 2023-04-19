@@ -30,11 +30,11 @@ const Home = (props) => {
               <span>Contact</span>
             </span>
           </div>
-          <img
+          {/* <img
             src="/playground_assets/rectangle1911-vhec-200h.png"
             alt="Rectangle1911"
             className={styles['rectangle1']}
-          />
+          /> */}
         </div>
         <div className={styles['sign-in']}>
         {/* Update sign-in element to use Link */}

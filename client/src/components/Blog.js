@@ -37,11 +37,11 @@ const Blog = (props) => {
               <span>Contact</span>
             </span>
           </div>
-          <img
+          {/* <img
             src="/playground_assets/rectangle11615-l4jn-200h.png"
             alt="Rectangle11615"
             className={styles['rectangle1']}
-          />
+          /> */}
         </div>
         <div className={styles['sign-in']}>
           <Link to="/signup" className={styles['text10']}>
