@@ -1,2 +1,0 @@
-class DiseaseAreaController < ApplicationController
-end
