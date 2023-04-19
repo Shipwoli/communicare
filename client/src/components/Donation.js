@@ -4,6 +4,7 @@ import './donation.css'
 import rectangle from './Rectangle 6.png'
 import styles from './donation.css'
 import { Link } from 'react-router-dom'
+import line from  './Line 4.png'
 const Donation = (props) => {
   return (
     <div>
@@ -92,11 +93,11 @@ const Donation = (props) => {
                 <span className="donation-text25 SubHeadline1">
                   <span>Payment</span>
                 </span>
-                <img
-                  src="/playground_assets/line41032-3r1q.svg"
+                {/* <img
+                  src={line}
                   alt="Line41032"
                   className="donation-line4"
-                />
+                /> */}
               </div>
               <div className="donation-frame58">
                 <span className="donation-text27 SubHeadline3Bold">
