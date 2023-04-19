@@ -1,7 +1,7 @@
 class Area < ApplicationRecord
-  belongs_to :communicable_disease
-  has_many :diseases
-  has_many :reviews
+  has_many :communicable_diseases, through: :disease_areas
+  has_many :disease_areas
+  has_many :reviews, through: :through: :disease_areas
   has_many :donations
 
   validates :name, presence: true
