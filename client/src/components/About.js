@@ -298,7 +298,7 @@ const About = (props) => {
           <span>MaryLucy</span>
         </span>
         <span className={styles['text68']}>
-          <span>Keittah</span>
+          <span>Linex</span>
         </span>
         
         <span className={styles['text70']}>
@@ -383,19 +383,8 @@ const About = (props) => {
         <span className={styles['text78']}>
           <span>(Backend)</span>
         </span>
-        <img
-          src={imagex}
-          alt="image5051023"
-          className={styles['image505']}
-        />
-        <span className={styles['text80']}>
-          <span>Linex</span>
-        </span>
-        <span className={styles['text82']}>
-          <span>(Frontend)</span>
-        </span>
+        
         <div className={styles['group2174']}>
-          
           
 
           <img
@@ -415,6 +404,12 @@ const About = (props) => {
               className={styles['vector22']}
             />
            
+           
+          <div className={styles['group21704']}>
+            
+           
+           
+          </div>
           </div>
         </div>
         <img
