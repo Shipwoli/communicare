@@ -47,7 +47,8 @@ class CommunicableDiseasesController < ApplicationController
   
     # Only allow a list of trusted parameters through.
     def comm_disease_params
-      params.require(:communicable_disease).permit(:name, :description, :symptoms, :prevention_measures)
+     
+      params.require(:communicable_disease).permit(:name, :image_url, :description, :symptoms, :prevention_measures, :most_prevalent)
     end
   end
   
