@@ -269,14 +269,14 @@
   opacity: 0.18;
   position: absolute;
 }
-.text14 {
-  top: 306px;
-  left: 101px;
-  color: rgba(53, 53, 53, 1);
+.text14 span:first-child{
+  top: 106px;
+  left: 40px;
+  color: rgb(58, 50, 124);
   width: 653px;
   height: auto;
   position: absolute;
-  font-size: 70px;
+  font-size: 80px;
   align-self: auto;
   font-style: ExtraBold;
   text-align: left;
@@ -288,8 +288,27 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.text90{
+  top: 350px;
+  left: 1px;
+  color: rgba(53, 53, 53, 1);
+  width: 653px;
+  height: auto;
+  position: absolute;
+  font-size: 60px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Plus Jakarta Sans;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
 .donate-now {
-  top: 879px;
+  top: 679px;
   left: 101px;
   width: 150px;
   height: 42px;
@@ -662,7 +681,7 @@
 }
 .text41 {
   top: 14px;
-  left: 18px;
+  left: 50px;
   color: rgba(26, 143, 227, 0.5);
   height: auto;
   position: absolute;

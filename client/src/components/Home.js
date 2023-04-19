@@ -72,18 +72,19 @@ const Home = (props) => {
         />
         <span className={styles['text14']}>
           <span>
-            <span>Communi-care</span>
+            <span>Revolutionizing Public Health:</span>
             <br></br>
             <span></span>
             <br></br>
-            <span>Preventing Communicable Diseases with Technology</span>
+            <span className={styles['text90']}>
+            Leveraging Cutting-Edge Technology to Combat Communicable Diseases</span>
           </span>
         </span>
-        <div className={styles['donate-now']}>
+        {/* <div className={styles['donate-now']}>
           <span className={styles['text21']}>
             <span>Donate Now</span>
           </span>
-        </div>
+        </div> */}
         <div className={styles['donation-form']}>
           <span className={styles['text23']}>
             <span>Donation Amount</span>

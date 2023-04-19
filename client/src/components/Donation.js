@@ -2,7 +2,8 @@ import React from 'react'
 import rect from './rectangle don.png'
 import './donation.css'
 import rectangle from './Rectangle 6.png'
-
+import styles from './donation.css'
+import { Link } from 'react-router-dom'
 const Donation = (props) => {
   return (
     <div>
@@ -14,9 +15,9 @@ const Donation = (props) => {
         />
         <div className="donation-menu">
           <div className="donation-menu-list">
-            <span className="donation-text">
-              <span>Home</span>
-            </span>
+          <Link to="/" className={styles['donation-text']}>
+          <span>Home</span>
+        </Link>
             <span className="donation-text02">
               <span>About</span>
             </span>
@@ -24,8 +25,10 @@ const Donation = (props) => {
               <span>Donation</span>
             </span>
             <span className="donation-text06">
-              <span>Blog</span>
-            </span>
+  <Link to="/blog">
+    <span>Blog</span>
+  </Link>
+</span>
             <span className="donation-text08">
               <span>Contact</span>
             </span>
@@ -102,16 +105,12 @@ const Donation = (props) => {
                 <div className="donation-frame4">
                   <div className="donation-card">
                     <div className="donation-frame3">
-                      <img
+                      {/* <img
                         src="/playground_assets/ellipse2i1032-dq1o-200w.png"
                         alt="Ellipse2I1032"
                         className="donation-ellipse2"
-                      />
-                      <img
-                        src="/playground_assets/ellipse3i1032-thn-200h.png"
-                        alt="Ellipse3I1032"
-                        className="donation-ellipse3"
-                      />
+                      /> */}
+                    <input type="radio" name="paymentMethod" value="bank" />
                     </div>
                     <span className="donation-text29">
                       <span>Card</span>
@@ -119,11 +118,8 @@ const Donation = (props) => {
                   </div>
                   <div className="donation-bank">
                     <div className="donation-frame31">
-                      <img
-                        src="/playground_assets/ellipse3i1032-ani8-200h.png"
-                        alt="Ellipse3I1032"
-                        className="donation-ellipse31"
-                      />
+                    <input type="radio" name="paymentMethod" value="card" />
+
                     </div>
                     <span className="donation-text31">
                       <span>Bank</span>
@@ -131,11 +127,13 @@ const Donation = (props) => {
                   </div>
                   <div className="donation-transfer">
                     <div className="donation-frame32">
-                      <img
+                    <input type="radio" name="paymentMethod" value="bank" />
+
+                      {/* <img
                         src="/playground_assets/ellipse3i1032-op3l-200h.png"
                         alt="Ellipse3I1032"
                         className="donation-ellipse32"
-                      />
+                      /> */}
                     </div>
                     <span className="donation-text33">
                       <span>Transfer</span>
@@ -151,7 +149,7 @@ const Donation = (props) => {
                     </span>
                     <div className="donation-frame6">
                       <span className="donation-text37">
-                        <span>1234 5678 9101 1121</span>
+                      <input type="text" placeholder="1234 5678 9101 1121" />
                       </span>
                     </div>
                   </div>
@@ -162,7 +160,7 @@ const Donation = (props) => {
                       </span>
                       <div className="donation-frame8">
                         <span className="donation-text41">
-                          <span>MM/YY</span>
+                        <input type="text" placeholder="MM/YY" />
                         </span>
                       </div>
                     </div>
@@ -172,7 +170,7 @@ const Donation = (props) => {
                       </span>
                       <div className="donation-frame10">
                         <span className="donation-text45">
-                          <span>123</span>
+                        <input type="text" placeholder="123" />
                         </span>
                       </div>
                     </div>
@@ -180,7 +178,10 @@ const Donation = (props) => {
                   <div className="donation-savecarddetails">
                     <div className="donation-frame21"></div>
                     <span className="donation-text47 Body">
-                      <span>Save card details</span>
+                    <label>
+  <input type="checkbox" name="saveCardDetails" />
+  <span>Save card details</span>
+</label>
                     </span>
                   </div>
                 </div>
