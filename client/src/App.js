@@ -7,6 +7,8 @@ import Blog from './components/Blog';
 import Donation from './components/Donation';
 import About from './components/About/About';
 import Contact from './components/Contacts/contact';
+
+
  
 export default function App() {
   return (
@@ -17,11 +19,12 @@ export default function App() {
         <Route path="/" element={< Home />} />
         <Route path="/home" element={<Home />}/>
         <Route path="/about" element={< About />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/donation" element={<Donation/>}/>
         <Route path="/contacts" element={<Contact/>}/>
+        
         
 
 
