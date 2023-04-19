@@ -2537,3 +2537,182 @@ Processing by UsersController#login as */*
 Completed 200 OK in 291ms (Views: 1.6ms | ActiveRecord: 6.5ms | Allocations: 5743)
 
 
+Started GET "/user/login/check" for 127.0.0.1 at 2023-04-19 14:31:26 +0300
+Processing by UsersController#check_login_status as */*
+  Parameters: {"email"=>"moses@gmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"moses@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 3ms (Views: 0.9ms | Allocations: 445)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-04-19 14:31:48 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/logout"):
+  
+Started DELETE "/users/logout" for 127.0.0.1 at 2023-04-19 14:32:00 +0300
+Processing by UsersController#logout as */*
+  Parameters: {"email"=>"khalwale@gmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"khalwale@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 361)
+
+
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-19 14:33:08 +0300
+Processing by CommunicableDiseasesController#index as */*
+  [1m[36mCommunicableDisease Load (31.9ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 200 OK in 70ms (Views: 48.8ms | ActiveRecord: 39.5ms | Allocations: 5114)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.5ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "A highly infectious respiratory disease caused by the SARS-CoV-2 virus."], ["symptoms", "Fever, cough, shortness of breath, fatigue, body aches, loss of taste or smell."], ["prevention_measures", "Wear a mask, practice social distancing, wash your hands frequently, get vaccinated."], ["created_at", "2023-04-19 11:34:28.965665"], ["updated_at", "2023-04-19 11:34:28.965665"]]
+  [1m[36mTRANSACTION (229.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Malaria"], ["description", "A parasitic disease transmitted by female Anopheles mosquitoes."], ["symptoms", "Fever, headache, chills, muscle pain, vomiting."], ["prevention_measures", "Use insect repellent, wear protective clothing, use bed nets, eliminate standing water."], ["created_at", "2023-04-19 11:34:29.199408"], ["updated_at", "2023-04-19 11:34:29.199408"]]
+  [1m[36mTRANSACTION (29.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "khalwale@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "saviour"], ["last_name", "khalwale"], ["email", "khalwale@example.com"], ["password_digest", "[FILTERED]"], ["admin", true], ["created_at", "2023-04-19 11:34:29.491370"], ["updated_at", "2023-04-19 11:34:29.491370"]]
+  [1m[36mTRANSACTION (43.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "annette@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "annette"], ["last_name", "khalwale"], ["email", "annette@example.com"], ["password_digest", "[FILTERED]"], ["admin", false], ["created_at", "2023-04-19 11:34:29.760132"], ["updated_at", "2023-04-19 11:34:29.760132"]]
+  [1m[36mTRANSACTION (43.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (18.4ms)[0m  [1m[32mINSERT INTO "areas" ("name", "location", "reported_cases", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Nairobi"], ["location", "central"], ["reported_cases", 1000], ["communicable_disease_id", 1], ["created_at", "2023-04-19 11:34:29.842177"], ["updated_at", "2023-04-19 11:34:29.842177"]]
+  [1m[36mTRANSACTION (31.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (0.4ms)[0m  [1m[32mINSERT INTO "areas" ("name", "location", "reported_cases", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "kakamega"], ["location", "Western"], ["reported_cases", 500], ["communicable_disease_id", 2], ["created_at", "2023-04-19 11:34:29.897282"], ["updated_at", "2023-04-19 11:34:29.897282"]]
+  [1m[36mTRANSACTION (32.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDonation Create (17.5ms)[0m  [1m[32mINSERT INTO "donations" ("amount", "user_id", "area_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["amount", "500.0"], ["user_id", 3], ["area_id", 1], ["created_at", "2023-04-19 11:34:29.975022"], ["updated_at", "2023-04-19 11:34:29.975022"]]
+  [1m[36mTRANSACTION (38.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDonation Create (0.9ms)[0m  [1m[32mINSERT INTO "donations" ("amount", "user_id", "area_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["amount", "250.0"], ["user_id", 4], ["area_id", 2], ["created_at", "2023-04-19 11:34:30.036746"], ["updated_at", "2023-04-19 11:34:30.036746"]]
+  [1m[36mTRANSACTION (27.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-19 14:34:42 +0300
+Processing by CommunicableDiseasesController#index as */*
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:7:in `index'
+No serializer found for resource: #<CommunicableDisease id: 1, name: "COVID-19", description: "A highly infectious respiratory disease caused by ...", symptoms: "Fever, cough, shortness of breath, fatigue, body a...", prevention_measures: "Wear a mask, practice social distancing, wash your...", created_at: "2023-04-19 11:34:28.965665000 +0000", updated_at: "2023-04-19 11:34:28.965665000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with CommunicableDisease::ActiveRecord_Relation (0.34ms)
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 5.3ms | Allocations: 18393)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDonations (20230417075954)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.8ms)[0m  [1m[35mDROP TABLE "donations"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230417075954"]]
+  [1m[36mTRANSACTION (41.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateReviews (20230417075923)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE "reviews"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230417075923"]]
+  [1m[36mTRANSACTION (119.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAreas (20230417075744)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mDROP TABLE "areas"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230417075744"]]
+  [1m[36mTRANSACTION (192.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCommunicableDiseases (20230417075654)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE "communicable_diseases"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230417075654"]]
+  [1m[36mTRANSACTION (35.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230417075612)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230417075612"]]
+  [1m[36mTRANSACTION (71.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230417075612)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (575.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "admin" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230417075612"]]
+  [1m[36mTRANSACTION (32.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCommunicableDiseases (20230417075654)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (117.8ms)[0m  [1m[35mCREATE TABLE "communicable_diseases" ("id" bigserial primary key, "name" character varying, "image_url" character varying DEFAULT 'default_disease_image.jpg' NOT NULL, "description" text, "symptoms" text, "prevention_measures" text, "most_prevalent" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230417075654"]]
+  [1m[36mTRANSACTION (44.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAreas (20230417075744)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (399.4ms)[0m  [1m[35mCREATE TABLE "areas" ("id" bigserial primary key, "name" character varying, "location" character varying, "latitude" float, "longitude" float, "reported_cases" integer, "communicable_disease_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_86649dfc70"
+FOREIGN KEY ("communicable_disease_id")
+  REFERENCES "communicable_diseases" ("id")
+)[0m
+  [1m[35m (201.2ms)[0m  [1m[35mCREATE INDEX "index_areas_on_communicable_disease_id" ON "areas" ("communicable_disease_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230417075744"]]
+  [1m[36mTRANSACTION (30.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReviews (20230417075923)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (407.8ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "comment" text, "rating" integer, "user_id" bigint NOT NULL, "area_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_74a66bd6c5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_5a24de230c"
+FOREIGN KEY ("area_id")
+  REFERENCES "areas" ("id")
+)[0m
+  [1m[35m (190.7ms)[0m  [1m[35mCREATE INDEX "index_reviews_on_user_id" ON "reviews" ("user_id")[0m
+  [1m[35m (203.2ms)[0m  [1m[35mCREATE INDEX "index_reviews_on_area_id" ON "reviews" ("area_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230417075923"]]
+  [1m[36mTRANSACTION (30.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDonations (20230417075954)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (393.8ms)[0m  [1m[35mCREATE TABLE "donations" ("id" bigserial primary key, "amount" decimal, "user_id" bigint NOT NULL, "area_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_5470822a00"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_3dda997faf"
+FOREIGN KEY ("area_id")
+  REFERENCES "areas" ("id")
+)[0m
+  [1m[35m (213.1ms)[0m  [1m[35mCREATE INDEX "index_donations_on_user_id" ON "donations" ("user_id")[0m
+  [1m[35m (203.4ms)[0m  [1m[35mCREATE INDEX "index_donations_on_area_id" ON "donations" ("area_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230417075954"]]
+  [1m[36mTRANSACTION (44.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m

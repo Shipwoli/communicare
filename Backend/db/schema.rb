@@ -17,6 +17,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_17_075954) do
   create_table "areas", force: :cascade do |t|
     t.string "name"
     t.string "location"
+    t.float "latitude"
+    t.float "longitude"
     t.integer "reported_cases"
     t.bigint "communicable_disease_id", null: false
     t.datetime "created_at", null: false
@@ -26,9 +28,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_17_075954) do
 
   create_table "communicable_diseases", force: :cascade do |t|
     t.string "name"
+    t.string "image_url", default: "default_disease_image.jpg", null: false
     t.text "description"
     t.text "symptoms"
     t.text "prevention_measures"
+    t.boolean "most_prevalent", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
