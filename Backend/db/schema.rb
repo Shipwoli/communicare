@@ -28,7 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_17_075954) do
 
   create_table "communicable_diseases", force: :cascade do |t|
     t.string "name"
-    t.string "image_url", default: "default_disease_image.jpg", null: false
+    t.string "image_url", default: "https://images.pexels.com/photos/6303643/pexels-photo-6303643.jpeg?auto=compress&cs=tinysrgb&w=600", null: false
     t.text "description"
     t.text "symptoms"
     t.text "prevention_measures"
