@@ -5,11 +5,17 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   # user
-  post "/login", to: "sessions#create"
-  delete "/logout", to: "sessions#destroy"
+  # post "/login", to: "sessions#create"
+  # delete "/logout", to: "sessions#destroy"
 
-  post "/register", to: "users#create"
-  get "/me", to: "users#show"
+  # post "/register", to: "users#create"
+  # get "/me", to: "users#show"
+  post '/users', to: 'users#register'
+  post '/users/login', to: 'users#login'
+  delete '/users/logout', to: 'users#logout'
+  get '/user/login/check', to: 'users#check_login_status'
+  # verify auth
+  get '/verify', to: 'application#verify_auth'
   
 
      # Routes for communicable diseases
