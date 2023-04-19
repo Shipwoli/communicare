@@ -20,9 +20,9 @@ const Home = (props) => {
             <span className={styles['text02']}>
               <span>About</span>
             </span>
-            <span className={styles['text04']}>
-              <span>Donation</span>
-            </span>
+            <Link to="/donation" className={styles['text04']}>
+          <span>Donation</span>
+        </Link>
             <Link to="/blog" className={styles['text06']}>
           <span>Blog</span>
         </Link>
