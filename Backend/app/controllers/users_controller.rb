@@ -11,6 +11,10 @@ class UsersController < ApplicationController
             app_response(message: 'Something went wrong during registration', status: :unprocessable_entity, data: user.errors)
         end
     end
+    def index
+        users = User.all
+        render json: users
+    end
 
     def login
         sql = "email = :email"
