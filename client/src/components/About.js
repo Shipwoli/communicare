@@ -79,7 +79,7 @@ const About = (props) => {
         </span>
         <span className={styles['text17']}>
           <span>
-          Let us be the change we want to see in the world, and work towards a world free from the threat of communicable diseases.
+          Let us be the change we want to see in the world, and work towards a world free from the threat of communicable disease  h
           </span>
         </span>
         <div className={styles['group7']}>
