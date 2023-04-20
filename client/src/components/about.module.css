@@ -10,14 +10,7 @@
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 1);
   }
-  .rectangle3 {
-    top: 0px;
-    left: -47px;
-    width: 1533px;
-    height: 156px;
-    position: absolute;
-    border-color: transparent;
-  }
+  
   .menu {
     top: 51px;
     left: 467px;
@@ -1043,7 +1036,7 @@
   }
   .image505 {
     top: 2158px;
-    left: 1212px;
+    left: 1186px;
     width: 166px;
     height: 226px;
     position: absolute;
