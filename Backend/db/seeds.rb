@@ -1,4 +1,5 @@
 # Create some default communicable diseases
+puts "communicable_diseases"
 cd1= CommunicableDisease.create(
     name: "Malaria",
     image_url: "https://images.pexels.com/photos/6303643/pexels-photo-6303643.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -27,18 +28,22 @@ cd1= CommunicableDisease.create(
   )
 
   # Create some areas
+  puts "areas"
 a1 = Area.create(name: "New York City", location: "New York, USA", latitude: 40.7128, longitude: -74.0060, reported_cases: 1000, communicable_disease: cd1)
 a2 = Area.create(name: "Tokyo", location: "Japan", latitude: 35.6762, longitude: 139.6503, reported_cases: 500, communicable_disease: cd2)
 a3 = Area.create(name: "Rio de Janeiro", location: "Brazil", latitude: -22.9068, longitude: -43.1729, reported_cases: 200, communicable_disease: cd3)
 
 # Create some users
+puts "users🧑‍🦱"
 u1 = User.create(first_name: "saviour", last_name: "khalwale", email: "khalwale@gmail.com", password: "password", admin: false)
 u2 = User.create(first_name: "victor", last_name: "mwangi", email: "victor@gmail.com.com", password: "password", admin: true)
 
 # Create some reviews
-r1 = Review.create(comment: "I think we should donate more to this area to help fight COVID-19.", rating: 4, user: u1, area: a1)
-r2 = Review.create(comment: "This area has done a great job of controlling the spread of COVID-19.", rating: 5, user: u2, area: a2)
+# puts "reviews"
+# r1 = Review.create(content: "I think we should donate more to this area to help fight COVID-19.", rating: 4, user: u1, area: a1)
+# r2 = Review.create(content: "This area has done a great job of controlling the spread of COVID-19.", rating: 5, user: u2, area: a2)
 
-# Create some donations
-Donation.create(amount: 50.00, user: u1, area: a1)
-Donation.create(amount: 100.00, user: u2, area: a2)
+# # Create some donations
+# puts "donations💸"
+# Donation.create(amount: 50.00, user: u1, area: a1)
+# Donation.create(amount: 100.00, user: u2, area: a2)

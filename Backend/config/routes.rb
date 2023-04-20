@@ -24,4 +24,5 @@ Rails.application.routes.draw do
   resources :areas, only: [:index, :show, :create, :update]
   resources :donations, only: [:index, :show, :create, :update]
   resources :communicable_diseases
+  resources :users
 end

@@ -3379,3 +3379,353 @@ FOREIGN KEY ("user_id")
   [1m[36mTRANSACTION (42.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (118.7ms)[0m  [1m[35mCREATE DATABASE "Backend_development" ENCODING = 'unicode'[0m
   [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "Backend_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2023-04-20 09:19:35 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (26.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.4ms | Allocations: 828)
+Completed 200 OK in 75ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 6690)
+
+
+Started GET "/users'" for ::1 at 2023-04-20 09:19:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users'"):
+  
+Started GET "/users" for ::1 at 2023-04-20 09:19:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2023-04-20 09:19:53 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/reviews" for ::1 at 2023-04-20 09:19:59 +0300
+Processing by ReviewsController#index as HTML
+  [1m[36mReview Load (63.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.65ms)
+Completed 200 OK in 1453ms (Views: 49.7ms | ActiveRecord: 63.2ms | Allocations: 9363)
+
+
+Started GET "/donations" for ::1 at 2023-04-20 09:20:09 +0300
+Processing by DonationsController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.32ms)
+Completed 422 Unprocessable Entity in 690ms (Views: 8.5ms | ActiveRecord: 55.9ms | Allocations: 9725)
+
+
+Started GET "/areas" for ::1 at 2023-04-20 09:20:43 +0300
+Processing by AreasController#index as HTML
+  [1m[36mArea Load (620.5ms)[0m  [1m[34mSELECT "areas".* FROM "areas"[0m
+  ↳ app/controllers/areas_controller.rb:6:in `index'
+No serializer found for resource: #<Area id: 1, name: "Central Park", description: "A public park at the center of Manhattan in New Yo...", latitude: 0.407829e2, longitude: -0.739654e2, communicable_disease_id: 25, created_at: "2023-04-17 09:18:46.789357000 +0000", updated_at: "2023-04-17 09:18:46.789357000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Area::ActiveRecord_Relation (3.92ms)
+Completed 200 OK in 755ms (Views: 90.2ms | ActiveRecord: 664.9ms | Allocations: 23856)
+
+
+Started GET "/communicable_diseases" for ::1 at 2023-04-20 09:21:01 +0300
+Processing by CommunicableDiseasesController#index as HTML
+  [1m[36mCommunicableDisease Load (65.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:7:in `index'
+No serializer found for resource: #<CommunicableDisease id: 1, name: "Malaria", description: "A mosquito-borne disease", symptoms: nil, prevention_measures: nil, created_at: "2023-04-17 08:43:15.744362000 +0000", updated_at: "2023-04-17 08:43:15.744362000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with CommunicableDisease::ActiveRecord_Relation (35.87ms)
+Completed 200 OK in 191ms (Views: 78.5ms | ActiveRecord: 73.5ms | Allocations: 26198)
+
+
+Started GET "/users" for ::1 at 2023-04-20 09:21:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2023-04-20 09:23:39 +0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2023-04-20 09:26:36 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (471.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.35ms)
+Completed 200 OK in 1767ms (Views: 1261.3ms | ActiveRecord: 485.1ms | Allocations: 22415)
+
+
+Started GET "/areas" for ::1 at 2023-04-20 09:27:40 +0300
+Processing by AreasController#index as HTML
+  [1m[36mArea Load (0.4ms)[0m  [1m[34mSELECT "areas".* FROM "areas"[0m
+  ↳ app/controllers/areas_controller.rb:6:in `index'
+No serializer found for resource: #<Area id: 1, name: "Central Park", description: "A public park at the center of Manhattan in New Yo...", latitude: 0.407829e2, longitude: -0.739654e2, communicable_disease_id: 25, created_at: "2023-04-17 09:18:46.789357000 +0000", updated_at: "2023-04-17 09:18:46.789357000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Area::ActiveRecord_Relation (5.14ms)
+Completed 200 OK in 36ms (Views: 22.2ms | ActiveRecord: 4.7ms | Allocations: 15767)
+
+
+Started GET "/communicable_diseases" for ::1 at 2023-04-20 09:27:48 +0300
+Processing by CommunicableDiseasesController#index as HTML
+  [1m[36mCommunicableDisease Load (0.8ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:7:in `index'
+No serializer found for resource: #<CommunicableDisease id: 1, name: "Malaria", description: "A mosquito-borne disease", symptoms: nil, prevention_measures: nil, created_at: "2023-04-17 08:43:15.744362000 +0000", updated_at: "2023-04-17 08:43:15.744362000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with CommunicableDisease::ActiveRecord_Relation (10.84ms)
+Completed 200 OK in 35ms (Views: 22.7ms | ActiveRecord: 6.3ms | Allocations: 13694)
+
+
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCommunicableDisease Load (1.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1257.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddImageUrlToCommunicableDiseases (20230420064119)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (543.7ms)[0m  [1m[35mALTER TABLE "communicable_diseases" ADD "image_url" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230420064119"]]
+  [1m[36mTRANSACTION (30.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddMostPrevalentToCommunicableDiseases (20230420064411)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "communicable_diseases" ADD "most_prevalent" boolean[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230420064411"]]
+  [1m[36mTRANSACTION (21.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (145.1ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Malaria"], ["description", "Malaria is a mosquito-borne infectious disease that affects humans and other animals. Malaria causes symptoms that typically include fever, tiredness, vomiting, and headaches. In severe cases, it can cause yellow skin, seizures, coma, or death."], ["symptoms", "Fever, chills, headache, muscle pain, fatigue, nausea and vomiting."], ["prevention_measures", "Use mosquito nets while sleeping, wear protective clothing, use mosquito repellents, and eliminate standing water."], ["created_at", "2023-04-20 06:44:34.717733"], ["updated_at", "2023-04-20 06:44:34.717733"], ["image_url", "https://images.pexels.com/photos/6303643/pexels-photo-6303643.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", true]]
+  [1m[36mTRANSACTION (101.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.7ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "COVID-19 is a contagious respiratory illness caused by the SARS-CoV-2 virus. The disease has spread globally, leading to an ongoing pandemic. COVID-19 causes a range of symptoms, from mild to severe. Some people may be asymptomatic, while others may experience fever, cough, and difficulty breathing."], ["symptoms", "Fever, cough, shortness of breath, fatigue, body aches, loss of smell or taste, sore throat, congestion or runny nose."], ["prevention_measures", "Wash your hands regularly, wear a mask, practice physical distancing, avoid large gatherings, and get vaccinated."], ["created_at", "2023-04-20 06:44:34.972058"], ["updated_at", "2023-04-20 06:44:34.972058"], ["image_url", "https://images.pexels.com/photos/3958551/pexels-photo-3958551.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", true]]
+  [1m[36mTRANSACTION (129.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.5ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cholera"], ["description", "Cholera is an infectious disease that causes severe diarrhea and dehydration. It is caused by the bacterium Vibrio cholerae, which is usually found in water or food contaminated by feces from a person with the infection."], ["symptoms", "Diarrhea, nausea and vomiting, abdominal cramps, dehydration, and shock."], ["prevention_measures", "Drink clean and safe water, wash hands regularly, cook food thoroughly, avoid eating raw or undercooked seafood, and get vaccinated."], ["created_at", "2023-04-20 06:44:35.109909"], ["updated_at", "2023-04-20 06:44:35.109909"], ["image_url", "https://images.pexels.com/photos/392166/pexels-photo-392166.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", false]]
+  [1m[36mTRANSACTION (121.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddLocationToAreas (20230420064652)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "areas" ADD "location" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230420064652"]]
+  [1m[36mTRANSACTION (20.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.4ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Malaria"], ["description", "Malaria is a mosquito-borne infectious disease that affects humans and other animals. Malaria causes symptoms that typically include fever, tiredness, vomiting, and headaches. In severe cases, it can cause yellow skin, seizures, coma, or death."], ["symptoms", "Fever, chills, headache, muscle pain, fatigue, nausea and vomiting."], ["prevention_measures", "Use mosquito nets while sleeping, wear protective clothing, use mosquito repellents, and eliminate standing water."], ["created_at", "2023-04-20 06:47:05.027444"], ["updated_at", "2023-04-20 06:47:05.027444"], ["image_url", "https://images.pexels.com/photos/6303643/pexels-photo-6303643.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", true]]
+  [1m[36mTRANSACTION (20.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "COVID-19 is a contagious respiratory illness caused by the SARS-CoV-2 virus. The disease has spread globally, leading to an ongoing pandemic. COVID-19 causes a range of symptoms, from mild to severe. Some people may be asymptomatic, while others may experience fever, cough, and difficulty breathing."], ["symptoms", "Fever, cough, shortness of breath, fatigue, body aches, loss of smell or taste, sore throat, congestion or runny nose."], ["prevention_measures", "Wash your hands regularly, wear a mask, practice physical distancing, avoid large gatherings, and get vaccinated."], ["created_at", "2023-04-20 06:47:05.051232"], ["updated_at", "2023-04-20 06:47:05.051232"], ["image_url", "https://images.pexels.com/photos/3958551/pexels-photo-3958551.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", true]]
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cholera"], ["description", "Cholera is an infectious disease that causes severe diarrhea and dehydration. It is caused by the bacterium Vibrio cholerae, which is usually found in water or food contaminated by feces from a person with the infection."], ["symptoms", "Diarrhea, nausea and vomiting, abdominal cramps, dehydration, and shock."], ["prevention_measures", "Drink clean and safe water, wash hands regularly, cook food thoroughly, avoid eating raw or undercooked seafood, and get vaccinated."], ["created_at", "2023-04-20 06:47:05.067555"], ["updated_at", "2023-04-20 06:47:05.067555"], ["image_url", "https://images.pexels.com/photos/392166/pexels-photo-392166.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", false]]
+  [1m[36mTRANSACTION (14.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddReportedCasesToAreas (20230420064738)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "areas" ADD "reported_cases" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230420064738"]]
+  [1m[36mTRANSACTION (145.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.5ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Malaria"], ["description", "Malaria is a mosquito-borne infectious disease that affects humans and other animals. Malaria causes symptoms that typically include fever, tiredness, vomiting, and headaches. In severe cases, it can cause yellow skin, seizures, coma, or death."], ["symptoms", "Fever, chills, headache, muscle pain, fatigue, nausea and vomiting."], ["prevention_measures", "Use mosquito nets while sleeping, wear protective clothing, use mosquito repellents, and eliminate standing water."], ["created_at", "2023-04-20 06:47:54.318314"], ["updated_at", "2023-04-20 06:47:54.318314"], ["image_url", "https://images.pexels.com/photos/6303643/pexels-photo-6303643.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", true]]
+  [1m[36mTRANSACTION (157.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.5ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "COVID-19 is a contagious respiratory illness caused by the SARS-CoV-2 virus. The disease has spread globally, leading to an ongoing pandemic. COVID-19 causes a range of symptoms, from mild to severe. Some people may be asymptomatic, while others may experience fever, cough, and difficulty breathing."], ["symptoms", "Fever, cough, shortness of breath, fatigue, body aches, loss of smell or taste, sore throat, congestion or runny nose."], ["prevention_measures", "Wash your hands regularly, wear a mask, practice physical distancing, avoid large gatherings, and get vaccinated."], ["created_at", "2023-04-20 06:47:54.480902"], ["updated_at", "2023-04-20 06:47:54.480902"], ["image_url", "https://images.pexels.com/photos/3958551/pexels-photo-3958551.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", true]]
+  [1m[36mTRANSACTION (88.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (1.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cholera"], ["description", "Cholera is an infectious disease that causes severe diarrhea and dehydration. It is caused by the bacterium Vibrio cholerae, which is usually found in water or food contaminated by feces from a person with the infection."], ["symptoms", "Diarrhea, nausea and vomiting, abdominal cramps, dehydration, and shock."], ["prevention_measures", "Drink clean and safe water, wash hands regularly, cook food thoroughly, avoid eating raw or undercooked seafood, and get vaccinated."], ["created_at", "2023-04-20 06:47:54.577057"], ["updated_at", "2023-04-20 06:47:54.577057"], ["image_url", "https://images.pexels.com/photos/392166/pexels-photo-392166.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", false]]
+  [1m[36mTRANSACTION (112.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (104.6ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at", "location", "reported_cases") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York City"], ["description", nil], ["latitude", "40.7128"], ["longitude", "-74.006"], ["communicable_disease_id", 82], ["created_at", "2023-04-20 06:47:54.801809"], ["updated_at", "2023-04-20 06:47:54.801809"], ["location", "New York, USA"], ["reported_cases", 1000]]
+  [1m[36mTRANSACTION (105.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (1.4ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at", "location", "reported_cases") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tokyo"], ["description", nil], ["latitude", "35.6762"], ["longitude", "139.6503"], ["communicable_disease_id", 83], ["created_at", "2023-04-20 06:47:55.021183"], ["updated_at", "2023-04-20 06:47:55.021183"], ["location", "Japan"], ["reported_cases", 500]]
+  [1m[36mTRANSACTION (124.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (1.4ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at", "location", "reported_cases") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Rio de Janeiro"], ["description", nil], ["latitude", "-22.9068"], ["longitude", "-43.1729"], ["communicable_disease_id", 84], ["created_at", "2023-04-20 06:47:55.160213"], ["updated_at", "2023-04-20 06:47:55.160213"], ["location", "Brazil"], ["reported_cases", 200]]
+  [1m[36mTRANSACTION (120.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "khalwale@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (175.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "saviour"], ["last_name", "khalwale"], ["email", "khalwale@gmail.com"], ["password_digest", "[FILTERED]"], ["admin", false], ["created_at", "2023-04-20 06:47:55.625466"], ["updated_at", "2023-04-20 06:47:55.625466"]]
+  [1m[36mTRANSACTION (104.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "victor@gmail.com.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "victor"], ["last_name", "mwangi"], ["email", "victor@gmail.com.com"], ["password_digest", "[FILTERED]"], ["admin", true], ["created_at", "2023-04-20 06:47:56.161954"], ["updated_at", "2023-04-20 06:47:56.161954"]]
+  [1m[36mTRANSACTION (309.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.4ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Malaria"], ["description", "Malaria is a mosquito-borne infectious disease that affects humans and other animals. Malaria causes symptoms that typically include fever, tiredness, vomiting, and headaches. In severe cases, it can cause yellow skin, seizures, coma, or death."], ["symptoms", "Fever, chills, headache, muscle pain, fatigue, nausea and vomiting."], ["prevention_measures", "Use mosquito nets while sleeping, wear protective clothing, use mosquito repellents, and eliminate standing water."], ["created_at", "2023-04-20 06:49:01.482211"], ["updated_at", "2023-04-20 06:49:01.482211"], ["image_url", "https://images.pexels.com/photos/6303643/pexels-photo-6303643.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", true]]
+  [1m[36mTRANSACTION (32.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "COVID-19 is a contagious respiratory illness caused by the SARS-CoV-2 virus. The disease has spread globally, leading to an ongoing pandemic. COVID-19 causes a range of symptoms, from mild to severe. Some people may be asymptomatic, while others may experience fever, cough, and difficulty breathing."], ["symptoms", "Fever, cough, shortness of breath, fatigue, body aches, loss of smell or taste, sore throat, congestion or runny nose."], ["prevention_measures", "Wash your hands regularly, wear a mask, practice physical distancing, avoid large gatherings, and get vaccinated."], ["created_at", "2023-04-20 06:49:01.519259"], ["updated_at", "2023-04-20 06:49:01.519259"], ["image_url", "https://images.pexels.com/photos/3958551/pexels-photo-3958551.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", true]]
+  [1m[36mTRANSACTION (32.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cholera"], ["description", "Cholera is an infectious disease that causes severe diarrhea and dehydration. It is caused by the bacterium Vibrio cholerae, which is usually found in water or food contaminated by feces from a person with the infection."], ["symptoms", "Diarrhea, nausea and vomiting, abdominal cramps, dehydration, and shock."], ["prevention_measures", "Drink clean and safe water, wash hands regularly, cook food thoroughly, avoid eating raw or undercooked seafood, and get vaccinated."], ["created_at", "2023-04-20 06:49:01.555544"], ["updated_at", "2023-04-20 06:49:01.555544"], ["image_url", "https://images.pexels.com/photos/392166/pexels-photo-392166.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", false]]
+  [1m[36mTRANSACTION (19.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (0.5ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at", "location", "reported_cases") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York City"], ["description", nil], ["latitude", "40.7128"], ["longitude", "-74.006"], ["communicable_disease_id", 85], ["created_at", "2023-04-20 06:49:01.646319"], ["updated_at", "2023-04-20 06:49:01.646319"], ["location", "New York, USA"], ["reported_cases", 1000]]
+  [1m[36mTRANSACTION (14.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (1.2ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at", "location", "reported_cases") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tokyo"], ["description", nil], ["latitude", "35.6762"], ["longitude", "139.6503"], ["communicable_disease_id", 86], ["created_at", "2023-04-20 06:49:01.667665"], ["updated_at", "2023-04-20 06:49:01.667665"], ["location", "Japan"], ["reported_cases", 500]]
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (1.2ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at", "location", "reported_cases") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Rio de Janeiro"], ["description", nil], ["latitude", "-22.9068"], ["longitude", "-43.1729"], ["communicable_disease_id", 87], ["created_at", "2023-04-20 06:49:01.695465"], ["updated_at", "2023-04-20 06:49:01.695465"], ["location", "Brazil"], ["reported_cases", 200]]
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "khalwale@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "victor@gmail.com.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.4ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Malaria"], ["description", "Malaria is a mosquito-borne infectious disease that affects humans and other animals. Malaria causes symptoms that typically include fever, tiredness, vomiting, and headaches. In severe cases, it can cause yellow skin, seizures, coma, or death."], ["symptoms", "Fever, chills, headache, muscle pain, fatigue, nausea and vomiting."], ["prevention_measures", "Use mosquito nets while sleeping, wear protective clothing, use mosquito repellents, and eliminate standing water."], ["created_at", "2023-04-20 06:49:44.072238"], ["updated_at", "2023-04-20 06:49:44.072238"], ["image_url", "https://images.pexels.com/photos/6303643/pexels-photo-6303643.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", true]]
+  [1m[36mTRANSACTION (227.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "COVID-19 is a contagious respiratory illness caused by the SARS-CoV-2 virus. The disease has spread globally, leading to an ongoing pandemic. COVID-19 causes a range of symptoms, from mild to severe. Some people may be asymptomatic, while others may experience fever, cough, and difficulty breathing."], ["symptoms", "Fever, cough, shortness of breath, fatigue, body aches, loss of smell or taste, sore throat, congestion or runny nose."], ["prevention_measures", "Wash your hands regularly, wear a mask, practice physical distancing, avoid large gatherings, and get vaccinated."], ["created_at", "2023-04-20 06:49:44.303657"], ["updated_at", "2023-04-20 06:49:44.303657"], ["image_url", "https://images.pexels.com/photos/3958551/pexels-photo-3958551.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", true]]
+  [1m[36mTRANSACTION (267.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (1.1ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cholera"], ["description", "Cholera is an infectious disease that causes severe diarrhea and dehydration. It is caused by the bacterium Vibrio cholerae, which is usually found in water or food contaminated by feces from a person with the infection."], ["symptoms", "Diarrhea, nausea and vomiting, abdominal cramps, dehydration, and shock."], ["prevention_measures", "Drink clean and safe water, wash hands regularly, cook food thoroughly, avoid eating raw or undercooked seafood, and get vaccinated."], ["created_at", "2023-04-20 06:49:44.579244"], ["updated_at", "2023-04-20 06:49:44.579244"], ["image_url", "https://images.pexels.com/photos/392166/pexels-photo-392166.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", false]]
+  [1m[36mTRANSACTION (333.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (0.5ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at", "location", "reported_cases") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York City"], ["description", nil], ["latitude", "40.7128"], ["longitude", "-74.006"], ["communicable_disease_id", 88], ["created_at", "2023-04-20 06:49:44.960334"], ["updated_at", "2023-04-20 06:49:44.960334"], ["location", "New York, USA"], ["reported_cases", 1000]]
+  [1m[36mTRANSACTION (84.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (0.6ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at", "location", "reported_cases") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tokyo"], ["description", nil], ["latitude", "35.6762"], ["longitude", "139.6503"], ["communicable_disease_id", 89], ["created_at", "2023-04-20 06:49:45.050852"], ["updated_at", "2023-04-20 06:49:45.050852"], ["location", "Japan"], ["reported_cases", 500]]
+  [1m[36mTRANSACTION (109.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (1.2ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at", "location", "reported_cases") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Rio de Janeiro"], ["description", nil], ["latitude", "-22.9068"], ["longitude", "-43.1729"], ["communicable_disease_id", 90], ["created_at", "2023-04-20 06:49:45.168341"], ["updated_at", "2023-04-20 06:49:45.168341"], ["location", "Brazil"], ["reported_cases", 200]]
+  [1m[36mTRANSACTION (135.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "khalwale@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "victor@gmail.com.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.4ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Malaria"], ["description", "Malaria is a mosquito-borne infectious disease that affects humans and other animals. Malaria causes symptoms that typically include fever, tiredness, vomiting, and headaches. In severe cases, it can cause yellow skin, seizures, coma, or death."], ["symptoms", "Fever, chills, headache, muscle pain, fatigue, nausea and vomiting."], ["prevention_measures", "Use mosquito nets while sleeping, wear protective clothing, use mosquito repellents, and eliminate standing water."], ["created_at", "2023-04-20 06:56:00.852876"], ["updated_at", "2023-04-20 06:56:00.852876"], ["image_url", "https://images.pexels.com/photos/6303643/pexels-photo-6303643.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", true]]
+  [1m[36mTRANSACTION (702.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.8ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "COVID-19"], ["description", "COVID-19 is a contagious respiratory illness caused by the SARS-CoV-2 virus. The disease has spread globally, leading to an ongoing pandemic. COVID-19 causes a range of symptoms, from mild to severe. Some people may be asymptomatic, while others may experience fever, cough, and difficulty breathing."], ["symptoms", "Fever, cough, shortness of breath, fatigue, body aches, loss of smell or taste, sore throat, congestion or runny nose."], ["prevention_measures", "Wash your hands regularly, wear a mask, practice physical distancing, avoid large gatherings, and get vaccinated."], ["created_at", "2023-04-20 06:56:01.562319"], ["updated_at", "2023-04-20 06:56:01.562319"], ["image_url", "https://images.pexels.com/photos/3958551/pexels-photo-3958551.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", true]]
+  [1m[36mTRANSACTION (372.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.9ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "description", "symptoms", "prevention_measures", "created_at", "updated_at", "image_url", "most_prevalent") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cholera"], ["description", "Cholera is an infectious disease that causes severe diarrhea and dehydration. It is caused by the bacterium Vibrio cholerae, which is usually found in water or food contaminated by feces from a person with the infection."], ["symptoms", "Diarrhea, nausea and vomiting, abdominal cramps, dehydration, and shock."], ["prevention_measures", "Drink clean and safe water, wash hands regularly, cook food thoroughly, avoid eating raw or undercooked seafood, and get vaccinated."], ["created_at", "2023-04-20 06:56:01.946540"], ["updated_at", "2023-04-20 06:56:01.946540"], ["image_url", "https://images.pexels.com/photos/392166/pexels-photo-392166.jpeg?auto=compress&cs=tinysrgb&w=600"], ["most_prevalent", false]]
+  [1m[36mTRANSACTION (209.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (0.7ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at", "location", "reported_cases") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "New York City"], ["description", nil], ["latitude", "40.7128"], ["longitude", "-74.006"], ["communicable_disease_id", 91], ["created_at", "2023-04-20 06:56:02.249970"], ["updated_at", "2023-04-20 06:56:02.249970"], ["location", "New York, USA"], ["reported_cases", 1000]]
+  [1m[36mTRANSACTION (419.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (1.4ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at", "location", "reported_cases") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tokyo"], ["description", nil], ["latitude", "35.6762"], ["longitude", "139.6503"], ["communicable_disease_id", 92], ["created_at", "2023-04-20 06:56:02.678580"], ["updated_at", "2023-04-20 06:56:02.678580"], ["location", "Japan"], ["reported_cases", 500]]
+  [1m[36mTRANSACTION (130.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (1.2ms)[0m  [1m[32mINSERT INTO "areas" ("name", "description", "latitude", "longitude", "communicable_disease_id", "created_at", "updated_at", "location", "reported_cases") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Rio de Janeiro"], ["description", nil], ["latitude", "-22.9068"], ["longitude", "-43.1729"], ["communicable_disease_id", 93], ["created_at", "2023-04-20 06:56:02.822570"], ["updated_at", "2023-04-20 06:56:02.822570"], ["location", "Brazil"], ["reported_cases", 200]]
+  [1m[36mTRANSACTION (264.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "khalwale@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "victor@gmail.com.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/donations" for ::1 at 2023-04-20 09:57:59 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DonationsController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 422 Unprocessable Entity in 21ms (Views: 2.4ms | ActiveRecord: 4.8ms | Allocations: 11257)
+
+
+Started GET "/users" for ::1 at 2023-04-20 09:58:19 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.39ms)
+Completed 200 OK in 44ms (Views: 28.9ms | ActiveRecord: 5.4ms | Allocations: 25294)
+
+
+Started GET "/communicable_diseases" for ::1 at 2023-04-20 09:58:26 +0300
+Processing by CommunicableDiseasesController#index as HTML
+  [1m[36mCommunicableDisease Load (0.9ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:7:in `index'
+No serializer found for resource: #<CommunicableDisease id: 1, name: "Malaria", description: "A mosquito-borne disease", symptoms: nil, prevention_measures: nil, created_at: "2023-04-17 08:43:15.744362000 +0000", updated_at: "2023-04-17 08:43:15.744362000 +0000", image_url: nil, most_prevalent: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with CommunicableDisease::ActiveRecord_Relation (31.58ms)
+Completed 200 OK in 60ms (Views: 49.4ms | ActiveRecord: 5.1ms | Allocations: 32950)
+
+
+Started GET "/areas" for ::1 at 2023-04-20 09:58:45 +0300
+Processing by AreasController#index as HTML
+  [1m[36mArea Load (2.0ms)[0m  [1m[34mSELECT "areas".* FROM "areas"[0m
+  ↳ app/controllers/areas_controller.rb:6:in `index'
+No serializer found for resource: #<Area id: 1, name: "Central Park", description: "A public park at the center of Manhattan in New Yo...", latitude: 0.407829e2, longitude: -0.739654e2, communicable_disease_id: 25, created_at: "2023-04-17 09:18:46.789357000 +0000", updated_at: "2023-04-17 09:18:46.789357000 +0000", location: nil, reported_cases: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Area::ActiveRecord_Relation (9.35ms)
+Completed 200 OK in 57ms (Views: 49.8ms | ActiveRecord: 5.6ms | Allocations: 23249)
+
+

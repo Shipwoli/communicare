@@ -2,6 +2,11 @@ class UsersController < ApplicationController
 
     before_action :session_expired?, only: [:check_login_status]
 
+    def index
+        users = User.all
+        render json: users
+      end
+
     def register
         user = User.create(user_params)
         if user.valid?
