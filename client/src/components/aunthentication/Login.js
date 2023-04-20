@@ -110,7 +110,7 @@ function Login() {
 
     try {
       // send login request to backend
-      const response = await axios.post("api", {
+      const response = await axios.post("/users/login", {
         email: formData.email,
         password: formData.password,
       });
