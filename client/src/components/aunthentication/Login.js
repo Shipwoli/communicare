@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { useNavigate, Link } from "react-router-dom";
-import axios from "axios";
 
 const slideIn = keyframes`
   from {
@@ -110,13 +109,17 @@ function Login() {
 
     try {
       // send login request to backend
-      const response = await axios.post("api", {
-        email: formData.email,
-        password: formData.password,
+      // Replace this with your backend API endpoint
+      const response = await fetch("http://yourbackendapi.com/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
       // navigate to home page if login is successful
-      if (response.status === 200) {
+      if (response.ok) {
         nav("/home");
       } else {
         setMessage("Invalid email or password");
@@ -132,27 +135,23 @@ function Login() {
       <Form onSubmit={handleSubmit}>
         <Input
           type="email"
-          placeholder="Email Address"
+          placeholder="Email"
           name="email"
-          id="email"
-          
-          onChange={handleChange}
           value={formData.email}
+          onChange={handleChange}
           />
           <Input
                  type="password"
                  placeholder="Password"
                  name="password"
-                 id="password"
-                 onChange={handleChange}
                  value={formData.password}
+                 onChange={handleChange}
                />
           <Button type="submit">Login</Button>
+          {message && <Message isError>{message}</Message>}
           </Form>
-          {message && <Message isError={message.startsWith("Invalid")}>{message}</Message>}
           <LinkWrapper>
-          Don't have an account? <CustomLink to="/signup">Register</CustomLink>
-          {/* Forgot Password? <CustomLink to="/resetpassword">Reset</CustomLink> */}
+          <CustomLink to="/signup">Don't have an account? Sign up</CustomLink>
           </LinkWrapper>
           </Container>
           );
