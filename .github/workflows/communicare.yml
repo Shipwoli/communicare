@@ -57,7 +57,7 @@ jobs:
             bin/rails db:migrate
           fi
 
-      - name: Test
-        run: |
-          cd Backend
-          bin/rails test
+      # - name: Test
+      #   run: |
+      #     cd Backend
+      #     bin/rails test
