@@ -3,7 +3,7 @@ class DonationsController < ApplicationController
     before_action :set_donation, only: [:show, :update, :destroy]
   
     def index
-      donations = @area.donations
+      donations = Donation.all
       render json: donations
     end
   
@@ -45,7 +45,7 @@ class DonationsController < ApplicationController
     end
   
     def donation_params
-      params.require(:donation).permit(:amount, :user_id)
+      params.require(:donation).permit(:amount, :user_id, :area_id)
     end
   end
   

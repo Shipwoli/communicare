@@ -32,8 +32,8 @@ a2 = Area.create(name: "Tokyo", location: "Japan", latitude: 35.6762, longitude:
 a3 = Area.create(name: "Rio de Janeiro", location: "Brazil", latitude: -22.9068, longitude: -43.1729, reported_cases: 200, communicable_disease: cd3)
 
 # Create some users
-u1 = User.create(first_name: "saviour", last_name: "khalwale", email: "khalwale@gmail.com", password: "password", admin: false)
-u2 = User.create(first_name: "victor", last_name: "mwangi", email: "victor@gmail.com.com", password: "password", admin: true)
+u1 = User.create(username: "saviour", email: "khalwale@gmail.com", password: "password", admin: false)
+u2 = User.create(username: "victor", email: "victor@gmail.com.com", password: "password", admin: true)
 
 # Create some reviews
 r1 = Review.create(comment: "I think we should donate more to this area to help fight COVID-19.", rating: 4, user: u1, area: a1)
