@@ -8,7 +8,8 @@ class DonationsController < ApplicationController
     end
   
     def show
-      render json: @donation
+      donations = Donation.all
+      render json: donation
     end
   
     def create
