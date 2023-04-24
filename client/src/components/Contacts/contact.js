@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 import styles from './contact.module.css'
 import rectangle3 from './Rectangle 3.png'
@@ -36,21 +35,21 @@ const Contact = (props) => {
         />
         <div className={styles['menu']}>
           <div className={styles['menu-list']}>
-          <Link to="/home" className={styles['text']}>
-          <span>Home</span>
-        </Link>
-        <Link to="/about" className={styles['text02']}>
-          <span>About</span>
-        </Link>
-        <Link to="/donation" className={styles['text04']}>
-          <span>Donation</span>
-        </Link>
-        <Link to="/blog" className={styles['text06']}>
-          <span>Blog</span>
-        </Link>
-        <Link to="/contact" className={styles['text08']}>
-          <span>Contact</span>
-        </Link>
+            <span className={styles['text']}>
+              <span>Home</span>
+            </span>
+            <span className={styles['text02']}>
+              <span>About</span>
+            </span>
+            <span className={styles['text04']}>
+              <span>Donation</span>
+            </span>
+            <span className={styles['text06']}>
+              <span>Blog</span>
+            </span>
+            <span className={styles['text08']}>
+              <span>Contact</span>
+            </span>
           </div>
           {/* <img
             src="/playground_assets/rectangle11616-8xp4-200h.png"

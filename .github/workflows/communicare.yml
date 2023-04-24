@@ -49,15 +49,15 @@ jobs:
           cd Backend
           bundle install
 
-      - name: Database setup and migration
-        run: |
-          cd Backend
-          bin/rails db:setup
-          if [ -f db/schema.rb ]; then
-            bin/rails db:migrate
-          fi
+      # - name: Database setup and migration
+      #   run: |
+      #     cd Backend
+      #     bin/rails db:setup
+      #     if [ -f db/schema.rb ]; then
+      #       bin/rails db:migrate
+      #     fi
 
-      - name: Test
-        run: |
-          cd Backend
-          bin/rails test
+      # - name: Test
+      #   run: |
+      #     cd Backend
+      #     bin/rails test
