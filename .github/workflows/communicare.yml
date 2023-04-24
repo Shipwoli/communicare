@@ -54,7 +54,7 @@ jobs:
           cd Backend
           bin/rails db:setup
           if [ -f db/schema.rb ]; then
-            bin/rails db:create db:migrate
+            bin/rails db:migrate
           fi
 
       - name: Test
