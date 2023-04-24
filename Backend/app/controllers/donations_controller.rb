@@ -1,15 +1,14 @@
 class DonationsController < ApplicationController
-    before_action :set_area, only: [:index, :create]
+    before_action :set_area, only: [:index, :create, :show]
     before_action :set_donation, only: [:show, :update, :destroy]
   
     def index
-      donations = Donation.all
+      donations = @area.donations
       render json: donations
     end
   
     def show
-      donations = Donation.all
-      render json: donation
+      render json: @donation
     end
   
     def create
