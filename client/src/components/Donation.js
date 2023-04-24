@@ -4,7 +4,7 @@ import './donation.css'
 import rectangle from './Rectangle 6.png'
 import styles from './donation.css'
 import { Link } from 'react-router-dom'
-import line from  './Line 4.png'
+// import line from  './Line 4.png'
 const Donation = (props) => {
   return (
     <div>
@@ -91,7 +91,7 @@ const Donation = (props) => {
             <div className="donation-frame66">
               <div className="donation-frame119">
                 <span className="donation-text25 SubHeadline1">
-                  <span>Payment</span>
+                  {/* <span>Payment</span> */}
                 </span>
                 {/* <img
                   src={line}

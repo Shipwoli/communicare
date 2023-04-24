@@ -108,7 +108,7 @@ function Signup() {
       return;
     }
   
-    fetch("https://food-carty-api.onrender.com/signup", {
+    fetch("https://phase5.onrender.com/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
