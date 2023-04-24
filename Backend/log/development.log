@@ -5886,3 +5886,850 @@ puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.5) lib/puma/server.rb:443:in `process_client'
 puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-04-25 01:26:57 +0300
+  
+ActiveRecord::ConnectionNotEstablished (fe_sendauth: no password supplied
+):
+  
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.3) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-04-25 01:27:05 +0300
+  
+ActiveRecord::ConnectionNotEstablished (fe_sendauth: no password supplied
+):
+  
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.3) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-04-25 01:30:17 +0300
+  
+ActiveRecord::ConnectionNotEstablished (fe_sendauth: no password supplied
+):
+  
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.3) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-04-25 01:30:21 +0300
+  
+ActiveRecord::ConnectionNotEstablished (fe_sendauth: no password supplied
+):
+  
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.3) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-04-25 01:30:44 +0300
+  
+ActiveRecord::ConnectionNotEstablished (fe_sendauth: no password supplied
+):
+  
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.3) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-04-25 01:30:48 +0300
+  
+ActiveRecord::ConnectionNotEstablished (fe_sendauth: no password supplied
+):
+  
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.3) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-04-25 01:31:53 +0300
+  
+ActiveRecord::ConnectionNotEstablished (fe_sendauth: no password supplied
+):
+  
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.3) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-04-25 01:38:39 +0300
+  
+ActiveRecord::ConnectionNotEstablished (fe_sendauth: no password supplied
+):
+  
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.3) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/areas" for ::1 at 2023-04-25 01:38:58 +0300
+  
+ActiveRecord::ConnectionNotEstablished (fe_sendauth: no password supplied
+):
+  
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.3) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/__web_console/repl_sessions/06b394781ee9f990fe142c8931ef4892/trace" for ::1 at 2023-04-25 01:39:10 +0300
+Started GET "/" for ::1 at 2023-04-25 01:40:06 +0300
+  
+ActiveRecord::ConnectionNotEstablished (fe_sendauth: no password supplied
+):
+  
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.3) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.3) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.3) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.3) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-04-25 01:41:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (98.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.7ms | Allocations: 660)
+Completed 200 OK in 35ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 5391)
+
+
+Started GET "/areas" for ::1 at 2023-04-25 01:41:53 +0300
+Processing by AreasController#index as HTML
+  [1m[36mArea Load (1.2ms)[0m  [1m[34mSELECT "areas".* FROM "areas"[0m
+  ↳ app/controllers/areas_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 200 OK in 348ms (Views: 334.9ms | ActiveRecord: 1.2ms | Allocations: 8855)
+
+
+Started GET "/users" for ::1 at 2023-04-25 01:42:04 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:21:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 13ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 3613)
+
+
+Started GET "/users" for ::1 at 2023-04-25 01:42:08 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:21:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 751)
+
+
+Started GET "/communicable_diseases" for ::1 at 2023-04-25 01:42:17 +0300
+Processing by CommunicableDiseasesController#index as HTML
+  [1m[36mCommunicableDisease Load (0.5ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 2532)
+
+
+Started GET "/communicable_diseases" for ::1 at 2023-04-25 01:42:20 +0300
+Processing by CommunicableDiseasesController#index as HTML
+  [1m[36mCommunicableDisease Load (0.4ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 754)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mArea Load (1.1ms)[0m  [1m[34mSELECT "areas".* FROM "areas"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (181.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (20.2ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "image_url", "description", "symptoms", "prevention_measures", "most_prevalent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "COVID-19"], ["image_url", "https://images.pexels.com/photos/6303643/pexels-photo-6303643.jpeg?auto=compress&cs=tinysrgb&w=600"], ["description", "A respiratory illness caused by the SARS-CoV-2 virus."], ["symptoms", "Fever, cough, shortness of breath, loss of taste or smell."], ["prevention_measures", "Wear a mask, wash your hands, practice social distancing."], ["most_prevalent", true], ["created_at", "2023-04-24 22:45:54.267784"], ["updated_at", "2023-04-24 22:45:54.267784"]]
+  [1m[36mTRANSACTION (44.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "image_url", "description", "symptoms", "prevention_measures", "most_prevalent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Influenza"], ["image_url", "https://images.pexels.com/photos/6303643/pexels-photo-6303643.jpeg?auto=compress&cs=tinysrgb&w=600"], ["description", "A viral infection that affects the respiratory system."], ["symptoms", "Fever, cough, sore throat, runny or stuffy nose, body aches, headache, chills, fatigue."], ["prevention_measures", "Get vaccinated, wash your hands, avoid close contact with sick people."], ["most_prevalent", false], ["created_at", "2023-04-24 22:45:54.337867"], ["updated_at", "2023-04-24 22:45:54.337867"]]
+  [1m[36mTRANSACTION (29.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (0.8ms)[0m  [1m[32mINSERT INTO "areas" ("name", "location", "latitude", "longitude", "reported_cases", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Nairobi"], ["location", "Kenya"], ["latitude", -1.2921], ["longitude", 36.8219], ["reported_cases", 1000], ["communicable_disease_id", 1], ["created_at", "2023-04-24 22:45:54.441476"], ["updated_at", "2023-04-24 22:45:54.441476"]]
+  [1m[36mTRANSACTION (40.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (0.7ms)[0m  [1m[32mINSERT INTO "areas" ("name", "location", "latitude", "longitude", "reported_cases", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Kampala"], ["location", "Uganda"], ["latitude", 0.3476], ["longitude", 32.5825], ["reported_cases", 500], ["communicable_disease_id", 1], ["created_at", "2023-04-24 22:45:54.487950"], ["updated_at", "2023-04-24 22:45:54.487950"]]
+  [1m[36mTRANSACTION (41.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (0.8ms)[0m  [1m[32mINSERT INTO "areas" ("name", "location", "latitude", "longitude", "reported_cases", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "New York City"], ["location", "United States"], ["latitude", 40.7128], ["longitude", -74.006], ["reported_cases", 2000], ["communicable_disease_id", 2], ["created_at", "2023-04-24 22:45:54.537546"], ["updated_at", "2023-04-24 22:45:54.537546"]]
+  [1m[36mTRANSACTION (27.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "john@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "john_doe"], ["email", "john@example.com"], ["password_digest", "[FILTERED]"], ["admin", false], ["created_at", "2023-04-24 22:45:54.861124"], ["updated_at", "2023-04-24 22:45:54.861124"]]
+  [1m[36mTRANSACTION (32.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jane@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "jane_doe"], ["email", "jane@example.com"], ["password_digest", "[FILTERED]"], ["admin", true], ["created_at", "2023-04-24 22:45:55.158752"], ["updated_at", "2023-04-24 22:45:55.158752"]]
+  [1m[36mTRANSACTION (28.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDonation Create (1.0ms)[0m  [1m[32mINSERT INTO "donations" ("amount", "user_id", "area_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["amount", "50.0"], ["user_id", 1], ["area_id", 1], ["created_at", "2023-04-24 22:45:55.213730"], ["updated_at", "2023-04-24 22:45:55.213730"]]
+  [1m[36mTRANSACTION (28.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDonation Create (0.8ms)[0m  [1m[32mINSERT INTO "donations" ("amount", "user_id", "area_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["amount", "100.0"], ["user_id", 2], ["area_id", 2], ["created_at", "2023-04-24 22:45:55.249756"], ["updated_at", "2023-04-24 22:45:55.249756"]]
+  [1m[36mTRANSACTION (26.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Create (0.7ms)[0m  [1m[32mINSERT INTO "reviews" ("comment", "rating", "user_id", "area_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["comment", "This area needs more testing sites."], ["rating", 3], ["user_id", 1], ["area_id", 1], ["created_at", "2023-04-24 22:45:55.304852"], ["updated_at", "2023-04-24 22:45:55.304852"]]
+  [1m[36mTRANSACTION (31.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Create (0.8ms)[0m  [1m[32mINSERT INTO "reviews" ("comment", "rating", "user_id", "area_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["comment", "Great work being done here!"], ["rating", 5], ["user_id", 2], ["area_id", 2], ["created_at", "2023-04-24 22:45:55.341739"], ["updated_at", "2023-04-24 22:45:55.341739"]]
+  [1m[36mTRANSACTION (28.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/communicable_diseases" for ::1 at 2023-04-25 01:46:10 +0300
+Processing by CommunicableDiseasesController#index as HTML
+  [1m[36mCommunicableDisease Load (0.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:7:in `index'
+No serializer found for resource: #<CommunicableDisease id: 1, name: "COVID-19", image_url: "https://images.pexels.com/photos/6303643/pexels-ph...", description: "A respiratory illness caused by the SARS-CoV-2 vir...", symptoms: "Fever, cough, shortness of breath, loss of taste o...", prevention_measures: "Wear a mask, wash your hands, practice social dist...", most_prevalent: true, created_at: "2023-04-24 22:45:54.267784000 +0000", updated_at: "2023-04-24 22:45:54.267784000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with CommunicableDisease::ActiveRecord_Relation (0.34ms)
+Completed 200 OK in 16ms (Views: 10.3ms | ActiveRecord: 3.5ms | Allocations: 24338)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2023-04-25 01:46:55 +0300
+Processing by ReviewsController#create as */*
+  Parameters: {"user_id"=>1, "area_id"=>2, "comment"=>"I believe we need to increase public awareness campaigns in this area to help prevent the spread of the disease. Let's work together to make this happen!", "rating"=>3, "review"=>{"comment"=>"I believe we need to increase public awareness campaigns in this area to help prevent the spread of the disease. Let's work together to make this happen!", "rating"=>3, "user_id"=>1, "area_id"=>2}}
+  [1m[36mArea Load (0.2ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:23:in `set_area'
+[31mUnpermitted parameter: :area_id. Context: { controller: ReviewsController, action: create, request: #<ActionDispatch::Request:0x00007f55cc097f80>, params: {"user_id"=>1, "area_id"=>2, "comment"=>"I believe we need to increase public awareness campaigns in this area to help prevent the spread of the disease. Let's work together to make this happen!", "rating"=>3, "controller"=>"reviews", "action"=>"create", "review"=>{"comment"=>"I believe we need to increase public awareness campaigns in this area to help prevent the spread of the disease. Let's work together to make this happen!", "rating"=>3, "user_id"=>1, "area_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+  [1m[36mReview Create (0.8ms)[0m  [1m[32mINSERT INTO "reviews" ("comment", "rating", "user_id", "area_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["comment", "I believe we need to increase public awareness campaigns in this area to help prevent the spread of the disease. Let's work together to make this happen!"], ["rating", 3], ["user_id", 1], ["area_id", 2], ["created_at", "2023-04-24 22:46:55.616405"], ["updated_at", "2023-04-24 22:46:55.616405"]]
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (70.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Review (0.43ms)
+Completed 201 Created in 147ms (Views: 31.9ms | ActiveRecord: 79.9ms | Allocations: 64833)
+
+
+Started GET "/communicale_diseases" for 127.0.0.1 at 2023-04-25 01:47:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/communicale_diseases"):
+  
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-25 01:47:36 +0300
+Processing by CommunicableDiseasesController#index as */*
+  Parameters: {"user_id"=>1, "area_id"=>2, "comment"=>"I believe we need to increase public awareness campaigns in this area to help prevent the spread of the disease. Let's work together to make this happen!", "rating"=>3, "communicable_disease"=>{}}
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:7:in `index'
+No serializer found for resource: #<CommunicableDisease id: 1, name: "COVID-19", image_url: "https://images.pexels.com/photos/6303643/pexels-ph...", description: "A respiratory illness caused by the SARS-CoV-2 vir...", symptoms: "Fever, cough, shortness of breath, loss of taste o...", prevention_measures: "Wear a mask, wash your hands, practice social dist...", most_prevalent: true, created_at: "2023-04-24 22:45:54.267784000 +0000", updated_at: "2023-04-24 22:45:54.267784000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with CommunicableDisease::ActiveRecord_Relation (0.54ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1094)
+
+
+Started PATCH "/communicable_diseases/1" for 127.0.0.1 at 2023-04-25 01:49:06 +0300
+Processing by CommunicableDiseasesController#update as */*
+  Parameters: {"image_url"=>"https://www.shutterstock.com/image-illustration/coronavirus-covid19-microscopic-virus-corona-600w-1669704829.jpg", "id"=>"1", "communicable_disease"=>{"image_url"=>"https://www.shutterstock.com/image-illustration/coronavirus-covid19-microscopic-virus-corona-600w-1669704829.jpg"}}
+  [1m[36mCommunicableDisease Load (0.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/communicable_diseases_controller.rb:45:in `set_communicable_disease'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:28:in `update'
+  [1m[36mCommunicableDisease Update (0.3ms)[0m  [1m[33mUPDATE "communicable_diseases" SET "image_url" = $1, "updated_at" = $2 WHERE "communicable_diseases"."id" = $3[0m  [["image_url", "https://www.shutterstock.com/image-illustration/coronavirus-covid19-microscopic-virus-corona-600w-1669704829.jpg"], ["updated_at", "2023-04-24 22:49:06.457606"], ["id", 1]]
+  ↳ app/controllers/communicable_diseases_controller.rb:28:in `update'
+  [1m[36mTRANSACTION (113.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:28:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CommunicableDisease (0.49ms)
+Completed 200 OK in 121ms (Views: 1.5ms | ActiveRecord: 113.8ms | Allocations: 3154)
+
+
+Started GET "/communicable_diseases/2" for 127.0.0.1 at 2023-04-25 01:49:15 +0300
+Processing by CommunicableDiseasesController#show as */*
+  Parameters: {"image_url"=>"https://www.shutterstock.com/image-illustration/coronavirus-covid19-microscopic-virus-corona-600w-1669704829.jpg", "id"=>"2", "communicable_disease"=>{"image_url"=>"https://www.shutterstock.com/image-illustration/coronavirus-covid19-microscopic-virus-corona-600w-1669704829.jpg"}}
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/communicable_diseases_controller.rb:45:in `set_communicable_disease'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CommunicableDisease (0.27ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 748)
+
+
+Started PATCH "/communicable_diseases/2" for 127.0.0.1 at 2023-04-25 01:50:10 +0300
+Processing by CommunicableDiseasesController#update as */*
+  Parameters: {"image_url"=>"https://www.shutterstock.com/image-vector/cute-infographic-influenza-disease-600w-1508393528.jpg", "id"=>"2", "communicable_disease"=>{"image_url"=>"https://www.shutterstock.com/image-vector/cute-infographic-influenza-disease-600w-1508393528.jpg"}}
+  [1m[36mCommunicableDisease Load (0.5ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/communicable_diseases_controller.rb:45:in `set_communicable_disease'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:28:in `update'
+  [1m[36mCommunicableDisease Update (0.4ms)[0m  [1m[33mUPDATE "communicable_diseases" SET "image_url" = $1, "updated_at" = $2 WHERE "communicable_diseases"."id" = $3[0m  [["image_url", "https://www.shutterstock.com/image-vector/cute-infographic-influenza-disease-600w-1508393528.jpg"], ["updated_at", "2023-04-24 22:50:10.219252"], ["id", 2]]
+  ↳ app/controllers/communicable_diseases_controller.rb:28:in `update'
+  [1m[36mTRANSACTION (98.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:28:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CommunicableDisease (0.5ms)
+Completed 200 OK in 107ms (Views: 1.6ms | ActiveRecord: 99.9ms | Allocations: 2474)
+
+
+Started GET "/communicable_diseases/3" for 127.0.0.1 at 2023-04-25 01:50:25 +0300
+Processing by CommunicableDiseasesController#show as */*
+  Parameters: {"image_url"=>"https://www.shutterstock.com/image-vector/cute-infographic-influenza-disease-600w-1508393528.jpg", "id"=>"3", "communicable_disease"=>{"image_url"=>"https://www.shutterstock.com/image-vector/cute-infographic-influenza-disease-600w-1508393528.jpg"}}
+  [1m[36mCommunicableDisease Load (0.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/communicable_diseases_controller.rb:45:in `set_communicable_disease'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 422 Unprocessable Entity in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1640)
+
+
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-25 01:50:36 +0300
+Processing by CommunicableDiseasesController#index as */*
+  Parameters: {"image_url"=>"https://www.shutterstock.com/image-vector/cute-infographic-influenza-disease-600w-1508393528.jpg", "communicable_disease"=>{"image_url"=>"https://www.shutterstock.com/image-vector/cute-infographic-influenza-disease-600w-1508393528.jpg"}}
+  [1m[36mCommunicableDisease Load (0.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:7:in `index'
+No serializer found for resource: #<CommunicableDisease id: 1, name: "COVID-19", image_url: "https://www.shutterstock.com/image-illustration/co...", description: "A respiratory illness caused by the SARS-CoV-2 vir...", symptoms: "Fever, cough, shortness of breath, loss of taste o...", prevention_measures: "Wear a mask, wash your hands, practice social dist...", most_prevalent: true, created_at: "2023-04-24 22:45:54.267784000 +0000", updated_at: "2023-04-24 22:49:06.457606000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with CommunicableDisease::ActiveRecord_Relation (0.27ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1083)
+
+
+Started POST "/communicable_diseases" for 127.0.0.1 at 2023-04-25 02:01:16 +0300
+Processing by CommunicableDiseasesController#create as */*
+  Parameters: {"_json"=>[{"name"=>"Malaria", "image_url"=>"https://media.istockphoto.com/id/1035560516/vector/defeat-malaria-infographic-with-symptoms-and-prevention.jpg?s=2048x2048&w=is&k=20&c=bp6QsmeFhzCHDH_523zCzixeOBxCQ3SoSNdyYIh0APQ=", "description"=>"Malaria is a mosquito-borne infectious disease that affects humans and other animals. Malaria causes symptoms that typically include fever, tiredness, vomiting, and headaches. In severe cases, it can cause yellow skin, seizures, coma, or death.", "symptoms"=>"Symptoms of malaria include fever, chills, sweating, headache, muscle pain, and fatigue.", "prevention_measures"=>"Prevention measures include using mosquito nets, wearing long-sleeved shirts and pants, and using insect repellents.", "most_prevalent"=>true}, {"name"=>"Bilharzia", "image_url"=>"hhttps://www.who.int/images/default-source/departments/ntd-library/schistosomiasis/infographics/schistosomiasis-an-acute-and-chronic-neglected-tropical-disease.png?sfvrsn=1801624f_2", "description"=>"Bilharzia, also known as schistosomiasis, is a parasitic disease caused by flatworms called schistosomes. It is transmitted when people come into contact with water that is infested with the parasites.", "symptoms"=>"Symptoms of bilharzia include abdominal pain, diarrhea, bloody stool, blood in urine, and liver damage.", "prevention_measures"=>"Prevention measures include avoiding contact with contaminated water, treating water with chemicals, and using protective clothing.", "most_prevalent"=>false}, {"name"=>"Cholera", "image_url"=>"https://www.shutterstock.com/image-vector/cholera-vector-illustration-labeled-infection-600w-1385287967.jpg", "description"=>"Cholera is an infectious disease caused by the bacterium Vibrio cholerae. It is typically spread through contaminated water or food and can cause severe diarrhea and dehydration.", "symptoms"=>"Symptoms of cholera include diarrhea, vomiting, dehydration, and muscle cramps.", "prevention_measures"=>"Prevention measures include drinking clean water, eating cooked food, washing hands frequently, and using proper sanitation.", "most_prevalent"=>true}], "communicable_disease"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 1ms (Views: 0.7ms | Allocations: 540)
+
+
+Started POST "/communicable_diseases" for 127.0.0.1 at 2023-04-25 02:04:03 +0300
+Processing by CommunicableDiseasesController#create as */*
+  Parameters: {"name"=>"Malaria", "image_url"=>"https://media.istockphoto.com/id/1035560516/vector/defeat-malaria-infographic-with-symptoms-and-prevention.jpg?s=2048x2048&w=is&k=20&c=bp6QsmeFhzCHDH_523zCzixeOBxCQ3SoSNdyYIh0APQ=", "description"=>"Malaria is a mosquito-borne infectious disease that affects humans and other animals. Malaria causes symptoms that typically include fever, tiredness, vomiting, and headaches. In severe cases, it can cause yellow skin, seizures, coma, or death.", "symptoms"=>"Symptoms of malaria include fever, chills, sweating, headache, muscle pain, and fatigue.", "prevention_measures"=>"Prevention measures include using mosquito nets, wearing long-sleeved shirts and pants, and using insect repellents.", "most_prevalent"=>true, "communicable_disease"=>{"name"=>"Malaria", "image_url"=>"https://media.istockphoto.com/id/1035560516/vector/defeat-malaria-infographic-with-symptoms-and-prevention.jpg?s=2048x2048&w=is&k=20&c=bp6QsmeFhzCHDH_523zCzixeOBxCQ3SoSNdyYIh0APQ=", "description"=>"Malaria is a mosquito-borne infectious disease that affects humans and other animals. Malaria causes symptoms that typically include fever, tiredness, vomiting, and headaches. In severe cases, it can cause yellow skin, seizures, coma, or death.", "symptoms"=>"Symptoms of malaria include fever, chills, sweating, headache, muscle pain, and fatigue.", "prevention_measures"=>"Prevention measures include using mosquito nets, wearing long-sleeved shirts and pants, and using insect repellents.", "most_prevalent"=>true}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:19:in `create'
+  [1m[36mCommunicableDisease Create (1.1ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "image_url", "description", "symptoms", "prevention_measures", "most_prevalent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Malaria"], ["image_url", "https://media.istockphoto.com/id/1035560516/vector/defeat-malaria-infographic-with-symptoms-and-prevention.jpg?s=2048x2048&w=is&k=20&c=bp6QsmeFhzCHDH_523zCzixeOBxCQ3SoSNdyYIh0APQ="], ["description", "Malaria is a mosquito-borne infectious disease that affects humans and other animals. Malaria causes symptoms that typically include fever, tiredness, vomiting, and headaches. In severe cases, it can cause yellow skin, seizures, coma, or death."], ["symptoms", "Symptoms of malaria include fever, chills, sweating, headache, muscle pain, and fatigue."], ["prevention_measures", "Prevention measures include using mosquito nets, wearing long-sleeved shirts and pants, and using insect repellents."], ["most_prevalent", true], ["created_at", "2023-04-24 23:04:03.503978"], ["updated_at", "2023-04-24 23:04:03.503978"]]
+  ↳ app/controllers/communicable_diseases_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (106.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:19:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CommunicableDisease (0.69ms)
+Completed 201 Created in 125ms (Views: 2.0ms | ActiveRecord: 111.9ms | Allocations: 4892)
+
+
+Started POST "/communicable_diseases" for 127.0.0.1 at 2023-04-25 02:04:21 +0300
+Processing by CommunicableDiseasesController#create as */*
+  Parameters: {"name"=>"Bilharzia", "image_url"=>"hhttps://www.who.int/images/default-source/departments/ntd-library/schistosomiasis/infographics/schistosomiasis-an-acute-and-chronic-neglected-tropical-disease.png?sfvrsn=1801624f_2", "description"=>"Bilharzia, also known as schistosomiasis, is a parasitic disease caused by flatworms called schistosomes. It is transmitted when people come into contact with water that is infested with the parasites.", "symptoms"=>"Symptoms of bilharzia include abdominal pain, diarrhea, bloody stool, blood in urine, and liver damage.", "prevention_measures"=>"Prevention measures include avoiding contact with contaminated water, treating water with chemicals, and using protective clothing.", "most_prevalent"=>false, "communicable_disease"=>{"name"=>"Bilharzia", "image_url"=>"hhttps://www.who.int/images/default-source/departments/ntd-library/schistosomiasis/infographics/schistosomiasis-an-acute-and-chronic-neglected-tropical-disease.png?sfvrsn=1801624f_2", "description"=>"Bilharzia, also known as schistosomiasis, is a parasitic disease caused by flatworms called schistosomes. It is transmitted when people come into contact with water that is infested with the parasites.", "symptoms"=>"Symptoms of bilharzia include abdominal pain, diarrhea, bloody stool, blood in urine, and liver damage.", "prevention_measures"=>"Prevention measures include avoiding contact with contaminated water, treating water with chemicals, and using protective clothing.", "most_prevalent"=>false}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:19:in `create'
+  [1m[36mCommunicableDisease Create (0.3ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "image_url", "description", "symptoms", "prevention_measures", "most_prevalent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Bilharzia"], ["image_url", "hhttps://www.who.int/images/default-source/departments/ntd-library/schistosomiasis/infographics/schistosomiasis-an-acute-and-chronic-neglected-tropical-disease.png?sfvrsn=1801624f_2"], ["description", "Bilharzia, also known as schistosomiasis, is a parasitic disease caused by flatworms called schistosomes. It is transmitted when people come into contact with water that is infested with the parasites."], ["symptoms", "Symptoms of bilharzia include abdominal pain, diarrhea, bloody stool, blood in urine, and liver damage."], ["prevention_measures", "Prevention measures include avoiding contact with contaminated water, treating water with chemicals, and using protective clothing."], ["most_prevalent", false], ["created_at", "2023-04-24 23:04:21.562075"], ["updated_at", "2023-04-24 23:04:21.562075"]]
+  ↳ app/controllers/communicable_diseases_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (100.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:19:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CommunicableDisease (0.6ms)
+Completed 201 Created in 108ms (Views: 1.8ms | ActiveRecord: 101.2ms | Allocations: 2078)
+
+
+Started POST "/communicable_diseases" for 127.0.0.1 at 2023-04-25 02:04:30 +0300
+Processing by CommunicableDiseasesController#create as */*
+  Parameters: {"name"=>"Cholera", "image_url"=>"https://www.shutterstock.com/image-vector/cholera-vector-illustration-labeled-infection-600w-1385287967.jpg", "description"=>"Cholera is an infectious disease caused by the bacterium Vibrio cholerae. It is typically spread through contaminated water or food and can cause severe diarrhea and dehydration.", "symptoms"=>"Symptoms of cholera include diarrhea, vomiting, dehydration, and muscle cramps.", "prevention_measures"=>"Prevention measures include drinking clean water, eating cooked food, washing hands frequently, and using proper sanitation.", "most_prevalent"=>true, "communicable_disease"=>{"name"=>"Cholera", "image_url"=>"https://www.shutterstock.com/image-vector/cholera-vector-illustration-labeled-infection-600w-1385287967.jpg", "description"=>"Cholera is an infectious disease caused by the bacterium Vibrio cholerae. It is typically spread through contaminated water or food and can cause severe diarrhea and dehydration.", "symptoms"=>"Symptoms of cholera include diarrhea, vomiting, dehydration, and muscle cramps.", "prevention_measures"=>"Prevention measures include drinking clean water, eating cooked food, washing hands frequently, and using proper sanitation.", "most_prevalent"=>true}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:19:in `create'
+  [1m[36mCommunicableDisease Create (0.5ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "image_url", "description", "symptoms", "prevention_measures", "most_prevalent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cholera"], ["image_url", "https://www.shutterstock.com/image-vector/cholera-vector-illustration-labeled-infection-600w-1385287967.jpg"], ["description", "Cholera is an infectious disease caused by the bacterium Vibrio cholerae. It is typically spread through contaminated water or food and can cause severe diarrhea and dehydration."], ["symptoms", "Symptoms of cholera include diarrhea, vomiting, dehydration, and muscle cramps."], ["prevention_measures", "Prevention measures include drinking clean water, eating cooked food, washing hands frequently, and using proper sanitation."], ["most_prevalent", true], ["created_at", "2023-04-24 23:04:30.198692"], ["updated_at", "2023-04-24 23:04:30.198692"]]
+  ↳ app/controllers/communicable_diseases_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (97.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:19:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CommunicableDisease (0.43ms)
+Completed 201 Created in 106ms (Views: 1.4ms | ActiveRecord: 98.5ms | Allocations: 2081)
+
+
