@@ -8,7 +8,8 @@ class DonationsController < ApplicationController
     end
   
     def show
-      render json: @donation
+      donations = Donation.all
+      render json: donation
     end
   
     def create
@@ -45,7 +46,7 @@ class DonationsController < ApplicationController
     end
   
     def donation_params
-      params.require(:donation).permit(:amount, :user_id)
+      params.require(:donation).permit(:amount, :user_id, :area_id)
     end
   end
   

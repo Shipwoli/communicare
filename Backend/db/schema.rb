@@ -10,32 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_20_064738) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_17_075954) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "areas", force: :cascade do |t|
     t.string "name"
-    t.text "description"
-    t.decimal "latitude"
-    t.decimal "longitude"
+    t.string "location"
+    t.float "latitude"
+    t.float "longitude"
+    t.integer "reported_cases"
     t.bigint "communicable_disease_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "location"
-    t.integer "reported_cases"
     t.index ["communicable_disease_id"], name: "index_areas_on_communicable_disease_id"
   end
 
   create_table "communicable_diseases", force: :cascade do |t|
     t.string "name"
+    t.string "image_url", default: "https://images.pexels.com/photos/6303643/pexels-photo-6303643.jpeg?auto=compress&cs=tinysrgb&w=600", null: false
     t.text "description"
     t.text "symptoms"
     t.text "prevention_measures"
+    t.boolean "most_prevalent", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image_url"
-    t.boolean "most_prevalent"
   end
 
   create_table "donations", force: :cascade do |t|
@@ -49,7 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_20_064738) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.text "content"
+    t.text "comment"
     t.integer "rating"
     t.bigint "user_id", null: false
     t.bigint "area_id", null: false

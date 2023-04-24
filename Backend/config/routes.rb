@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   # user
-  # post "/login", to: "sessions#create"
+  post "/login", to: "sessions#create"
   # delete "/logout", to: "sessions#destroy"
 
   # post "/register", to: "users#create"
@@ -21,8 +21,9 @@ Rails.application.routes.draw do
      # Routes for communicable diseases
   # resources :communicable_diseases, only: [:index, :show, :create, :update, :destroy]
   resources :reviews, only: [:index, :show, :create, :update, :destroy]
-  resources :areas, only: [:index, :show, :create, :update]
-  resources :donations, only: [:index, :show, :create, :update]
+  resources :areas, only: [:index, :show, :create, :update] 
+  # resources :donations, only: [:index, :show, :create, :update]
+  get "/donations/:area_id" , to: "donations#index"
   resources :communicable_diseases
   resources :users
 end
