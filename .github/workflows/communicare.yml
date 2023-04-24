@@ -1,54 +1,63 @@
-name: communicable CI/CD
+name: CI/CD
+
 on:
   push:
-    branches: [ main, develop]
-  pull_request:
     branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop]
+
 jobs:
   react:
     name: React
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Install dependencies
         run: |
           cd client
           npm install
+
       - name: Build
         run: |
           cd client
           npm run build
+
       - name: Test
         run: |
           cd client
           npm run test
+
   rails:
     name: Ruby on Rails
     runs-on: ubuntu-latest
-    services:
-      postgres:
-        image: postgres:latest
-        ports:
-          - "5432:5432"
-        env:
-          POSTGRES_DB: rails_test
-          POSTGRES_USER: rails
-          POSTGRES_PASSWORD: password
-          options: >-
-            --health-cmd pg_isready
-            --health-interval 10s
-            --health-timeout 5s
-            --health-retries 5
-    env:
-      RAILS_ENV: test
-      DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: ruby/setup-ruby@v1
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Ruby and Bundler
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.7.4'
-      - run: cd Backend && bundle install
-      - run: cd Backend && bundle exec rails db:setup
-      - run: cd Backend && bundle exec rails db:migrate RAILS_ENV=test
-      - run: cd backend && bundle exec rspec spec
+          ruby-version: 2.7.4
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          cd Backend
+          bundle install
+
+      - name: Database setup and migration
+        run: |
+          cd Backend
+          bin/rails db:setup
+          if [ -f db/schema.rb ]; then
+            bin/rails db:migrate
+          fi
+
+      - name: Test
+        run: |
+          cd Backend
+          bin/rails test
