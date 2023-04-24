@@ -9,10 +9,10 @@ import image2 from './images2.png'
 import image3 from './images3.png'   
 import image4 from './images4.png'   
 import image5 from './images5.png' 
-//import imagex from './images6.jpeg' 
+import imagex from './images6.jpeg' 
 import image6 from './Rectangle 3.png'   
 import image7 from './image7.png'   
-//import image8 from './image8.png'   
+import image8 from './image8.png'   
 import image9 from './image9.png'     
 import Line2 from './Line 2.png'        
 import line1 from './Line 1.png'     
@@ -79,8 +79,7 @@ const About = (props) => {
         </span>
         <span className={styles['text17']}>
           <span>
-            Mattis et aliquam fermentum sed sagittis eu elit mauris. Nisl eros
-            vel neque vitae lorem molestie.
+          Let us be the change we want to see in the world, and work towards a world free from the threat of communicable disease  h
           </span>
         </span>
         <div className={styles['group7']}>

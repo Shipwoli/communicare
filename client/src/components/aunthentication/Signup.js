@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { useNavigate, Link } from "react-router-dom";
+import axios from "axios";
 
 const slideIn = keyframes`
   from {
@@ -84,12 +85,10 @@ const CustomLink = styled(Link)`
   color: rgba(26, 143, 227, 1);
 `;
 
-function Signup() {
+function Login() {
   const [formData, setFormData] = useState({
-    username: "",
     email: "",
     password: "",
-    confirmPassword: "",
   });
   const [message, setMessage] = useState("");
   const nav = useNavigate();
@@ -101,82 +100,62 @@ function Signup() {
     });
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {
-      setMessage("Passwords do not match");
+    // validate form data, e.g. check if email and password are not empty
+    if (!formData.email || !formData.password) {
+      setMessage("Please enter your email and password");
       return;
     }
-  
-    fetch("/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error("Signup failed");
-        }
-      })
-      .then((data) => {
-        nav("/home");
-        setMessage("Signup successful");
-      })
-      .catch((error) => {
-        setMessage("Signup failed");
-        console.error(error);
+
+    try {
+      // send login request to backend
+      const response = await axios.post("https://phase5.onrender.com/", {
+        email: formData.email,
+        password: formData.password,
       });
+
+      // navigate to home page if login is successful
+      if (response.status === 200) {
+        nav("/home");
+      } else {
+        setMessage("Invalid email or password");
+      }
+    } catch (error) {
+      setMessage("Login failed");
+    }
   }
-  
 
   return (
     <Container>
-      <Title>Sign up</Title>
+      <Title>Login</Title>
       <Form onSubmit={handleSubmit}>
-      <Input
-          type="username"
-          placeholder="User Name"
-          name="username"
-          id="username"
-          onChange={handleChange}
-          value={formData.username}
-        />
         <Input
           type="email"
           placeholder="Email Address"
           name="email"
           id="email"
+          
           onChange={handleChange}
           value={formData.email}
-        />
-        <Input
-          type="password"
-          placeholder="Password"
-          name="password"
-          id="password"
-          onChange={handleChange}
-          value={formData.password}
-        />
-        <Input
-          type="password"
-          placeholder="Confirm Password"
-          name="confirmPassword"
-          id="confirmPassword"
-          onChange={handleChange}
-          value={formData.confirmPassword}
-        />
-        <Button type="submit">Sign up</Button>
-        {message && <Message isError={message.includes("Passwords do not match")}>{message}</Message>}
-      </Form>
-      <LinkWrapper>
-  <p>Already have an account?</p>
-  <CustomLink to="/login">Login</CustomLink>
-</LinkWrapper>
-</Container>
-);
-}
-export default Signup;
+          />
+          <Input
+                 type="password"
+                 placeholder="Password"
+                 name="password"
+                 id="password"
+                 onChange={handleChange}
+                 value={formData.password}
+               />
+          <Button type="submit">Login</Button>
+          </Form>
+          {message && <Message isError={message.startsWith("Invalid")}>{message}</Message>}
+          <LinkWrapper>
+          Don't have an account? <CustomLink to="/signup">Register</CustomLink>
+          {/* Forgot Password? <CustomLink to="/resetpassword">Reset</CustomLink> */}
+          </LinkWrapper>
+          </Container>
+          );
+          }
+          
+          export default Login;
