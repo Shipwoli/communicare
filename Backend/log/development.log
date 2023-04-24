@@ -5654,3 +5654,7 @@ Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.7ms | Allocations: 2193)
   [1m[35m (822.8ms)[0m  [1m[35mCREATE DATABASE "postgres_test" ENCODING = 'unicode'[0m
   [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE "postgres_development" ENCODING = 'unicode'[0m
   [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "postgres_test" ENCODING = 'unicode'[0m
+  [1m[35m (985.9ms)[0m  [1m[35mCREATE DATABASE "bACKEND_development" ENCODING = 'unicode'[0m
+  [1m[35m (15.0ms)[0m  [1m[35mCREATE DATABASE "Backend_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "Backend_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "Backend_test" ENCODING = 'unicode'[0m
