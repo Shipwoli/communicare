@@ -5732,3 +5732,12 @@ No serializer found for resource: #<CommunicableDisease id: 1, name: "Malaria", 
 Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 2742)
 
 
+Started GET "/users" for ::1 at 2023-04-25 17:00:42 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:10:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.11ms)
+Completed 200 OK in 31ms (Views: 20.4ms | ActiveRecord: 2.9ms | Allocations: 27449)
+
+
