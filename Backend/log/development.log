@@ -5732,3 +5732,5 @@ No serializer found for resource: #<CommunicableDisease id: 1, name: "Malaria", 
 Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 2742)
 
 
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCommunicableDisease Load (0.8ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
