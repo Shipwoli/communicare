@@ -5836,3 +5836,47 @@ app/controllers/application_controller.rb:88:in `standard_error'
   [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6261970625210806065)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mReview Load (99.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+Started GET "/" for ::1 at 2023-04-25 16:02:49 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (73.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.6ms | Allocations: 678)
+Completed 200 OK in 101ms (Views: 38.1ms | ActiveRecord: 0.0ms | Allocations: 5525)
+
+
+Started GET "/users" for ::1 at 2023-04-25 16:02:59 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (149.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:33:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (19.58ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 422 Unprocessable Entity in 1140ms (Views: 62.1ms | ActiveRecord: 267.7ms | Allocations: 29749)
+
+
+Started GET "/users" for ::1 at 2023-04-25 16:03:01 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:33:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.52ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 422 Unprocessable Entity in 16ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 4795)
+
+
+Started GET "/areas" for ::1 at 2023-04-25 16:03:12 +0300
+Processing by AreasController#index as HTML
+  [1m[36mArea Load (59.8ms)[0m  [1m[34mSELECT "areas".* FROM "areas"[0m
+  ↳ app/controllers/areas_controller.rb:11:in `index'
+  [1m[36mCommunicableDisease Load (16.4ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" IN ($1, $2, $3, $4, $5)[0m  [["id", 1], ["id", 2], ["id", 7], ["id", 8], ["id", 9]]
+  ↳ app/controllers/areas_controller.rb:11:in `index'
+Completed 200 OK in 451ms (Views: 0.9ms | ActiveRecord: 86.5ms | Allocations: 46652)
+
+
+Started GET "/communicable_diseases" for ::1 at 2023-04-25 16:03:21 +0300
+Processing by CommunicableDiseasesController#index as HTML
+  [1m[36mCommunicableDisease Load (0.7ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:7:in `index'
+No serializer found for resource: #<CommunicableDisease id: 1, name: "COVID-19", image_url: "https://www.shutterstock.com/image-illustration/co...", description: "A respiratory illness caused by the SARS-CoV-2 vir...", symptoms: "Fever, cough, shortness of breath, loss of taste o...", prevention_measures: "Wear a mask, wash your hands, practice social dist...", most_prevalent: true, created_at: "2023-04-24 22:45:54.267784000 +0000", updated_at: "2023-04-24 22:49:06.457606000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with CommunicableDisease::ActiveRecord_Relation (3.07ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.7ms | Allocations: 4512)
+
+
