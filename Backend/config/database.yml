@@ -109,6 +109,7 @@ test:
 
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: Backend_production
   username: saviour
   password: 12345
