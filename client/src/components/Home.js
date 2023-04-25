@@ -17,7 +17,7 @@ const Home = (props) => {
             <span className={styles['text']}>
               <span>Home</span>
             </span>
-            <Link to="/about" className={styles['text02']}>
+            <Link to="/lists" className={styles['text02']}>
               <span>About</span>
             </Link>
             <Link to="/donation" className={styles['text04']}>

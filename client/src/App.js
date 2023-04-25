@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Login from './components/aunthentication/Login';
 import Signup from './components/aunthentication/Signup';
@@ -7,6 +7,9 @@ import Blog from './components/Blog';
 import Donation from './components/Donation';
 import About from './components/About/About';
 import Contact from './components/Contacts/contact';
+//import DiseasesList from './components/Diseases/Diseases';
+import Areas from './components/Areas/areas';
+
 
 
  
@@ -24,6 +27,10 @@ export default function App() {
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/donation" element={<Donation/>}/>
         <Route path="/contacts" element={<Contact/>}/>
+        {/* <Route path = "/lists" element={<DiseasesList/>} /> */}
+        <Route path = "/lists" element={<Areas/>} />
+        
+        
         
         
 

@@ -110,7 +110,7 @@ function Login() {
 
     try {
       // send login request to backend
-      const response = await axios.post("https://phase5.onrender.com/", {
+      const response = await axios.post("/login", {
         email: formData.email,
         password: formData.password,
       });
