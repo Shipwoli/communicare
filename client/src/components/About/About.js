@@ -1,5 +1,8 @@
-import React from 'react'
 
+ 
+
+import React from 'react'
+import { Link } from 'react-router-dom';
 import styles from './about.module.css'
 import Vector from './Vector.png'
 import Vector2 from './Vector 2.png'
@@ -9,10 +12,10 @@ import image2 from './images2.png'
 import image3 from './images3.png'   
 import image4 from './images4.png'   
 import image5 from './images5.png' 
-import imagex from './images6.jpeg' 
+// import imagex from './images6.jpeg' 
 import image6 from './Rectangle 3.png'   
 import image7 from './image7.png'   
-import image8 from './image8.png'   
+// import image8 from './image8.png'   
 import image9 from './image9.png'     
 import Line2 from './Line 2.png'        
 import line1 from './Line 1.png'     
@@ -34,27 +37,23 @@ const About = (props) => {
         />
         <div className={styles['menu']}>
           <div className={styles['menu-list']}>
-            <span className={styles['text']}>
+          <Link to="/home" className={styles['text']}>
               <span>Home</span>
-            </span>
-            <span className={styles['text02']}>
+            </Link>
+            <Link to="/about" className={styles['text02']}>
               <span>About</span>
-            </span>
-            <span className={styles['text04']}>
+            </Link>
+            <Link to="/donation" className={styles['text04']}>
               <span>Donation</span>
-            </span>
-            <span className={styles['text06']}>
+            </Link>
+            <Link to="/blog" className={styles['text06']}>
               <span>Blog</span>
-            </span>
-            <span className={styles['text08']}>
+            </Link>
+            <Link to="/contact" className={styles['text08']}>
               <span>Contact</span>
-            </span>
+            </Link>
           </div>
-          <img
-            alt="Rectangle11074"
-            src={image7}
-            className={styles['rectangle1']}
-          />
+        
         </div>
         <div className={styles['sign-in']}>
           <span className={styles['text10']}>
@@ -79,7 +78,7 @@ const About = (props) => {
         </span>
         <span className={styles['text17']}>
           <span>
-          Let us be the change we want to see in the world, and work towards a world free from the threat of communicable disease  h
+          Let us be the change we want to see in the world, and work towards a world free from the threat of communicable disease.
           </span>
         </span>
         <div className={styles['group7']}>
