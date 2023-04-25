@@ -1,0 +1,52 @@
+.report label,
+.report input[type="text"],
+.report input[type="date"],
+.report textarea,
+.report select {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.report input[type="file"] {
+  margin-top: 5px;
+}
+.report label[for="imageUpload"],
+.report label[for="videoUpload"] {
+  margin-top: 15px;
+  display: inline-block;
+}
+.report .input {
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.report label,
+.report button {
+  font-weight: bold;
+}
+.report select option {
+  font-size: 16px;
+}
+/* Style submit button */
+.submit-btn {
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.submit-btn:hover {
+  background-color: #006B9F;
+}
+/* Style preview images and videos */
+.report img,
+.report video {
+  display: block;
+  margin: 10px 0;
+  max-width: 100%;
+  height: auto;
+}

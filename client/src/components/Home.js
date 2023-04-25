@@ -17,7 +17,7 @@ const Home = (props) => {
             <span className={styles['text']}>
               <span>Home</span>
             </span>
-            <Link to="/lists" className={styles['text02']}>
+            <Link to="/about" className={styles['text02']}>
               <span>About</span>
             </Link>
             <Link to="/donation" className={styles['text04']}>
@@ -28,6 +28,9 @@ const Home = (props) => {
         </Link>
             <Link to ="/contacts" span className={styles['text08']}>
               <span>Contact</span>
+            </Link>
+            <Link to ="/map" span className={styles['text222']}>
+              <span>Maps</span>
             </Link>
           </div>
           {/* <img

@@ -19,9 +19,12 @@ const Donation = (props) => {
           <Link to="/" className={styles['donation-text']}>
           <span>Home</span>
         </Link>
-            <span className="donation-text02">
-              <span>About</span>
-            </span>
+        <span className="donation-text02">
+  <Link to="/about">
+    <span>About</span>
+  </Link>
+</span>
+        
             <span className="donation-text04">
               <span>Donation</span>
             </span>
@@ -30,9 +33,11 @@ const Donation = (props) => {
     <span>Blog</span>
   </Link>
 </span>
-            <span className="donation-text08">
-              <span>Contact</span>
-            </span>
+<span className="donation-text08">
+  <Link to="/contact">
+    <span>Contact</span>
+  </Link>
+</span>
           </div>
         </div>
         <div className="donation-sign-in">
