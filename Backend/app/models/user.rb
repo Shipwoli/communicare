@@ -7,4 +7,8 @@ class User < ApplicationRecord
     validates :password_digest, presence: true, length: { minimum: 6 }
     validates :first_name, :last_name, presence: true, length: { maximum: 50 }
     validates :admin, inclusion: { in: [true, false] }
+
+    def admin?
+        self.admin
+    end
 end

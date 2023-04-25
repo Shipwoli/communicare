@@ -1,7 +1,15 @@
 class ApplicationController < ActionController::API
     include ActionController::Cookies
+    include ApplicationHelper
+    
 
     rescue_from StandardError, with: :standard_error
+
+    def require_admin
+        unless current_user && current_user.admin?
+            render json: {error: "You need Admin privileges"}, status: :unauthorized
+        end
+    end
 
     def app_response(message: 'success', status: 200, data: nil)
         render json: {
