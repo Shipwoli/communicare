@@ -5681,3 +5681,54 @@ Filter chain halted as :require_admin rendered or redirected
 Completed 401 Unauthorized in 7ms (Views: 1.1ms | ActiveRecord: 2.7ms | Allocations: 5776)
 
 
+Started POST "/communicable_diseases" for 127.0.0.1 at 2023-04-25 12:34:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CommunicableDiseasesController#create as */*
+  Parameters: {"first_name"=>"richie", "last_name"=>"ngeti", "email"=>"richie@gmail.com.com", "password"=>"[FILTERED]", "admin"=>false, "communicable_disease"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 422 Unprocessable Entity in 45ms (Views: 39.3ms | ActiveRecord: 6.1ms | Allocations: 26846)
+
+
+Started GET "/communicable_diseases" for 127.0.0.1 at 2023-04-25 12:34:59 +0300
+Processing by CommunicableDiseasesController#index as */*
+  Parameters: {"first_name"=>"richie", "last_name"=>"ngeti", "email"=>"richie@gmail.com.com", "password"=>"[FILTERED]", "admin"=>false, "communicable_disease"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3:in `current_user'
+  [1m[36mCommunicableDisease Load (58.6ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:7:in `index'
+No serializer found for resource: #<CommunicableDisease id: 1, name: "Malaria", image_url: "https://images.pexels.com/photos/6303643/pexels-ph...", description: "Malaria is a mosquito-borne infectious disease tha...", symptoms: "Fever, chills, headache, muscle pain, fatigue, nau...", prevention_measures: "Use mosquito nets while sleeping, wear protective ...", most_prevalent: true, created_at: "2023-04-24 07:26:24.939563000 +0000", updated_at: "2023-04-24 07:26:24.939563000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with CommunicableDisease::ActiveRecord_Relation (2.39ms)
+Completed 200 OK in 84ms (Views: 22.3ms | ActiveRecord: 61.1ms | Allocations: 21959)
+
+
+Started PATCH "/communicable_diseases/3" for 127.0.0.1 at 2023-04-25 12:35:44 +0300
+Processing by CommunicableDiseasesController#update as */*
+  Parameters: {"most_prevalent"=>true, "id"=>"3", "communicable_disease"=>{"most_prevalent"=>true}}
+  [1m[36mCommunicableDisease Load (0.3ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases" WHERE "communicable_diseases"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/communicable_diseases_controller.rb:45:in `set_communicable_disease'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:28:in `update'
+  [1m[36mCommunicableDisease Update (0.4ms)[0m  [1m[33mUPDATE "communicable_diseases" SET "most_prevalent" = $1, "updated_at" = $2 WHERE "communicable_diseases"."id" = $3[0m  [["most_prevalent", true], ["updated_at", "2023-04-25 09:35:44.638747"], ["id", 3]]
+  ↳ app/controllers/communicable_diseases_controller.rb:28:in `update'
+  [1m[36mTRANSACTION (113.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:28:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CommunicableDisease (0.6ms)
+Completed 200 OK in 124ms (Views: 2.7ms | ActiveRecord: 114.4ms | Allocations: 5080)
+
+
+Started GET "/communicable_diseases/" for 127.0.0.1 at 2023-04-25 12:36:10 +0300
+Processing by CommunicableDiseasesController#index as */*
+  Parameters: {"most_prevalent"=>true, "communicable_disease"=>{"most_prevalent"=>true}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:3:in `current_user'
+  [1m[36mCommunicableDisease Load (0.2ms)[0m  [1m[34mSELECT "communicable_diseases".* FROM "communicable_diseases"[0m
+  ↳ app/controllers/communicable_diseases_controller.rb:7:in `index'
+No serializer found for resource: #<CommunicableDisease id: 1, name: "Malaria", image_url: "https://images.pexels.com/photos/6303643/pexels-ph...", description: "Malaria is a mosquito-borne infectious disease tha...", symptoms: "Fever, chills, headache, muscle pain, fatigue, nau...", prevention_measures: "Use mosquito nets while sleeping, wear protective ...", most_prevalent: true, created_at: "2023-04-24 07:26:24.939563000 +0000", updated_at: "2023-04-24 07:26:24.939563000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with CommunicableDisease::ActiveRecord_Relation (1.78ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 2742)
+
+

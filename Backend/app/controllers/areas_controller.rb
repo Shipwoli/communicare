@@ -1,5 +1,6 @@
 class AreasController < ApplicationController
     before_action :set_area, only: [:show, :update, :destroy]
+    before_action :require_admin , only: [:create, :update, :destroy]
   
     def index
       areas = Area.all
