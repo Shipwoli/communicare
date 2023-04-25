@@ -34,9 +34,9 @@ const Blog = (props) => {
             <span className={styles['text06']}>
               <span>Blog</span>
             </span>
-            <span className={styles['text08']}>
-              <span>Contact</span>
-            </span>
+            <Link to="/contacts" className={styles['text08']}>
+          <span>contact</span>
+        </Link>
           </div>
           {/* <img
             src="/playground_assets/rectangle11615-l4jn-200h.png"
