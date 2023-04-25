@@ -7,6 +7,7 @@ import Blog from './components/Blog';
 import Donation from './components/Donation';
 import About from './components/About/About';
 import Contact from './components/Contacts/contact';
+import Map from './components/Map';
 
 
  
@@ -24,7 +25,8 @@ export default function App() {
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/donation" element={<Donation/>}/>
         <Route path="/contacts" element={<Contact/>}/>
-        
+        <Route path="/map" element={<Map/>}/>
+
         
 
 

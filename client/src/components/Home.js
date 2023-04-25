@@ -29,6 +29,9 @@ const Home = (props) => {
             <Link to ="/contacts" span className={styles['text08']}>
               <span>Contact</span>
             </Link>
+            <Link to ="/map" span className={styles['text222']}>
+              <span>Maps</span>
+            </Link>
           </div>
           {/* <img
             src="/playground_assets/rectangle1911-vhec-200h.png"
