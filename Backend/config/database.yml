@@ -86,7 +86,7 @@ test:
 #   <<: *default
 production:
   <<: *default
-  database: Backend_development
-  username: saviour
-  password: 12345
+  database: Backend_production
+  username: Backend
+  password: <%= ENV["BACKEND_DATABASE_PASSWORD"] %>
 
