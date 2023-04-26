@@ -35,8 +35,8 @@ a3 = Area.create(name: "Rio de Janeiro", location: "Brazil", latitude: -22.9068,
 
 # Create some users
 puts "users🧑‍🦱"
-u1 = User.create(first_name: "saviour", last_name: "khalwale", email: "khalwale@gmail.com", password: "password", admin: false)
-u2 = User.create(first_name: "victor", last_name: "mwangi", email: "victor@gmail.com.com", password: "password", admin: true)
+u1 = User.create(username: "saviour", email: "khalwale@gmail.com", password: "password", admin: false)
+u2 = User.create(username: "victor", email: "victor@gmail.com.com", password: "password", admin: true)
 
 
 puts "reviews"
