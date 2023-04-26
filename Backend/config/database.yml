@@ -22,14 +22,14 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 x-local_database: &x-local-database
-  username: saviour
-  password: 12345
+  username: postgres
+  password: 
   host: localhost
   port: 5432
 
 development:
   <<: *default
-  database: Backend_development
+  database: postgres_development
   <<: *x-local-database
 
 # Warning: The database defined as "test" will be erased and
@@ -37,7 +37,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: Backend_test
+  database: postgres_test
   <<: *x-local-database
 
 # As with config/credentials.yml, you never want to store sensitive information,
