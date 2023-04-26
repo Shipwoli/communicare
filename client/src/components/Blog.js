@@ -139,6 +139,7 @@ const Blog = (props) => {
             <span>Affected areas</span>
           </span>
           <span className={styles['text37']}>
+            
             <span>
               Global impact: NCDs are a leading cause of death and disability
               worldwide. According to the World Health Organization (WHO), NCDs

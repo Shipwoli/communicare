@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './Diseases.css';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 const DiseasesList = () => {
