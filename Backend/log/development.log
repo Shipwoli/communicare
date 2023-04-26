@@ -5880,3 +5880,24 @@ No serializer found for resource: #<CommunicableDisease id: 1, name: "COVID-19",
 Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.7ms | Allocations: 4512)
 
 
+Started GET "/ws" for ::1 at 2023-04-25 20:42:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (33.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-04-25 20:43:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-04-25 20:43:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/" for ::1 at 2023-04-25 20:43:33 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.8ms | Allocations: 457)
+Completed 200 OK in 71ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 3601)
+
+
+  [1m[36mUser Load (92.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
