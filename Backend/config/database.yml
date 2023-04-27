@@ -9,12 +9,12 @@ default: &default
 
 development:
   <<: *default
-  database: Backend_development_development
+  database: Backend_development
 
 test:
   <<: *default
-  database: Backend_development_test
+  database: Backend_test
 
 production:
   <<: *default
-  database: Backend_development_production
+  database: Backend_production
