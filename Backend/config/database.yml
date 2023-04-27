@@ -10,7 +10,7 @@ default: &default
 
 development:
   <<: *default
-  database: Backend_development
+  database: Backend
 
 test:
   <<: *default
