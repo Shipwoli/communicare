@@ -14,11 +14,6 @@ import image4 from './images4.png'
 import image5 from './images5.png' 
 // import imagex from './images6.jpeg' 
 import image6 from './Rectangle 3.png'   
-<<<<<<< HEAD
-import image7 from './image7.png'   
-=======
-//import image7 from './image7.png'   
->>>>>>> 5d6463ad4ef5511a0be8fcd841eb8472ce6e0fa2
 // import image8 from './image8.png'   
 import image9 from './image9.png'     
 import Line2 from './Line 2.png'        
