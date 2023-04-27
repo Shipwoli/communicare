@@ -9,14 +9,13 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  adapter: postgresql
-  encoding: unicode
+  <<: *default
   database: Backend_development
-  pool: 5
-  username: saviour
-  password: 12345
   host: localhost
   port: 5432
+  username: saviour
+  password: 12345
+
 
 
   # The specified database role being used to connect to postgres.
