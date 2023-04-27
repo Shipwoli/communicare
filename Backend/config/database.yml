@@ -65,7 +65,7 @@ test:
 # variable, Rails will automatically merge its configuration values on top of
 # the values provided in this file. Alternatively, you can specify a connection
 # URL environment variable explicitly:
-#
+
 
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
