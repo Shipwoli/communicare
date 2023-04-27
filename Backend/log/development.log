@@ -6552,3 +6552,173 @@ FOREIGN KEY ("user_id")
   [1m[36mTRANSACTION (27.5ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "postgres_development" ENCODING = 'unicode'[0m
   [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "postgres_test" ENCODING = 'unicode'[0m
+  [1m[35m (1435.6ms)[0m  [1m[35mCREATE DATABASE "Backend_development_development" ENCODING = 'unicode'[0m
+  [1m[35m (838.8ms)[0m  [1m[35mCREATE DATABASE "Backend_development_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE "Backend_development_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "Backend_development_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "areas" CASCADE[0m
+  [1m[35m (206.3ms)[0m  [1m[35mCREATE TABLE "areas" ("id" bigserial primary key, "name" character varying, "location" character varying, "latitude" float, "longitude" float, "reported_cases" integer, "communicable_disease_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (72.6ms)[0m  [1m[35mCREATE INDEX "index_areas_on_communicable_disease_id" ON "areas" ("communicable_disease_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "communicable_diseases" CASCADE[0m
+  [1m[35m (154.1ms)[0m  [1m[35mCREATE TABLE "communicable_diseases" ("id" bigserial primary key, "name" character varying, "image_url" character varying DEFAULT 'https://images.pexels.com/photos/6303643/pexels-photo-6303643.jpeg?auto=compress&cs=tinysrgb&w=600' NOT NULL, "description" text, "symptoms" text, "prevention_measures" text, "most_prevalent" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "donations" CASCADE[0m
+  [1m[35m (131.6ms)[0m  [1m[35mCREATE TABLE "donations" ("id" bigserial primary key, "amount" decimal, "user_id" bigint NOT NULL, "area_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (97.1ms)[0m  [1m[35mCREATE INDEX "index_donations_on_area_id" ON "donations" ("area_id")[0m
+  [1m[35m (179.3ms)[0m  [1m[35mCREATE INDEX "index_donations_on_user_id" ON "donations" ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  [1m[35m (146.0ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "comment" text, "rating" integer, "user_id" bigint NOT NULL, "area_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (72.8ms)[0m  [1m[35mCREATE INDEX "index_reviews_on_area_id" ON "reviews" ("area_id")[0m
+  [1m[35m (72.5ms)[0m  [1m[35mCREATE INDEX "index_reviews_on_user_id" ON "reviews" ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (155.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "admin" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (33.8ms)[0m  [1m[35mALTER TABLE "areas" ADD CONSTRAINT "fk_rails_86649dfc70"
+FOREIGN KEY ("communicable_disease_id")
+  REFERENCES "communicable_diseases" ("id")
+[0m
+  [1m[35m (33.9ms)[0m  [1m[35mALTER TABLE "donations" ADD CONSTRAINT "fk_rails_3dda997faf"
+FOREIGN KEY ("area_id")
+  REFERENCES "areas" ("id")
+[0m
+  [1m[35m (34.3ms)[0m  [1m[35mALTER TABLE "donations" ADD CONSTRAINT "fk_rails_5470822a00"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (34.4ms)[0m  [1m[35mALTER TABLE "reviews" ADD CONSTRAINT "fk_rails_5a24de230c"
+FOREIGN KEY ("area_id")
+  REFERENCES "areas" ("id")
+[0m
+  [1m[35m (34.0ms)[0m  [1m[35mALTER TABLE "reviews" ADD CONSTRAINT "fk_rails_74a66bd6c5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (131.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (28.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230417075954)[0m
+  [1m[35m (23.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230417075612),
+(20230417075654),
+(20230417075744),
+(20230417075923);
+
+[0m
+  [1m[35m (131.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-04-27 15:19:39.627523"], ["updated_at", "2023-04-27 15:19:39.627523"]]
+  [1m[36mTRANSACTION (23.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "7da733d2e034d258fe73230e90d6732bd967aae8"], ["created_at", "2023-04-27 15:19:39.662011"], ["updated_at", "2023-04-27 15:19:39.662011"]]
+  [1m[36mTRANSACTION (23.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "areas" CASCADE[0m
+  [1m[35m (321.9ms)[0m  [1m[35mCREATE TABLE "areas" ("id" bigserial primary key, "name" character varying, "location" character varying, "latitude" float, "longitude" float, "reported_cases" integer, "communicable_disease_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (83.1ms)[0m  [1m[35mCREATE INDEX "index_areas_on_communicable_disease_id" ON "areas" ("communicable_disease_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "communicable_diseases" CASCADE[0m
+  [1m[35m (153.9ms)[0m  [1m[35mCREATE TABLE "communicable_diseases" ("id" bigserial primary key, "name" character varying, "image_url" character varying DEFAULT 'https://images.pexels.com/photos/6303643/pexels-photo-6303643.jpeg?auto=compress&cs=tinysrgb&w=600' NOT NULL, "description" text, "symptoms" text, "prevention_measures" text, "most_prevalent" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "donations" CASCADE[0m
+  [1m[35m (130.9ms)[0m  [1m[35mCREATE TABLE "donations" ("id" bigserial primary key, "amount" decimal, "user_id" bigint NOT NULL, "area_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (72.5ms)[0m  [1m[35mCREATE INDEX "index_donations_on_area_id" ON "donations" ("area_id")[0m
+  [1m[35m (72.8ms)[0m  [1m[35mCREATE INDEX "index_donations_on_user_id" ON "donations" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  [1m[35m (155.8ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "comment" text, "rating" integer, "user_id" bigint NOT NULL, "area_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (83.7ms)[0m  [1m[35mCREATE INDEX "index_reviews_on_area_id" ON "reviews" ("area_id")[0m
+  [1m[35m (83.5ms)[0m  [1m[35mCREATE INDEX "index_reviews_on_user_id" ON "reviews" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (131.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "admin" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (34.0ms)[0m  [1m[35mALTER TABLE "areas" ADD CONSTRAINT "fk_rails_86649dfc70"
+FOREIGN KEY ("communicable_disease_id")
+  REFERENCES "communicable_diseases" ("id")
+[0m
+  [1m[35m (33.9ms)[0m  [1m[35mALTER TABLE "donations" ADD CONSTRAINT "fk_rails_3dda997faf"
+FOREIGN KEY ("area_id")
+  REFERENCES "areas" ("id")
+[0m
+  [1m[35m (34.5ms)[0m  [1m[35mALTER TABLE "donations" ADD CONSTRAINT "fk_rails_5470822a00"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (34.1ms)[0m  [1m[35mALTER TABLE "reviews" ADD CONSTRAINT "fk_rails_5a24de230c"
+FOREIGN KEY ("area_id")
+  REFERENCES "areas" ("id")
+[0m
+  [1m[35m (34.1ms)[0m  [1m[35mALTER TABLE "reviews" ADD CONSTRAINT "fk_rails_74a66bd6c5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (156.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (30.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230417075954)[0m
+  [1m[35m (23.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230417075612),
+(20230417075654),
+(20230417075744),
+(20230417075923);
+
+[0m
+  [1m[35m (132.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-04-27 15:19:41.569153"], ["updated_at", "2023-04-27 15:19:41.569153"]]
+  [1m[36mTRANSACTION (28.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2023-04-27 15:19:41.604591"], ["key", "environment"]]
+  [1m[36mTRANSACTION (26.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "7da733d2e034d258fe73230e90d6732bd967aae8"], ["created_at", "2023-04-27 15:19:41.639604"], ["updated_at", "2023-04-27 15:19:41.639604"]]
+  [1m[36mTRANSACTION (27.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.7ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "image_url", "description", "symptoms", "prevention_measures", "most_prevalent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Malaria"], ["image_url", "https://images.pexels.com/photos/6303643/pexels-photo-6303643.jpeg?auto=compress&cs=tinysrgb&w=600"], ["description", "Malaria is a mosquito-borne infectious disease that affects humans and other animals. Malaria causes symptoms that typically include fever, tiredness, vomiting, and headaches. In severe cases, it can cause yellow skin, seizures, coma, or death."], ["symptoms", "Fever, chills, headache, muscle pain, fatigue, nausea and vomiting."], ["prevention_measures", "Use mosquito nets while sleeping, wear protective clothing, use mosquito repellents, and eliminate standing water."], ["most_prevalent", true], ["created_at", "2023-04-27 15:19:41.744126"], ["updated_at", "2023-04-27 15:19:41.744126"]]
+  [1m[36mTRANSACTION (24.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "image_url", "description", "symptoms", "prevention_measures", "most_prevalent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "COVID-19"], ["image_url", "https://images.pexels.com/photos/3958551/pexels-photo-3958551.jpeg?auto=compress&cs=tinysrgb&w=600"], ["description", "COVID-19 is a contagious respiratory illness caused by the SARS-CoV-2 virus. The disease has spread globally, leading to an ongoing pandemic. COVID-19 causes a range of symptoms, from mild to severe. Some people may be asymptomatic, while others may experience fever, cough, and difficulty breathing."], ["symptoms", "Fever, cough, shortness of breath, fatigue, body aches, loss of smell or taste, sore throat, congestion or runny nose."], ["prevention_measures", "Wash your hands regularly, wear a mask, practice physical distancing, avoid large gatherings, and get vaccinated."], ["most_prevalent", true], ["created_at", "2023-04-27 15:19:41.774901"], ["updated_at", "2023-04-27 15:19:41.774901"]]
+  [1m[36mTRANSACTION (29.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCommunicableDisease Create (0.6ms)[0m  [1m[32mINSERT INTO "communicable_diseases" ("name", "image_url", "description", "symptoms", "prevention_measures", "most_prevalent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cholera"], ["image_url", "https://images.pexels.com/photos/392166/pexels-photo-392166.jpeg?auto=compress&cs=tinysrgb&w=600"], ["description", "Cholera is an infectious disease that causes severe diarrhea and dehydration. It is caused by the bacterium Vibrio cholerae, which is usually found in water or food contaminated by feces from a person with the infection."], ["symptoms", "Diarrhea, nausea and vomiting, abdominal cramps, dehydration, and shock."], ["prevention_measures", "Drink clean and safe water, wash hands regularly, cook food thoroughly, avoid eating raw or undercooked seafood, and get vaccinated."], ["most_prevalent", false], ["created_at", "2023-04-27 15:19:41.810997"], ["updated_at", "2023-04-27 15:19:41.810997"]]
+  [1m[36mTRANSACTION (29.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (1.0ms)[0m  [1m[32mINSERT INTO "areas" ("name", "location", "latitude", "longitude", "reported_cases", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "New York City"], ["location", "New York, USA"], ["latitude", 40.7128], ["longitude", -74.006], ["reported_cases", 1000], ["communicable_disease_id", 1], ["created_at", "2023-04-27 15:19:41.882082"], ["updated_at", "2023-04-27 15:19:41.882082"]]
+  [1m[36mTRANSACTION (27.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (0.8ms)[0m  [1m[32mINSERT INTO "areas" ("name", "location", "latitude", "longitude", "reported_cases", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Tokyo"], ["location", "Japan"], ["latitude", 35.6762], ["longitude", 139.6503], ["reported_cases", 500], ["communicable_disease_id", 2], ["created_at", "2023-04-27 15:19:41.916269"], ["updated_at", "2023-04-27 15:19:41.916269"]]
+  [1m[36mTRANSACTION (28.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArea Create (0.8ms)[0m  [1m[32mINSERT INTO "areas" ("name", "location", "latitude", "longitude", "reported_cases", "communicable_disease_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Rio de Janeiro"], ["location", "Brazil"], ["latitude", -22.9068], ["longitude", -43.1729], ["reported_cases", 200], ["communicable_disease_id", 3], ["created_at", "2023-04-27 15:19:41.951961"], ["updated_at", "2023-04-27 15:19:41.951961"]]
+  [1m[36mTRANSACTION (28.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "khalwale@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "saviour"], ["email", "khalwale@gmail.com"], ["password_digest", "[FILTERED]"], ["admin", false], ["created_at", "2023-04-27 15:19:42.256289"], ["updated_at", "2023-04-27 15:19:42.256289"]]
+  [1m[36mTRANSACTION (21.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "victor@gmail.com.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "victor"], ["email", "victor@gmail.com.com"], ["password_digest", "[FILTERED]"], ["admin", true], ["created_at", "2023-04-27 15:19:42.502697"], ["updated_at", "2023-04-27 15:19:42.502697"]]
+  [1m[36mTRANSACTION (33.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArea Load (0.2ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Create (0.7ms)[0m  [1m[32mINSERT INTO "reviews" ("comment", "rating", "user_id", "area_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["comment", "I think we should donate more to this area to help fight COVID-19."], ["rating", 4], ["user_id", 1], ["area_id", 1], ["created_at", "2023-04-27 15:19:42.571991"], ["updated_at", "2023-04-27 15:19:42.571991"]]
+  [1m[36mTRANSACTION (32.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArea Load (0.5ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Create (0.9ms)[0m  [1m[32mINSERT INTO "reviews" ("comment", "rating", "user_id", "area_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["comment", "This area has done a great job of controlling the spread of COVID-19."], ["rating", 5], ["user_id", 2], ["area_id", 2], ["created_at", "2023-04-27 15:19:42.619162"], ["updated_at", "2023-04-27 15:19:42.619162"]]
+  [1m[36mTRANSACTION (28.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArea Load (0.3ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDonation Create (0.8ms)[0m  [1m[32mINSERT INTO "donations" ("amount", "user_id", "area_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["amount", "50.0"], ["user_id", 1], ["area_id", 1], ["created_at", "2023-04-27 15:19:42.706736"], ["updated_at", "2023-04-27 15:19:42.706736"]]
+  [1m[36mTRANSACTION (24.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArea Load (0.4ms)[0m  [1m[34mSELECT "areas".* FROM "areas" WHERE "areas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDonation Create (0.5ms)[0m  [1m[32mINSERT INTO "donations" ("amount", "user_id", "area_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["amount", "100.0"], ["user_id", 2], ["area_id", 2], ["created_at", "2023-04-27 15:19:42.744403"], ["updated_at", "2023-04-27 15:19:42.744403"]]
+  [1m[36mTRANSACTION (33.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "Backend_development_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "Backend_development_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE "Backend_development_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "Backend_development_test" ENCODING = 'unicode'[0m
