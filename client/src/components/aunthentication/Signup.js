@@ -85,77 +85,121 @@ const CustomLink = styled(Link)`
   color: rgba(26, 143, 227, 1);
 `;
 
-function Login() {
+function Signup() {
   const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
   });
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
   const nav = useNavigate();
 
   function handleChange(e) {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    if (e.target.name === "firstName" || e.target.name === "lastName") {
+      // handle first name and last name separately
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+      });
+    } else if (e.target.name === "confirmPassword") {
+      setConfirmPassword(e.target.value);
+    } else {
+      // handle other fields normally
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+      });
+    }
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
-    // validate form data, e.g. check if email and password are not empty
-    if (!formData.email || !formData.password) {
-      setMessage("Please enter your email and password");
+    // validate form data, e.g. check if all fields are not empty
+    for (const field in formData) {
+      if (!formData[field]) {
+        setMessage("Please fill in all fields");
+        return;
+      }
+    }
+    if (formData.password !== confirmPassword) {
+      setMessage("Passwords do not match");
       return;
     }
 
     try {
-      // send login request to backend
-      const response = await axios.post("https://phase5.onrender.com/", {
+      // send sign up request to backend
+      const response = await axios.post("/users", {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
         email: formData.email,
         password: formData.password,
       });
 
-      // navigate to home page if login is successful
-      if (response.status === 200) {
+      // navigate to home page if sign up is successful
+      if (response.status === 201) {
         nav("/home");
       } else {
-        setMessage("Invalid email or password");
+        setMessage("Sign up failed");
       }
     } catch (error) {
-      setMessage("Login failed");
+      setMessage("Sign up failed");
     }
   }
 
   return (
     <Container>
-      <Title>Login</Title>
+      <Title>Sign Up</Title>
       <Form onSubmit={handleSubmit}>
+        <Input
+          type="text"
+          placeholder="First Name"
+          name="firstName"
+          id="first-name"
+          onChange={handleChange}
+          value={formData.firstName}
+        />
+        <Input
+          type="text"
+          placeholder="Last Name"
+          name="lastName"
+          id="last-name"
+          onChange={handleChange}
+          value={formData.lastName}
+        />
         <Input
           type="email"
           placeholder="Email Address"
           name="email"
           id="email"
-          
           onChange={handleChange}
           value={formData.email}
-          />
-          <Input
-                 type="password"
-                 placeholder="Password"
-                 name="password"
-                 id="password"
-                 onChange={handleChange}
-                 value={formData.password}
-               />
-          <Button type="submit">Login</Button>
-          </Form>
-          {message && <Message isError={message.startsWith("Invalid")}>{message}</Message>}
-          <LinkWrapper>
-          Don't have an account? <CustomLink to="/signup">Register</CustomLink>
-          {/* Forgot Password? <CustomLink to="/resetpassword">Reset</CustomLink> */}
-          </LinkWrapper>
-          </Container>
-          );
-          }
-          
-          export default Login;
+        />
+        <Input
+          type="password"
+          placeholder="Password"
+          name="password"
+          id="password"
+          onChange={handleChange}
+          value={formData.password}
+        />
+        <Input
+          type="password"
+          placeholder="Confirm Password"
+          name="confirmPassword"
+          id="confirm-password"
+          onChange={handleChange}
+          value={confirmPassword}
+        />
+        <Button type="submit">Sign up</Button>
+        {message && <Message isError={message.includes("Passwords do not match")}>{message}</Message>}
+      </Form>
+      <LinkWrapper>
+        Already have an account? <CustomLink to="/login">Login</CustomLink>
+      </LinkWrapper>
+    </Container>
+  );
+}
+
+export default Signup;
