@@ -27,7 +27,7 @@ export default function App() {
         <Route path="/donation" element={<Donation/>}/>
         <Route path="/contacts" element={<Contact/>}/>
         <Route path="/map" element={<Map/>}/>
-        <Route path = "/Diseses" element={<DiseasesList/>}/>
+        <Route path = "/list" element={<DiseasesList/>}/>
         
 
         
