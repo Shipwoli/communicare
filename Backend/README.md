@@ -27,7 +27,7 @@ area:
   has_many :donations
 Start by creating the models and migrations for the following database tables:
 
-![alt text](/communicare/ecommerce.png)
+
 
 
 
