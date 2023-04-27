@@ -1,10 +1,22 @@
 class UsersController < ApplicationController
 
+    before_action :current_user
+    before_action :require_admin, only: [ :create, :update, :destroy]
     before_action :session_expired?, only: [:check_login_status]
+    
 
     def index
         users = User.all
         render json: users
+      end
+
+      def create
+        user = User.new(user_params)
+        if user.save
+            render json: { message: 'User created successfully', data: user }, status: :created
+        else
+            render json: { message: 'Failed to create user', errors: user.errors }, status: :unprocessable_entity
+        end
       end
 
     def register

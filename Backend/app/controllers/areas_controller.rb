@@ -1,10 +1,17 @@
 class AreasController < ApplicationController
     before_action :set_area, only: [:show, :update, :destroy]
+    before_action :require_admin , only: [:create, :update, :destroy]
   
+    # def index
+    #   areas = Area.all
+    #   render json: areas
+    # end
     def index
-      areas = Area.all
-      render json: areas
+      areas = Area.includes(:communicable_disease).all
+      render json: areas.to_json(include: { communicable_disease: { only: [:name, :image_url] } })
+
     end
+    
   
     def show
       render json: @area

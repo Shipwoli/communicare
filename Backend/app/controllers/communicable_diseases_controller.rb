@@ -1,6 +1,6 @@
 class CommunicableDiseasesController < ApplicationController
     before_action :set_communicable_disease, only: [:show, :update, :destroy]
-  
+    before_action :require_admin, only: [:create, :update, :destroy]
     # GET /communicable_diseases
     def index
       @communicable_diseases = CommunicableDisease.all
