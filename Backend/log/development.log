@@ -6722,3 +6722,5 @@ FOREIGN KEY ("user_id")
   [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "Backend_development_test" ENCODING = 'unicode'[0m
   [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE "Backend_development_development" ENCODING = 'unicode'[0m
   [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "Backend_development_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "Backend_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "Backend_test" ENCODING = 'unicode'[0m
