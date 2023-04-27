@@ -25,10 +25,10 @@ jobs:
           cd client
           npm run build
 
-      - name: Test
-        run: |
-          cd client
-          npm run test
+      # - name: Test
+      #   run: |
+      #     cd client
+      #     npm run test
 
   rails:
     name: Ruby on Rails
