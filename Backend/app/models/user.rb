@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     has_many :reviews
     has_many :donations
-    enum role: [:standard, :admin]
+    
 
     has_secure_password
 
