@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { useNavigate, Link } from "react-router-dom";
+import axios from "axios";
 
 const slideIn = keyframes`
   from {
@@ -86,64 +87,86 @@ const CustomLink = styled(Link)`
 
 function Signup() {
   const [formData, setFormData] = useState({
-    username: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
-    confirmPassword: "",
   });
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
   const nav = useNavigate();
 
   function handleChange(e) {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    if (e.target.name === "firstName" || e.target.name === "lastName") {
+      // handle first name and last name separately
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+      });
+    } else if (e.target.name === "confirmPassword") {
+      setConfirmPassword(e.target.value);
+    } else {
+      // handle other fields normally
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+      });
+    }
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {
+    // validate form data, e.g. check if all fields are not empty
+    for (const field in formData) {
+      if (!formData[field]) {
+        setMessage("Please fill in all fields");
+        return;
+      }
+    }
+    if (formData.password !== confirmPassword) {
       setMessage("Passwords do not match");
       return;
     }
-  
-    fetch("https://phase5.onrender.com/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error("Signup failed");
-        }
-      })
-      .then((data) => {
-        nav("/home");
-        setMessage("Signup successful");
-      })
-      .catch((error) => {
-        setMessage("Signup failed");
-        console.error(error);
+
+    try {
+      // send sign up request to backend
+      const response = await axios.post("/users", {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        password: formData.password,
       });
+
+      // navigate to home page if sign up is successful
+      if (response.status === 201) {
+        nav("/home");
+      } else {
+        setMessage("Sign up failed");
+      }
+    } catch (error) {
+      setMessage("Sign up failed");
+    }
   }
-  
 
   return (
     <Container>
-      <Title>Sign up</Title>
+      <Title>Sign Up</Title>
       <Form onSubmit={handleSubmit}>
-      <Input
-          type="username"
-          placeholder="User Name"
-          name="username"
-          id="username"
+        <Input
+          type="text"
+          placeholder="First Name"
+          name="firstName"
+          id="first-name"
           onChange={handleChange}
-          value={formData.username}
+          value={formData.firstName}
+        />
+        <Input
+          type="text"
+          placeholder="Last Name"
+          name="lastName"
+          id="last-name"
+          onChange={handleChange}
+          value={formData.lastName}
         />
         <Input
           type="email"
@@ -165,18 +188,18 @@ function Signup() {
           type="password"
           placeholder="Confirm Password"
           name="confirmPassword"
-          id="confirmPassword"
+          id="confirm-password"
           onChange={handleChange}
-          value={formData.confirmPassword}
+          value={confirmPassword}
         />
         <Button type="submit">Sign up</Button>
         {message && <Message isError={message.includes("Passwords do not match")}>{message}</Message>}
       </Form>
       <LinkWrapper>
-  <p>Already have an account?</p>
-  <CustomLink to="/login">Login</CustomLink>
-</LinkWrapper>
-</Container>
-);
+        Already have an account? <CustomLink to="/login">Login</CustomLink>
+      </LinkWrapper>
+    </Container>
+  );
 }
+
 export default Signup;

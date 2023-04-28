@@ -1,52 +1,98 @@
-.report label,
-.report input[type="text"],
-.report input[type="date"],
-.report textarea,
-.report select {
-  display: block;
+.map-container {
+  display: flex;
+}
+
+.report-content {
+  background-color: #fff;
+  padding: 20px;
+  margin-right: 20px;
+  flex-grow: 1;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.report {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.report label {
   margin-bottom: 10px;
-  font-size: 16px;
 }
-.report input[type="file"] {
-  margin-top: 5px;
-}
-.report label[for="imageUpload"],
-.report label[for="videoUpload"] {
-  margin-top: 15px;
-  display: inline-block;
-}
-.report .input {
-  padding: 8px;
-  border-radius: 3px;
-  border: 1px solid #ccc;
+
+.input {
   width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   margin-bottom: 10px;
 }
-.report label,
-.report button {
-  font-weight: bold;
+
+.date-range {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
-.report select option {
-  font-size: 16px;
+
+.date-range input {
+  margin-right: 10px;
 }
-/* Style submit button */
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
 .submit-btn {
-  background-color: #008CBA;
+  background-color: #008cba;
   color: #fff;
+  padding: 10px 20px;
   border: none;
-  padding: 12px 20px;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+.card {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  max-width: 500px;
+}
+
+.card-text {
+  margin-bottom: 10px;
+}
+
+.text-title {
   font-size: 18px;
+  font-weight: bold;
+  color: #008cba;
 }
-.submit-btn:hover {
-  background-color: #006B9F;
+
+.card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/* Style preview images and videos */
-.report img,
-.report video {
-  display: block;
-  margin: 10px 0;
+
+.card-img img,
+.card-img video {
   max-width: 100%;
   height: auto;
+  margin-top: 10px;
+}
+
+#map {
+  height: 600px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

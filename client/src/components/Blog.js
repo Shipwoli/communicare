@@ -25,18 +25,18 @@ const Blog = (props) => {
           <span>Home</span>
         </Link>
         
-            <span className={styles['text02']}>
-              <span>About</span>
-            </span>
+        <Link to="/about" className={styles['text02']}>
+          <span>About</span>
+        </Link>
             <Link to="/donation" className={styles['text04']}>
           <span>Donation</span>
         </Link>
             <span className={styles['text06']}>
               <span>Blog</span>
             </span>
-            <span className={styles['text08']}>
-              <span>Contact</span>
-            </span>
+            <Link to="/contacts" className={styles['text08']}>
+          <span>contact</span>
+        </Link>
           </div>
           {/* <img
             src="/playground_assets/rectangle11615-l4jn-200h.png"
@@ -115,12 +115,11 @@ const Blog = (props) => {
         <div className={styles['blog2']}>
           <span className={styles['text28']}>
             <span>
-              Communicable diseases also known as chronic diseases,
+              Non-communicable diseases (NCDs), also known as chronic diseases,
               are medical conditions that are not contagious and cannot be
               transmitted from person to person. 
             </span>
           </span>
-         
           <img
             src="https://store.thtcentre.com/images/communicable-diseases.png"
             alt="image4974051"
@@ -128,7 +127,7 @@ const Blog = (props) => {
           />
           <span className={styles['text30']}>
             <span>
-              <span>Communicable Diseases</span>
+              <span>Non-communicable Diseases</span>
               <br></br>
               <span></span>
             </span>
@@ -139,7 +138,6 @@ const Blog = (props) => {
             <span>Affected areas</span>
           </span>
           <span className={styles['text37']}>
-            
             <span>
               Global impact: NCDs are a leading cause of death and disability
               worldwide. According to the World Health Organization (WHO), NCDs
