@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './map.css'
 function Map(props) {
@@ -217,6 +218,7 @@ function Map(props) {
     {/* <p> <b>REVIEW: </b> {review}</p> */}
     
 </div>
+
 <div className='card-img'>
 {imageURL && (
   <div>
@@ -234,12 +236,16 @@ function Map(props) {
               {/* <video src={videoURL} controls width="100" height="200" /> */}
               <video src={videoURL} controls />
             </div>
+            
           )}
  
 </div>
   </div>
 )}
+    <Link to="/blog">Back to blog</Link> {/* Link to the blog page */}
+
     </div>
+    
   );
 }
 
