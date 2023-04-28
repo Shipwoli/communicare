@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-      params.permit(:First_name, :Last_name, :email, :password)
+      params.permit(:First_name, :Last_name, :email, :password, :admin)
   end
 
   def render_not_found_response
