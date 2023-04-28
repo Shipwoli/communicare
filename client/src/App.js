@@ -8,6 +8,7 @@ import Donation from './components/Donation';
 import About from './components/About/About';
 import Contact from './components/Contacts/contact';
 import Map from './components/Map';
+import LandingPage from './components/Landing/LandingPage';
 
 
  
@@ -17,7 +18,7 @@ export default function App() {
        <BrowserRouter>
 {/* added routes */}
       <Routes>
-        <Route path="/" element={< Home />} />
+        <Route path="/" element={< LandingPage />} />
         <Route path="/home" element={<Home />}/>
         <Route path="/about" element={< About />} />
         <Route path="/login" element={<Login/>} />
