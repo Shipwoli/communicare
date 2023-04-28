@@ -7,4 +7,3 @@ class CommunicableDisease < ApplicationRecord
     validates :symptoms, presence: true
     validates :prevention_measures, presence: true
   end
-end
