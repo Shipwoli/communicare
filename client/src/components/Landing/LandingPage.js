@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './landing-page.module.css';
-import Decore from '/home/victor/new-project/communicare/client/src/components/images/Decore.png';
-import virus from '/home/victor/new-project/communicare/client/src/components/images/virus.png';
-import liza from '/home/victor/new-project/communicare/client/src/components/images/liza.png';
-import dollar from '/home/victor/new-project/communicare/client/src/components/images/dollar 1.png';
-import charity from '/home/victor/new-project/communicare/client/src/components/images/charity 1.png';
+import Decore from '../images/Decore.png';
+import virus from '../images/virus.png';
+import liza from '../images/liza.png';
+import dollar from '../images/dollar 1.png';
+import charity from '../images/charity 1.png';
 
 const LandingPage = (props) => {
   return (

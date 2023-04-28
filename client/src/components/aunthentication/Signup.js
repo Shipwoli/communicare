@@ -87,10 +87,11 @@ const CustomLink = styled(Link)`
 
 function Signup() {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    FirstName: "",
+    LastName: "",
     email: "",
     password: "",
+    admin: "",
   });
   const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -131,8 +132,8 @@ function Signup() {
     try {
       // send sign up request to backend
       const response = await axios.post("/users", {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
+        FirstName: formData.FirstName,
+        LastName: formData.LastName,
         email: formData.email,
         password: formData.password,
       });

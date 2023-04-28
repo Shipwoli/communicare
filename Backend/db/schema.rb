@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_28_034316) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_28_141858) do
   create_table "areas", force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -59,7 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_28_034316) do
     t.string "Last_name"
     t.string "email"
     t.string "password_digest"
-    t.boolean "admin"
+    t.boolean "admin", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
