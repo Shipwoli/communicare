@@ -25,9 +25,9 @@ const Blog = (props) => {
           <span>Home</span>
         </Link>
         
-            <span className={styles['text02']}>
-              <span>About</span>
-            </span>
+        <Link to="/about" className={styles['text02']}>
+          <span>About</span>
+        </Link>
             <Link to="/donation" className={styles['text04']}>
           <span>Donation</span>
         </Link>
