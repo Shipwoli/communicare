@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { useNavigate, Link } from "react-router-dom";
-import axios from "axios";
 
 const slideIn = keyframes`
   from {
@@ -87,119 +86,96 @@ const CustomLink = styled(Link)`
 
 function Signup() {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    First_name: "",
+    Last_name: "",
     email: "",
     password: "",
   });
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
   const nav = useNavigate();
 
   function handleChange(e) {
-    if (e.target.name === "firstName" || e.target.name === "lastName") {
-      // handle first name and last name separately
-      setFormData({
-        ...formData,
-        [e.target.name]: e.target.value,
-      });
-    } else if (e.target.name === "confirmPassword") {
-      setConfirmPassword(e.target.value);
-    } else {
-      // handle other fields normally
-      setFormData({
-        ...formData,
-        [e.target.name]: e.target.value,
-      });
-    }
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   }
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
-    // validate form data, e.g. check if all fields are not empty
-    for (const field in formData) {
-      if (!formData[field]) {
-        setMessage("Please fill in all fields");
-        return;
-      }
-    }
-    if (formData.password !== confirmPassword) {
-      setMessage("Passwords do not match");
+    if (!formData.First_name || !formData.Last_name || !formData.email || !formData.password) {
+      setMessage("Please fill in all fields");
       return;
     }
 
-    try {
-      // send sign up request to backend
-      const response = await axios.post("/users", {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        password: formData.password,
-      });
-
-      // navigate to home page if sign up is successful
-      if (response.status === 201) {
+    fetch("users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Signup failed");
+        }
+      })
+      .then((data) => {
         nav("/home");
-      } else {
-        setMessage("Sign up failed");
-      }
-    } catch (error) {
-      setMessage("Sign up failed");
-    }
+        setMessage("Signup successful");
+      })
+      .catch((error) => {
+        setMessage("Signup failed");
+        console.error(error);
+      });
   }
 
   return (
     <Container>
-      <Title>Sign Up</Title>
-      <Form onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          placeholder="First Name"
-          name="firstName"
-          id="First_name"
-          onChange={handleChange}
-          value={formData.firstName}
-        />
-        <Input
-          type="text"
-          placeholder="Last Name"
-          name="lastName"
-          id="Last_name"
-          onChange={handleChange}
-          value={formData.lastName}
-        />
-        <Input
-          type="email"
-          placeholder="Email Address"
-          name="email"
-          id="email"
-          onChange={handleChange}
-          value={formData.email}
-        />
-        <Input
-          type="password"
-          placeholder="Password"
-          name="password"
-          id="password"
-          onChange={handleChange}
-          value={formData.password}
-        />
-        <Input
-          type="password"
-          placeholder="Confirm Password"
-          name="confirmPassword"
-          id="confirm-password"
-          onChange={handleChange}
-          value={confirmPassword}
-        />
-        <Button type="submit">Sign up</Button>
-        {message && <Message isError={message.includes("Passwords do not match")}>{message}</Message>}
-      </Form>
-      <LinkWrapper>
-        Already have an account? <CustomLink to="/login">Login</CustomLink>
-      </LinkWrapper>
-    </Container>
-  );
+      <Title>Sign up</Title>
+      <Form
+onSubmit={handleSubmit}>
+<Input
+       type="text"
+       name="First_name"
+       placeholder="First Name"
+       value={formData.first_name}
+       onChange={handleChange}
+     />
+<Input
+       type="text"
+       name="Last_name"
+       placeholder="Last Name"
+       value={formData.Last_name}
+       onChange={handleChange}
+     />
+<Input
+       type="email"
+       name="email"
+       placeholder="Email"
+       value={formData.email}
+       onChange={handleChange}
+     />
+<Input
+       type="password"
+       name="password"
+       placeholder="Password"
+       value={formData.password}
+       onChange={handleChange}
+     />
+<Button type="submit">Sign up</Button>
+{message && <Message isError>{message}</Message>}
+</Form>
+<LinkWrapper>
+<Message>
+Already have an account?{" "}
+<CustomLink to="/login">Log in</CustomLink>
+</Message>
+</LinkWrapper>
+</Container>
+);
 }
 
 export default Signup;
