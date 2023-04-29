@@ -5,6 +5,11 @@ class DonationsController < ApplicationController
     @area = Area.find(params[:area_id])
     @donation = Donation.new
   end
+  def index
+    @donation = Donation.includes(:area).all
+    render json: @donation.to_json(include: { area: { only: [:name] } })
+
+  end
 
   def create
     @area = Area.find(params[:area_id])
