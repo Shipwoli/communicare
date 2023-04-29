@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   resources :communicable_diseases
   resources :areas
   resources :donations, only: [:index, :show, :create, :update]
-  get "/donations/:area_id" , to: "donations#index"
+  # get "/donations/:area_id" , to: "donations#index"
+  resources :areas do
+    resources :donations, only: [:create, :new]
+  end
   resources :reviews, only: [:index, :show, :create, :update, :destroy]
 end

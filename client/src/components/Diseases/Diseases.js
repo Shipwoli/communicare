@@ -16,7 +16,7 @@ const DiseasesList = () => {
 
   return (
     <div className="container">
-      <h2 className="mt-3 mb-3">Most Prevalent Communicable Diseases</h2>
+      <h2 className="mt-3 mb-3">Communicable Diseases</h2>
       <div className="row">
         {diseases.map(disease => (
           <div key={disease.id} className="col-md-4 mb-4">

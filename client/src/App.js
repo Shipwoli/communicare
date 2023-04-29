@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Login from './components/aunthentication/Login';
@@ -9,7 +9,9 @@ import About from './components/About/About';
 import Contact from './components/Contacts/contact';
 import Map from './components/Map';
 import LandingPage from './components/Landing/LandingPage';
-
+import DiseasesList from './components/Diseases/Diseases';
+import Areas from './components/Areas/Area';
+import AreaDetails from './components/Areas/areas';
 
  
 export default function App() {
@@ -18,20 +20,19 @@ export default function App() {
        <BrowserRouter>
 {/* added routes */}
       <Routes>
-        <Route path="/" element={< LandingPage />} />
-        <Route path="/home" element={<Home />}/>
-        <Route path="/about" element={< About />} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/signup" element={<Signup/>}/>
-        <Route path="/blog" element={<Blog/>}/>
-        <Route path="/donation" element={<Donation/>}/>
-        <Route path="/contacts" element={<Contact/>}/>
-        <Route path="/map" element={<Map/>}/>
-
-        
-
-
-      </Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/donation" element={<Donation />} />
+            <Route path="/contacts" element={<Contact />} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/map" element={<Map />} />
+            <Route path="/diseases" element={<DiseasesList />} />
+            <Route path="/areas" element={<Areas />} />
+            <Route path="/areadetails" element={<AreaDetails />} />
+            <Route path="/signup" element={<Signup />} />
+            </Routes>
       </BrowserRouter>
     </div>
   );

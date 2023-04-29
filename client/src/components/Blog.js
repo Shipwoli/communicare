@@ -175,12 +175,18 @@ const Blog = (props) => {
           
           </div>
         </div>
-        <button className={styles['rectangle21']}>Learn More</button>
-
+       
+      <Link to="/areas">
+        <button className={styles.rectangle21}>Learn More</button>
+      </Link>
+  <Link to="/areadetails">
         <button className={styles['rectangle24']}>Learn More</button>
-
+        </Link>
+        <div>
+        <Link to="/diseases">
         <button className={styles['rectangle23']}>Learn More</button>
-
+        </Link>
+        </div>
       </div>
     </div>
   )
