@@ -127,7 +127,7 @@ const Blog = (props) => {
           />
           <span className={styles['text30']}>
             <span>
-              <span>Non-communicable Diseases</span>
+              <span>communicable Diseases</span>
               <br></br>
               <span></span>
             </span>
@@ -152,13 +152,13 @@ const Blog = (props) => {
         </div>
         <div className={styles['blog22']}>
           <span className={styles['text39']}>
-            <span>Preventions</span>
+            <span>Donations progress</span>
           </span>
           <span className={styles['text41']}>
-            <span>
-              Prevention and management: Many NCDs can be prevented or
-              effectively managed through early detection, lifestyle
-              modifications,
+            <span>Thomas Fuller says 
+              "Charity begins at home, but should not end there." lets 
+              come together to offer donations the areas affected by communicable diseases.
+             
             </span>
           </span>
           <img
@@ -179,8 +179,8 @@ const Blog = (props) => {
       <Link to="/areas">
         <button className={styles.rectangle21}>Learn More</button>
       </Link>
-  <Link to="/areadetails">
-        <button className={styles['rectangle24']}>Learn More</button>
+  <Link to="/donated">
+        <button className={styles['rectangle24']}>Donation Progress</button>
         </Link>
         <div>
         <Link to="/diseases">

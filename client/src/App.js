@@ -25,7 +25,7 @@ export default function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<Donate />} />
+            <Route path="/blog" element={<Blog/>} />
             <Route path="/donation" element={<Donation />} />
             <Route path="/contacts" element={<Contact />} />
             <Route path="/login" element={<Login/>} />
@@ -34,6 +34,7 @@ export default function App() {
             <Route path="/areas" element={<Areas />} />
             <Route path="/areadetails" element={<AreaDetails />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/donated" element={<Donate />} />
             </Routes>
       </BrowserRouter>
     </div>

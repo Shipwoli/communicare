@@ -16,10 +16,10 @@ const Donate = () => {
       <table className="table">
         <thead>
           <tr>
-            <th>Amount</th>
             <th>Amount Donated</th>
-            <th>Area Donated To</th>
-            <th>Date</th>
+            <th>Area Affected</th>
+            <th>User email Donated</th>
+            <th>Name</th>
           </tr>
         </thead>
         <tbody>
@@ -28,7 +28,7 @@ const Donate = () => {
               <td>{donation.amount}</td>
               <td>{donation.area.name}</td>
               <td>{donation.user.email}</td>
-              <td>{donation.date}</td>
+              <td>{donation.user.First_name}</td>
             </tr>
           ))}
         </tbody>
