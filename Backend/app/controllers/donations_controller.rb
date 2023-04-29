@@ -6,10 +6,10 @@ class DonationsController < ApplicationController
     @donation = Donation.new
   end
   def index
-    @donation = Donation.includes(:area).all
-    render json: @donation.to_json(include: { area: { only: [:name] } })
-
+    @donation = Donation.includes(:area, :user).all
+    render json: @donation.to_json(include: { area: { only: [:name] }, user: { only: [:First_name, :email] } })
   end
+  
 
   def create
     @area = Area.find(params[:area_id])

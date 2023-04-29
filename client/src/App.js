@@ -12,6 +12,8 @@ import LandingPage from './components/Landing/LandingPage';
 import DiseasesList from './components/Diseases/Diseases';
 import Areas from './components/Areas/Area';
 import AreaDetails from './components/Areas/areas';
+import Donate from './components/Diseases/Donate';
+
 
  
 export default function App() {
@@ -23,7 +25,7 @@ export default function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog" element={<Donate />} />
             <Route path="/donation" element={<Donation />} />
             <Route path="/contacts" element={<Contact />} />
             <Route path="/login" element={<Login/>} />
