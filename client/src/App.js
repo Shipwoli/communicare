@@ -10,7 +10,7 @@ import Contact from './components/Contacts/contact';
 import Map from './components/Map';
 import LandingPage from './components/Landing/LandingPage';
 import Testimonial from './components/testimonial';
-
+import MedicinePage from './components/medicinepage';
  
 export default function App() {
   return (
@@ -28,6 +28,7 @@ export default function App() {
         <Route path="/contacts" element={<Contact/>}/>
         <Route path="/map" element={<Map/>}/>
         <Route path="/testimonial" element={<Testimonial/>}/>
+        <Route path="/medicine" element={<MedicinePage/>}/>
 
 
         
