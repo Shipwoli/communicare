@@ -7,7 +7,7 @@ const DonationForm = ({ area }) => {
   const handleDonationSubmit = async event => {
     event.preventDefault();
     try {
-      const response = await fetch('/donations', {
+      const response = await fetch('https://communicables.onrender.com/donations', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ const DonationForm = ({ area }) => {
   useEffect(() => {
     const fetchDonations = async () => {
       try {
-        const response = await fetch(`/donations?area_id=${area.id}`);
+        const response = await fetch(`https://communicables.onrender.com/donations?area_id=${area.id}`);
         if (response.ok) {
           const data = await response.json();
           setDonations(data);

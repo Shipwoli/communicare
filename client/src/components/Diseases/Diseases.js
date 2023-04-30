@@ -7,7 +7,7 @@ const DiseasesList = () => {
   const [diseases, setDiseases] = useState([]);
 
   useEffect(() => {
-    axios.get('/communicable_diseases')
+    axios.get('https://communicables.onrender.com/communicable_diseases')
       .then(response => {
         setDiseases(response.data);
       })

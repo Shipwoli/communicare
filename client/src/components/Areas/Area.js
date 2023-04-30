@@ -7,7 +7,7 @@ const Areas = () => {
   const [selectedArea, setSelectedArea] = useState(null);
 
   useEffect(() => {
-    axios.get('/areas')
+    axios.get('https://communicables.onrender.com/areas')
       .then(response => setAreas(response.data))
       .catch(error => console.log(error));
   }, []);

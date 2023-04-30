@@ -5,7 +5,7 @@ const Donate = () => {
   const [donations, setDonations] = useState([]);
 
   useEffect(() => {
-    axios.get('/donations')
+    axios.get('https://communicables.onrender.com/donations')
       .then(response => setDonations(response.data))
       .catch(error => console.log(error));
   }, []);

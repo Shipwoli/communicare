@@ -11,7 +11,7 @@ const AreaDetails = ({ areaId }) => {
 
   useEffect(() => {
     const fetchArea = async () => {
-      const response = await fetch(`/areas/${areaId}`);
+      const response = await fetch(`https://communicables.onrender.com/areas/${areaId}`);
       const data = await response.json();
       setArea(data);
     };
