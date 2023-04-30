@@ -152,25 +152,23 @@ const Blog = (props) => {
         </div>
         <div className={styles['blog22']}>
           <span className={styles['text39']}>
-            <span>Preventions</span>
+            <span>Testimonials</span>
           </span>
           <span className={styles['text41']}>
             <span>
-              Prevention and management: Many NCDs can be prevented or
-              effectively managed through early detection, lifestyle
-              modifications,
+            I am incredibly grateful for the support I received from Communicare, made possible by generous donations from individuals like you.
             </span>
           </span>
           <img
-            src="https://images.unsplash.com/photo-1586739051907-cadac873075a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJldmVudGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            src="https://images.unsplash.com/photo-1576765607924-3f7b8410a787?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDE1fHxzaWNrJTIwcGVvcGxlfGVufDB8fHx8MTY4Mjc4ODg0Mg&ixlib=rb-4.0.3&w=400"
             alt="image5004061"
             className={styles['image500']}
           />
         </div>
         <div className={styles['seemore']}>
-          <span className={styles['text43']}>
+          {/* <span className={styles['text43']}>
             <span>See More</span>
-          </span>
+          </span> */}
           <div className={styles['group2169']}>
           
           </div>

@@ -9,7 +9,7 @@ import About from './components/About/About';
 import Contact from './components/Contacts/contact';
 import Map from './components/Map';
 import LandingPage from './components/Landing/LandingPage';
-
+import Testimonial from './components/testimonial';
 
  
 export default function App() {
@@ -27,6 +27,8 @@ export default function App() {
         <Route path="/donation" element={<Donation/>}/>
         <Route path="/contacts" element={<Contact/>}/>
         <Route path="/map" element={<Map/>}/>
+        <Route path="/testimonial" element={<Testimonial/>}/>
+
 
         
 
