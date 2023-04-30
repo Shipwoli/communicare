@@ -108,7 +108,7 @@ function Signup() {
       return;
     }
 
-    fetch("users", {
+    fetch("https://communicables.onrender.com/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
