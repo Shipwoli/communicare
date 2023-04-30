@@ -106,16 +106,22 @@ const Blog = (props) => {
               make a difference in the fight against non-communicable diseases.
             </span>
           </span>
+        
           <div className={styles['readmore']}>
+           
             <span className={styles['text26']}>
+            <Link to="/medicine">
               <span>Read More</span>
+              </Link>
             </span>
+          
           </div>
         </div>
+     
         <div className={styles['blog2']}>
           <span className={styles['text28']}>
             <span>
-              Non-communicable diseases (NCDs), also known as chronic diseases,
+              Communicable diseases also known as chronic diseases,
               are medical conditions that are not contagious and cannot be
               transmitted from person to person. 
             </span>
@@ -127,7 +133,7 @@ const Blog = (props) => {
           />
           <span className={styles['text30']}>
             <span>
-              <span>communicable Diseases</span>
+              <span>Communicable Diseases</span>
               <br></br>
               <span></span>
             </span>
@@ -152,35 +158,33 @@ const Blog = (props) => {
         </div>
         <div className={styles['blog22']}>
           <span className={styles['text39']}>
-            <span>Donations progress</span>
+            <span>Testimonials</span>
           </span>
           <span className={styles['text41']}>
-            <span>Thomas Fuller says 
-              "Charity begins at home, but should not end there." lets 
-              come together to offer donations the areas affected by communicable diseases.
-             
+            <span>
+            I am incredibly grateful for the support I received from Communicare, made possible by generous donations from individuals like you.
             </span>
           </span>
           <img
-            src="https://images.unsplash.com/photo-1586739051907-cadac873075a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJldmVudGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            src="https://images.unsplash.com/photo-1576765607924-3f7b8410a787?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDE1fHxzaWNrJTIwcGVvcGxlfGVufDB8fHx8MTY4Mjc4ODg0Mg&ixlib=rb-4.0.3&w=400"
             alt="image5004061"
             className={styles['image500']}
           />
         </div>
         <div className={styles['seemore']}>
-          <span className={styles['text43']}>
+          {/* <span className={styles['text43']}>
             <span>See More</span>
-          </span>
+          </span> */}
           <div className={styles['group2169']}>
           
           </div>
         </div>
-       
-      <Link to="/areas">
+           
+        <Link to="/areas">
         <button className={styles.rectangle21}>Learn More</button>
       </Link>
-  <Link to="/donated">
-        <button className={styles['rectangle24']}>Donation Progress</button>
+  <Link to="/testimonial">
+        <button className={styles['rectangle24']}>Learn More</button>
         </Link>
         <div>
         <Link to="/diseases">
@@ -191,5 +195,4 @@ const Blog = (props) => {
     </div>
   )
 }
-
-export default Blog
+ export default Blog
