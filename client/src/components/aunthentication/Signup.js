@@ -86,10 +86,10 @@ const CustomLink = styled(Link)`
 
 function Signup() {
   const [formData, setFormData] = useState({
-    username: "",
+    First_name: "",
+    Last_name: "",
     email: "",
     password: "",
-    confirmPassword: "",
   });
   const [message, setMessage] = useState("");
   const nav = useNavigate();
@@ -103,12 +103,12 @@ function Signup() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {
-      setMessage("Passwords do not match");
+    if (!formData.First_name || !formData.Last_name || !formData.email || !formData.password) {
+      setMessage("Please fill in all fields");
       return;
     }
-  
-    fetch("https://phase5.onrender.com/signup", {
+
+    fetch("https://communicables.onrender.com/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -131,52 +131,51 @@ function Signup() {
         console.error(error);
       });
   }
-  
 
   return (
     <Container>
       <Title>Sign up</Title>
-      <Form onSubmit={handleSubmit}>
-      <Input
-          type="username"
-          placeholder="User Name"
-          name="username"
-          id="username"
-          onChange={handleChange}
-          value={formData.username}
-        />
-        <Input
-          type="email"
-          placeholder="Email Address"
-          name="email"
-          id="email"
-          onChange={handleChange}
-          value={formData.email}
-        />
-        <Input
-          type="password"
-          placeholder="Password"
-          name="password"
-          id="password"
-          onChange={handleChange}
-          value={formData.password}
-        />
-        <Input
-          type="password"
-          placeholder="Confirm Password"
-          name="confirmPassword"
-          id="confirmPassword"
-          onChange={handleChange}
-          value={formData.confirmPassword}
-        />
-        <Button type="submit">Sign up</Button>
-        {message && <Message isError={message.includes("Passwords do not match")}>{message}</Message>}
-      </Form>
-      <LinkWrapper>
-  <p>Already have an account?</p>
-  <CustomLink to="/login">Login</CustomLink>
+      <Form
+onSubmit={handleSubmit}>
+<Input
+       type="text"
+       name="First_name"
+       placeholder="First Name"
+       value={formData.first_name}
+       onChange={handleChange}
+     />
+<Input
+       type="text"
+       name="Last_name"
+       placeholder="Last Name"
+       value={formData.Last_name}
+       onChange={handleChange}
+     />
+<Input
+       type="email"
+       name="email"
+       placeholder="Email"
+       value={formData.email}
+       onChange={handleChange}
+     />
+<Input
+       type="password"
+       name="password"
+       placeholder="Password"
+       value={formData.password}
+       onChange={handleChange}
+     />
+<Button type="submit">Sign up</Button>
+{message && <Message isError>{message}</Message>}
+</Form>
+<LinkWrapper>
+<Message>
+Already have an account?{" "}
+<CustomLink to="/login">Log in</CustomLink>
+</Message>
 </LinkWrapper>
 </Container>
 );
 }
+
 export default Signup;

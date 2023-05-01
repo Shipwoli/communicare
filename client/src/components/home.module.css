@@ -767,3 +767,37 @@
   font-weight: bold; 
   margin-top: 10px; 
 }
+
+.images {
+  top: 217px;
+  left: 804px;
+  width: 567px;
+  height: 526px;
+  position: absolute;
+}
+.frame67 {
+  top: 834px;
+  left: 196px;
+  width: 1134px;
+  height: 104px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.frame68 {
+  gap: 10px;
+  top: 29px;
+  left: -33px;
+  width: 1191px;
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.image506 {
+  width: 1171px;
+  height: 101px;
+  border-radius: 20px;
+}

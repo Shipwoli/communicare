@@ -3,11 +3,7 @@
 one:
   name: MyString
   description: MyText
-  symptoms: MyText
-  prevention_measures: MyText
 
 two:
   name: MyString
   description: MyText
-  symptoms: MyText
-  prevention_measures: MyText

@@ -25,18 +25,18 @@ const Blog = (props) => {
           <span>Home</span>
         </Link>
         
-            <span className={styles['text02']}>
-              <span>About</span>
-            </span>
+        <Link to="/about" className={styles['text02']}>
+          <span>About</span>
+        </Link>
             <Link to="/donation" className={styles['text04']}>
           <span>Donation</span>
         </Link>
             <span className={styles['text06']}>
               <span>Blog</span>
             </span>
-            <span className={styles['text08']}>
-              <span>Contact</span>
-            </span>
+            <Link to="/contacts" className={styles['text08']}>
+          <span>contact</span>
+        </Link>
           </div>
           {/* <img
             src="/playground_assets/rectangle11615-l4jn-200h.png"
@@ -106,12 +106,18 @@ const Blog = (props) => {
               make a difference in the fight against non-communicable diseases.
             </span>
           </span>
+        
           <div className={styles['readmore']}>
+           
             <span className={styles['text26']}>
-              <span>Read More</span>
+            <Link to="/medicine">
+              <span>Expand</span>
+              </Link>
             </span>
+          
           </div>
         </div>
+     
         <div className={styles['blog2']}>
           <span className={styles['text28']}>
             <span>
@@ -120,7 +126,6 @@ const Blog = (props) => {
               transmitted from person to person. 
             </span>
           </span>
-         
           <img
             src="https://store.thtcentre.com/images/communicable-diseases.png"
             alt="image4974051"
@@ -139,7 +144,6 @@ const Blog = (props) => {
             <span>Affected areas</span>
           </span>
           <span className={styles['text37']}>
-            
             <span>
               Global impact: NCDs are a leading cause of death and disability
               worldwide. According to the World Health Organization (WHO), NCDs
@@ -154,38 +158,41 @@ const Blog = (props) => {
         </div>
         <div className={styles['blog22']}>
           <span className={styles['text39']}>
-            <span>Preventions</span>
+            <span>Testimonials</span>
           </span>
           <span className={styles['text41']}>
             <span>
-              Prevention and management: Many NCDs can be prevented or
-              effectively managed through early detection, lifestyle
-              modifications,
+            I am incredibly grateful for the support I received from Communicare, made possible by generous donations from individuals like you.
             </span>
           </span>
           <img
-            src="https://images.unsplash.com/photo-1586739051907-cadac873075a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJldmVudGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            src="https://images.unsplash.com/photo-1576765607924-3f7b8410a787?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDE1fHxzaWNrJTIwcGVvcGxlfGVufDB8fHx8MTY4Mjc4ODg0Mg&ixlib=rb-4.0.3&w=400"
             alt="image5004061"
             className={styles['image500']}
           />
         </div>
         <div className={styles['seemore']}>
-          <span className={styles['text43']}>
+          {/* <span className={styles['text43']}>
             <span>See More</span>
-          </span>
+          </span> */}
           <div className={styles['group2169']}>
           
           </div>
         </div>
-        <button className={styles['rectangle21']}>Learn More</button>
-
+           
+        <Link to="/areas">
+        <button className={styles.rectangle21}>Learn More</button>
+      </Link>
+  <Link to="/testimonial">
         <button className={styles['rectangle24']}>Learn More</button>
-
+        </Link>
+        <div>
+        <Link to="/diseases">
         <button className={styles['rectangle23']}>Learn More</button>
-
+        </Link>
+        </div>
       </div>
     </div>
   )
 }
-
-export default Blog
+ export default Blog

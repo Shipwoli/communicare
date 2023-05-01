@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const DonationForm = ({ area }) => {
   const [donationAmount, setDonationAmount] = useState(0);
+  const [donations, setDonations] = useState([]);
 
   const handleDonationSubmit = async event => {
     event.preventDefault();
     try {
-      const response = await fetch('/donations', {
+      const response = await fetch('https://communicables.onrender.com/donations', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -18,6 +19,7 @@ const DonationForm = ({ area }) => {
       });
       if (response.ok) {
         alert('Thank you for your donation!');
+        setDonationAmount(0);
       } else {
         alert('There was an error processing your donation.');
       }
@@ -26,6 +28,24 @@ const DonationForm = ({ area }) => {
       alert('There was an error processing your donation.');
     }
   };
+
+  useEffect(() => {
+    const fetchDonations = async () => {
+      try {
+        const response = await fetch(`https://communicables.onrender.com/donations?area_id=${area.id}`);
+        if (response.ok) {
+          const data = await response.json();
+          setDonations(data);
+        } else {
+          console.log('Unable to fetch donations.');
+        }
+      } catch (error) {
+        console.error(error);
+        console.log('Unable to fetch donations.');
+      }
+    };
+    fetchDonations();
+  }, [area]);
 
   return (
     <div className="donation-form">
@@ -47,6 +67,18 @@ const DonationForm = ({ area }) => {
           Submit
         </button>
       </form>
+      {donations.length > 0 && (
+        <div className="donation-list">
+          <h4>Donations:</h4>
+          <ul>
+            {donations.map(donation => (
+              <li key={donation.id}>
+                {donation.donation_amount} from {donation.donor_name}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

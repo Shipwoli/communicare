@@ -10,17 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_17_075954) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
+ActiveRecord::Schema[7.0].define(version: 2023_04_28_151007) do
   create_table "areas", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.float "latitude"
     t.float "longitude"
     t.integer "reported_cases"
-    t.bigint "communicable_disease_id", null: false
+    t.integer "communicable_disease_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["communicable_disease_id"], name: "index_areas_on_communicable_disease_id"
@@ -39,8 +36,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_17_075954) do
 
   create_table "donations", force: :cascade do |t|
     t.decimal "amount"
-    t.bigint "user_id", null: false
-    t.bigint "area_id", null: false
+    t.integer "user_id", null: false
+    t.integer "area_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["area_id"], name: "index_donations_on_area_id"
@@ -49,9 +46,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_17_075954) do
 
   create_table "reviews", force: :cascade do |t|
     t.text "comment"
-    t.integer "rating"
-    t.bigint "user_id", null: false
-    t.bigint "area_id", null: false
+    t.integer "user_id", null: false
+    t.integer "area_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["area_id"], name: "index_reviews_on_area_id"
@@ -59,10 +55,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_17_075954) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
+    t.string "First_name"
+    t.string "Last_name"
     t.string "email"
     t.string "password_digest"
-    t.boolean "admin"
+    t.boolean "admin", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -2,12 +2,10 @@
 
 one:
   content: MyText
-  rating: 1
-  user_id: one
-  area_id: one
+  user: one
+  affected_area: one
 
 two:
   content: MyText
-  rating: 1
-  user_id: two
-  area_id: two
+  user: two
+  affected_area: two

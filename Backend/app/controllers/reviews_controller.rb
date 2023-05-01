@@ -1,29 +1,37 @@
 class ReviewsController < ApplicationController
-  before_action :set_area, only: [:index, :create]
+  before_action :authenticate_user!, only: [:new, :create]
+  before_action :set_area, only: [:new, :create]
 
-  # GET /areas/:area_id/reviews
+  def new
+    @review = Review.new
+  end
   def index
-    @reviews = @area.reviews
-    render json: @reviews
+    @reviews = Review.includes(:area).all
+    render json: @reviews.to_json(include: { area: { only: [:name] } })
+
   end
 
-  # POST /areas/:area_id/reviews
   def create
     @review = @area.reviews.build(review_params)
+    @review.user = current_user
+
     if @review.save
-      render json: @review, status: :created
+      redirect_to area_path(@area), notice: "Your review has been submitted."
     else
-      render json: { message: 'failed', errors: @review.errors }, status: :unprocessable_entity
+      render :new
     end
   end
 
   private
+  def authenticate_user!
+    return render json: { errors: ["Not authorized"] }, status: :unauthorized unless session.include? :user_id
+end
 
   def set_area
     @area = Area.find(params[:area_id])
   end
 
   def review_params
-    params.require(:review).permit(:comment, :user_id, :rating)
+    params.require(:review).permit(:comment)
   end
 end

@@ -1,6 +1,7 @@
 class CommunicableDiseasesController < ApplicationController
+    # before_action :authenticate_user!
     before_action :set_communicable_disease, only: [:show, :update, :destroy]
-    before_action :require_admin, only: [:create, :update, :destroy]
+  
     # GET /communicable_diseases
     def index
       @communicable_diseases = CommunicableDisease.all
@@ -14,7 +15,7 @@ class CommunicableDiseasesController < ApplicationController
   
     # POST /communicable_diseases
     def create
-      @communicable_disease = CommunicableDisease.new(comm_disease_params)
+      @communicable_disease = CommunicableDisease.new(communicable_disease_params)
   
       if @communicable_disease.save
         render json: @communicable_disease, status: :created
@@ -25,7 +26,7 @@ class CommunicableDiseasesController < ApplicationController
   
     # PATCH/PUT /communicable_diseases/1
     def update
-      if @communicable_disease.update(comm_disease_params)
+      if @communicable_disease.update(communicable_disease_params)
         render json: @communicable_disease
       else
         render json: @communicable_disease.errors, status: :unprocessable_entity
@@ -35,20 +36,18 @@ class CommunicableDiseasesController < ApplicationController
     # DELETE /communicable_diseases/1
     def destroy
       @communicable_disease.destroy
-      render json: { message: 'Communicable disease was successfully deleted' }
+      render json: { message: 'Communicable disease was successfully destroyed.' }
     end
   
     private
+      # Use callbacks to share common setup or constraints between actions.
+      def set_communicable_disease
+        @communicable_disease = CommunicableDisease.find(params[:id])
+      end
   
-    # Use callbacks to share common setup or constraints between actions.
-    def set_communicable_disease
-      @communicable_disease = CommunicableDisease.find(params[:id])
-    end
-  
-    # Only allow a list of trusted parameters through.
-    def comm_disease_params
-     
-      params.require(:communicable_disease).permit(:name, :image_url, :description, :symptoms, :prevention_measures, :most_prevalent)
-    end
+      # Only allow a trusted parameter "white list" through.
+      def communicable_disease_params
+        params.require(:communicable_disease).permit(:name, :image_url, :description, :symptoms, :prevention_measures, :most_prevalent)
+      end
   end
   

@@ -1,6 +1,9 @@
 class CommunicableDisease < ApplicationRecord
-    has_many :areas
-    scope :most_prevalent, -> { where(most_prevalent: true) }
-    validates :name, presence: true, length: { maximum: 50 }
-    validates :description, :symptoms, :prevention_measures, :image_url, presence: true
-end
+    has_many :areas, dependent: :destroy
+
+    validates :name, presence: true, uniqueness: true
+    validates :image_url, presence: true
+    validates :description, presence: true
+    validates :symptoms, presence: true
+    validates :prevention_measures, presence: true
+  end
