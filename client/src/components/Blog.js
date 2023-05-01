@@ -169,6 +169,25 @@ const Blog = (props) => {
             className={styles['image500']}
           />
         </div>
+
+        <div className={styles['blog21']}>
+          <span className={styles['text35']}>
+            <span>Map</span>
+          </span>
+          <span className={styles['text37']}>
+            
+            <span>
+              Global impact: NCDs are a leading cause of death and disability
+              worldwide. According to the World Health Organization (WHO), NCDs
+              are responsible for approximately 71% of all global deaths, 
+            </span>
+          </span>
+          <img
+            src="https://assets.weforum.org/editor/AbLC3IQxbU_l8ImxS3UoRieNQTCI7Dt_7QLRHa-avX8.JPG"
+            alt="image4994061"
+            className={styles['image499']}
+          />
+        </div>
         <div className={styles['seemore']}>
           <span className={styles['text43']}>
             <span>See More</span>

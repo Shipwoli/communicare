@@ -11,6 +11,7 @@ import Map from './components/Map';
 import DiseasesList from './components/Diseases/Diseases';
 
 
+
  
 export default function App() {
   return (
@@ -27,7 +28,8 @@ export default function App() {
         <Route path="/donation" element={<Donation/>}/>
         <Route path="/contacts" element={<Contact/>}/>
         <Route path="/map" element={<Map/>}/>
-        <Route path = "/Diseses" element={<DiseasesList/>}/>
+        <Route path = "/Diseases" element={<DiseasesList/>}/>
+        
         
 
         
