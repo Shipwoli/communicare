@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DonationForm from '../Diseases/Donation';
+import Map from '../Map';
 
 const Areas = () => {
   const [areas, setAreas] = useState([]);
@@ -37,7 +38,9 @@ const Areas = () => {
         ))}
       </div>
       {selectedArea && <DonationForm area={selectedArea} />}
+      <Map/>
     </div>
+   
   );
 };
 

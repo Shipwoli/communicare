@@ -528,7 +528,25 @@
     line-height: normal;
     font-stretch: normal;
     text-decoration: none;
+
+    
   }
+
+  .text36 {
+    top: 230px;
+    left: 3px;
+    color: rgba(0, 20, 13, 0);
+    height: auto;
+    position: absolute;
+    font-size: 12px;
+    align-self: auto;
+    font-style: Bold;
+    text-align: left;
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;}
   .text37 {
     top: 256px;
     left: 4px;
@@ -546,11 +564,90 @@
     font-stretch: normal;
     text-decoration: none;
   }
+  .map-card {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  .map-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  .map-card .map-title {
+    top: 305px;
+    left: 8px;
+    color: rgb(0, 0, 0);
+    width: 215px;
+    height: auto;
+    position: absolute;
+    font-size: 13px;
+    align-self: auto;
+    font-style: Medium;
+    text-align: left;
+    font-family: Plus Jakarta Sans;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .map-card .map-image {
+    top: 19px;
+    left: 8px;
+    width: 279px;
+    height: 241px;
+    position: absolute;
+    border-color: transparent;
+  }
+  .map-card {
+    top: 845px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  .map-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  .map-card .map-title {
+    top: 305px;
+    left: 8px;
+    color: rgb(0, 0, 0);
+    width: 215px;
+    height: auto;
+    position: absolute;
+    font-size: 13px;
+    align-self: auto;
+    font-style: Medium;
+    text-align: left;
+    font-family: Plus Jakarta Sans;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .map-card .map-image {
+    top: 19px;
+    left: 8px;
+    width: 279px;
+    height: 241px;
+    position: absolute;
+    border-color: transparent;
+  }
+  
+  
+
   .image499 {
     top: 27px;
     /* left: -17px; */
     width: 291px;
     height: 185px;
+    position: absolute;
+    border-color: transparent;
+  }
+
+  .image500 {
+    top: 2px;
+    left: 8px;
+    width: 282px;
+    height: 254px;
     position: absolute;
     border-color: transparent;
   }
@@ -586,6 +683,20 @@
   }
   
   .blog22:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .blog23 {
+    /* Existing styles */
+    /* ... */
+  
+    /* Additional styles */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .blog23:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   }
