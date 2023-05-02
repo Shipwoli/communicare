@@ -1,5 +1,6 @@
 class AreasController < ApplicationController
-  before_action :set_area, only: [:show, :update, :destroy]
+  before_action :set_area, only: [:show, :update, :destroy, :create]
+  before_action :set_communicable_disease, only: [:destroy]
   
 
   # def index
@@ -37,13 +38,16 @@ class AreasController < ApplicationController
 
   def destroy
     @area.destroy
-    head :no_content
+    redirect_to @area.communicable_disease, notice: 'Area was successfully removed from the disease.'
   end
 
   private
 
   def set_area
     @area = Area.find(params[:id])
+  end
+  def set_disease
+    @disease = CommunicableDisease.find(params[:disease_id])
   end
 
   def area_params

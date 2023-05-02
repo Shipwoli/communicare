@@ -1,5 +1,5 @@
 class Area < ApplicationRecord
-  belongs_to :communicable_disease
+  belongs_to :communicable_disease, dependent: :destroy
   has_many :reviews
   has_many :donations
 

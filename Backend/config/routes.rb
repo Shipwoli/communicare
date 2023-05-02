@@ -3,13 +3,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :users, only: [:create, :show, :update, :destroy]
+  resources :users, only: [:create, :show, :update, :destroy, :index]
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   get "/me", to: "users#show"
 
   resources :communicable_diseases
-  resources :areas
+  resources :areas, only: [:create, :show, :update, :destroy, :index]
   resources :donations, only: [:index, :show, :create, :update]
   # get "/donations/:area_id" , to: "donations#index"
   resources :areas do
