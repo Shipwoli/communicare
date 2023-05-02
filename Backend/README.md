@@ -78,18 +78,18 @@ Project contributed to and maintained by:
 ## License
 ### ISC License (ISC)
 [![License: ICL](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
-GitHubGitHub
+GitHubGitHub <br>
 Marylucy123450 - Overview
 Marylucy123450 has 182 repositories available. Follow their code on GitHub.<br>
-GitHubGitHub
+GitHubGitHub<br>
 Shipwoli - Overview
 Shipwoli has 209 repositories available. Follow their code on GitHub.
-GitHubGitHub
+GitHubGitHub<br>
 vickyprinz-Overview
 vickyprinz has 210 repositories available. Follow their code on GitHub.
-GitHubGitHub
+GitHubGitHub<br>
 LinexMugambi-Overview
 LinexMugambi has 161 repositories available. Follow their code on GitHub.
-GitHubGitHub
+GitHubGitHub<br>
 AlexIrungu-Overview
 AlexIrungu has 185 repositories available. Follow their code on GitHub.
