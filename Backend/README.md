@@ -80,13 +80,16 @@ Project contributed to and maintained by:
 [![License: ICL](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 GitHubGitHub
 Marylucy123450 - Overview
-Marylucy123450 has 182 repositories available. Follow their code on GitHub.
+Marylucy123450 has 182 repositories available. Follow their code on GitHub.<br>
 GitHubGitHub
 Shipwoli - Overview
 Shipwoli has 209 repositories available. Follow their code on GitHub.
+GitHubGitHub
 vickyprinz-Overview
 vickyprinz has 210 repositories available. Follow their code on GitHub.
+GitHubGitHub
 LinexMugambi-Overview
 LinexMugambi has 161 repositories available. Follow their code on GitHub.
+GitHubGitHub
 AlexIrungu-Overview
 AlexIrungu has 185 repositories available. Follow their code on GitHub.
