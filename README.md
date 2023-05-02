@@ -70,7 +70,7 @@ This application has been built with the following tools:
 - [Victor](https://github.com/Vickyprinz) 
 - [Lenix](https://github.com/LinexMugambi) 
 - [Alex](https://github.com/AlexIrungu) 
-- [Keittah](https://github.com/KeittahSewe) 
+
 
 
 
