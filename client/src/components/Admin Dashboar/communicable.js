@@ -24,7 +24,7 @@ const ComAdmin = () => {
   const handleCreateDisease = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/communicable_diseases', newDisease);
+      await axios.post('https://communicables.onrender.com/communicable_diseases', newDisease);
       setNewDisease({
         name: '',
         image_url: 'https://images.pexels.com/photos/6303643/pexels-photo-6303643.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -62,7 +62,7 @@ const ComAdmin = () => {
 
   const handleDeleteDisease = async (diseaseId) => {
     try {
-      await axios.delete(`/communicable_diseases/${diseaseId}`);
+      await axios.delete(`https://communicables.onrender.com/communicable_diseases/${diseaseId}`);
       fetchDiseases();
     } catch (error) {
       console.log(error);
@@ -71,7 +71,7 @@ const ComAdmin = () => {
 
   const fetchDiseases = async () => {
     try {
-      const { data } = await axios.get('/communicable_diseases');
+      const { data } = await axios.get('https://communicables.onrender.com/communicable_diseases');
       setDiseases(data);
     } catch (error) {
       console.log(error);

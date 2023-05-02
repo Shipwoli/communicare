@@ -25,7 +25,7 @@ const AreaTable = () => {
   const handleCreateArea = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/areas', newArea);
+      await axios.post('https://communicables.onrender.com/areas', newArea);
       setNewArea({
         name: '',
         location: '',
@@ -63,7 +63,7 @@ const AreaTable = () => {
 
   const handleDeleteArea = async (areaId) => {
     try {
-      await axios.delete(`/areas/${areaId}`);
+      await axios.delete(`https://communicables.onrender.com/areas/${areaId}`);
       fetchAreas();
     } catch (error) {
       console.log(error);
@@ -72,7 +72,7 @@ const AreaTable = () => {
 
   const fetchAreas = async () => {
     try {
-      const { data } = await axios.get('/areas');
+      const { data } = await axios.get('https://communicables.onrender.com/areas');
       setAreas(data);
     } catch (error) {
       console.log(error);
@@ -81,7 +81,7 @@ const AreaTable = () => {
 
   const fetchDiseases = async () => {
     try {
-      const { data } = await axios.get('/communicable_diseases');
+      const { data } = await axios.get('https://communicables.onrender.com/communicable_diseases');
       setDiseases(data);
     } catch (error) {
       console.log(error);

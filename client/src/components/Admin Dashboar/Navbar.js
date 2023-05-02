@@ -24,8 +24,8 @@ const Navbar = ({ setUser, user }) => {
       <Nav>
         <Bars />
         <NavMenu>
-          <NavLink to="/home">Home</NavLink>
           <NavLink to="/admin">Admin Dashboard</NavLink>
+          {/* <NavLink to="/admin"></NavLink> */}
           {/* <NavLink to="/contact">Contact Us</NavLink> */}
 
           {user ? (

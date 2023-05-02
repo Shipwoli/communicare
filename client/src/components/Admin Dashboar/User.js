@@ -23,7 +23,7 @@ const UserTable = () => {
   const handleCreateUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/users', newUser);
+      await axios.post('https://communicables.onrender.com/users', newUser);
       setNewUser({
         First_name: '',
         Last_name: '',
@@ -44,7 +44,7 @@ const UserTable = () => {
     const role = formData.get('role');
     const userId = selectedUser.id;
     try {
-      await axios.put(`/users/${userId}`, { role });
+      await axios.put(`https://communicables.onrender.com/users/${userId}`, { role });
       setSelectedUser(null);
       setShowModal(false);
       fetchUsers();
