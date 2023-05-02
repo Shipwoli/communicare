@@ -89,6 +89,7 @@ function Login() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
+    role: "user", // default role is "user"
   });
   const [message, setMessage] = useState("");
   const nav = useNavigate();
@@ -109,53 +110,59 @@ function Login() {
     }
 
     try {
-      // send login request to backend
+      // send login request to backend with the selected role
       const response = await axios.post("https://communicables.onrender.com/login", {
         email: formData.email,
         password: formData.password,
+        role: formData.role,
       });
 
-      // navigate to home page if login is successful
+      // navigate to appropriate dashboard if login is successful
       if (response.status === 200) {
-        nav("/home");
-      } else {
-        setMessage("Invalid email or password");
-      }
-    } catch (error) {
-      setMessage("Login failed");
-    }
-  }
+        if (formData.role === "admin") {
+          nav("/nav");
+        } else {
+          nav("/home");
+          setMessage("Login successful");
+}
+}
+} catch (error) {
+// display error message if login request fails
+setMessage(error.response.data.message);
+}
+}
 
-  return (
-    <Container>
-      <Title>Login</Title>
-      <Form onSubmit={handleSubmit}>
-        <Input
-          type="email"
-          placeholder="Email Address"
-          name="email"
-          id="email"
-          
-          onChange={handleChange}
-          value={formData.email}
-          />
-          <Input
-                 type="password"
-                 placeholder="Password"
-                 name="password"
-                 id="password"
-                 onChange={handleChange}
-                 value={formData.password}
-               />
-          <Button type="submit">Login</Button>
-          </Form>
-          {message && <Message isError={message.startsWith("Invalid")}>{message}</Message>}
-          <LinkWrapper>
-          Don't have an account? <CustomLink to="/signup">Register</CustomLink>
-          {/* Forgot Password? <CustomLink to="/resetpassword">Reset</CustomLink> */}
-          </LinkWrapper>
-          </Container>
-          );
-          }
-          
-          export default Login;
+return (
+<Container>
+<Title>Login</Title>
+<Form onSubmit={handleSubmit}>
+<Input
+       type="email"
+       name="email"
+       placeholder="Email"
+       value={formData.email}
+       onChange={handleChange}
+     />
+<Input
+       type="password"
+       name="password"
+       placeholder="Password"
+       value={formData.password}
+       onChange={handleChange}
+     />
+<label htmlFor="role">Login as:</label>
+<select name="role" id="role" value={formData.role} onChange={handleChange}>
+<option value="user">User</option>
+<option value="admin">Admin</option>
+</select>
+<Button type="submit">Login</Button>
+</Form>
+<Message isError={message.includes("Error")}>{message}</Message>
+<LinkWrapper>
+<CustomLink to="/signup">Don't have an account? Signup here</CustomLink>
+</LinkWrapper>
+</Container>
+);
+}
+
+export default Login;

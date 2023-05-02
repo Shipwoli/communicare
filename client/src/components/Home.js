@@ -19,13 +19,14 @@ const Home = (props) => {
             <span className={styles['text']}>
               <span>Home</span>
             </span>
+          
             <Link to="/about" className={styles['text02']}>
               <span>About</span>
             </Link>
             <Link to="/donation" className={styles['text04']}>
           <span>Donation</span>
         </Link>
-            <Link to="/blog" className={styles['text06']}>
+            <Link to="/admin" className={styles['text06']}>
           <span>Blog</span>
         </Link>
             <Link to ="/contacts" span className={styles['text08']}>
@@ -34,6 +35,7 @@ const Home = (props) => {
             <Link to ="/map" span className={styles['text222']}>
               <span>Maps</span>
             </Link>
+
           </div>
           {/* <img
             src="/playground_assets/rectangle1911-vhec-200h.png"
@@ -48,9 +50,7 @@ const Home = (props) => {
       </div> */}
       <div className={styles['sign-up']}>
         {/* Update sign-up element to use Link */}
-        <Link to="/signup" className={styles['text12']}>
-          <span>Log Out</span>
-        </Link>
+        
       </div>
         <div className={styles['background-circles']}>
         <img

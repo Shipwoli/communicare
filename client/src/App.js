@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Login from './components/aunthentication/Login';
 import Signup from './components/aunthentication/Signup';
 import Blog from './components/Blog';
+import Navbar from './components/Admin Dashboar/Navbar';
 
 import Donation from './components/Donation';
 import About from './components/About/About';
@@ -16,6 +17,10 @@ import AreaDetails from './components/Areas/areas';
 import Donate from './components/Diseases/Donate';
 import Testimonial from './components/Diseases/testimonial';
 import MedicinePage from './components/Diseases/medicinepage';
+// import UserTable from './components/Admin Dashboar/User';
+// import ComAdmin from './components/Admin Dashboar/communicable';
+import AreaTable from './components/Admin Dashboar/AreaAdmin';
+import Dashboard from './components/Admin Dashboar/Admin';
 
 
  
@@ -40,6 +45,12 @@ export default function App() {
             <Route path="/donated" element={<Donate />} />
             <Route path="/testimonial" element={<Testimonial/>}/>
         <Route path="/medicine" element={<MedicinePage/>}/>
+        {/* <Route path ="/user" element={<UserTable/>}/>
+        <Route path ="/communicable" element={<ComAdmin/>}/> */}
+        <Route path ="/area" element={<AreaTable/>}/> 
+          <Route path="/admin" element={<Dashboard/>} />
+          <Route path="/nav" element={<Navbar/>} />
+
             </Routes>
       </BrowserRouter>
     </div>

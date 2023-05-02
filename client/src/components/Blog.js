@@ -45,15 +45,15 @@ const Blog = (props) => {
           /> */}
         </div>
         <div className={styles['sign-in']}>
-          <Link to="/signup" className={styles['text10']}>
+          {/* <Link to="/signup" className={styles['text10']}>
           <span>Sign in</span>
-        </Link>
+        </Link> */}
         </div>
-        <div className={styles['sign-up']}>
-        <Link to="/login" className={styles['text12']}>
+        {/* <div className={styles['sign-up']}>
+        <Link to="/logout" className={styles['text12']}>
           <span>Sign up</span>
         </Link>
-        </div>
+        </div> */}
         <span className={styles['text14']}>
           <span className={styles['text15']}>
             Stay Up To
@@ -111,7 +111,7 @@ const Blog = (props) => {
            
             <span className={styles['text26']}>
             <Link to="/medicine">
-              <span>Read More</span>
+              <span>Expand</span>
               </Link>
             </span>
           
