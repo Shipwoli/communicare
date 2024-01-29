@@ -11,13 +11,16 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_04_28_151007) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "areas", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.float "latitude"
     t.float "longitude"
     t.integer "reported_cases"
-    t.integer "communicable_disease_id", null: false
+    t.bigint "communicable_disease_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["communicable_disease_id"], name: "index_areas_on_communicable_disease_id"
@@ -36,8 +39,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_28_151007) do
 
   create_table "donations", force: :cascade do |t|
     t.decimal "amount"
-    t.integer "user_id", null: false
-    t.integer "area_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "area_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["area_id"], name: "index_donations_on_area_id"
@@ -46,8 +49,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_28_151007) do
 
   create_table "reviews", force: :cascade do |t|
     t.text "comment"
-    t.integer "user_id", null: false
-    t.integer "area_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "area_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["area_id"], name: "index_reviews_on_area_id"
