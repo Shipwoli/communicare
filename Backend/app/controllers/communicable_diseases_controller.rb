@@ -7,10 +7,27 @@ class CommunicableDiseasesController < ApplicationController
       @communicable_diseases = CommunicableDisease.all
       render json: @communicable_diseases
     end
+
+    def generate_qr_code
+      @communicable_diseases = Disease.find(params[:id])
+      qr_code = RQRCode::QRCode.new("CommunibleDisease: #{CommunibleDisease.name}, ID: #{CommunibleDisease.id}")
+  
+      # You can customize the size, color, etc.
+      png = qr_code.as_png(size: 300)
+      
+      send_data png.to_s, type: 'image/png', disposition: 'inline'
+    end
   
     # GET /communicable_diseases/1
     def show
-      render json: @communicable_disease
+      @communicable_disease = CommunicableDisease.find(params[:id])
+    end
+
+    def generate_qr_code
+      @communicable_disease= CommunicableDisease.find(params[:id])
+      qr_code = RQRCode::QRCode.new("CommunicableDisease: #{@communicable_disease.name}, ID: #{@communicable_disease.id}")
+      png = qr_code.as_png(size: 300)
+      send_data png.to_s, type: 'image/png', disposition: 'inline'
     end
   
     # POST /communicable_diseases

@@ -194,6 +194,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.4, >= 7.0.4.3)
+  railties
   rqrcode
   tzinfo-data
   zxing

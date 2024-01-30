@@ -10,10 +10,15 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.3"
 gem 'pg'
 gem "rack-cors"
 
+gem 'railties'
+
+
+
 # QR code generation
 gem 'rqrcode'
 
 # QR code scanning
+# gem 'qrscanner', '~> 0.4.1'
 gem 'zxing'
 
 # Use the Puma web server [https://github.com/puma/puma]

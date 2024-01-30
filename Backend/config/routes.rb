@@ -9,6 +9,14 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
 
   resources :communicable_diseases
+
+  # config/routes.rb
+resources :communicable_diseases do
+  member do
+    get :generate_qr_code
+  end
+  
+end
   resources :areas, only: [:create, :show, :update, :destroy, :index]
   resources :donations, only: [:index, :show, :create, :update]
   # get "/donations/:area_id" , to: "donations#index"
