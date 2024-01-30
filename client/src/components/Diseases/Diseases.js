@@ -11,7 +11,7 @@ const DiseasesList = () => {
   const [scannedData, setScannedData] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/communicable_diseases')
+    axios.get('https://communicables.onrender.com/communicable_diseases')
       .then(response => {
         setDiseases(response.data);
       })
